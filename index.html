@@ -143,22 +143,38 @@ function initSupabase() {
 function updateSyncUI() {
   const b = document.getElementById("sync");
   if (!b) return;
-  if (sbSession) { b.textContent = "☁︎ " + (sbSession.user.email || "synced"); b.title = "Signed in — tap to sign out"; }
-  else { b.textContent = "☁︎ Sync"; b.title = "Sign in to sync across your devices"; }
+  if (sbSession) { b.textContent = "☁︎ Synced"; b.title = "Synced with your code — tap to sign out"; }
+  else { b.textContent = "☁︎ Sync"; b.title = "Enter a code to sync across your devices"; }
+}
+
+// A sync code is both the identity and the password. Same code anywhere = same deck.
+function codeToCred(code) {
+  const slug = code.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  return { email: slug + "@sync.deutschdutch.app", password: "sync:" + code };
 }
 
 async function syncClick() {
   if (!sbClient) { alert("Sync isn't available right now (offline?)."); return; }
   if (sbSession) {
-    if (confirm(`Synced as ${sbSession.user.email}. Sign out? Local progress stays on this device.`)) {
+    if (confirm("Sign out on this device? Your progress stays safe in the cloud under your code.")) {
       await sbClient.auth.signOut(); sbSession = null; updateSyncUI();
     }
     return;
   }
-  const email = (prompt("Your email — we'll send a one-tap sign-in link so progress syncs across your phones:") || "").trim();
-  if (!email) return;
-  const { error } = await sbClient.auth.signInWithOtp({ email, options: { emailRedirectTo: location.href.split("#")[0] } });
-  toast(error ? ("Sign-in error: " + error.message) : "✉️ Check your email for the sign-in link", 3200);
+  const code = (prompt("Enter a sync code.\n\nUse the SAME code on every device to share that progress. Keep it secret — it is your password.") || "").trim();
+  if (!code) return;
+  if (code.length < 4) { alert("Please use a code of at least 4 characters."); return; }
+  const cred = codeToCred(code);
+  const res = await sbClient.auth.signInWithPassword(cred);
+  if (res.error) {                                   // unknown code -> create it
+    const su = await sbClient.auth.signUp(cred);
+    if (su.error) { toast("Sync error: " + su.error.message, 3200); return; }
+    if (!su.data.session) {
+      alert("Almost there — in Supabase, turn OFF 'Confirm email' (Authentication -> Providers -> Email), then tap Sync again. Codes then work instantly.");
+      return;
+    }
+  }
+  // onAuthStateChange fires -> pull + merge automatically
 }
 
 async function cloudPullMerge() {
