@@ -223,7 +223,7 @@ async function cloudPullMerge() {
     const res = await sbClient.rpc("get_deck", { p_code: syncCode });
     if (res.error) { console.warn("cloud pull failed", res.error); return; }
     if (res.data) {
-      state = mergeStates(state, ensureDefaults(res.data));
+      state = applyCloud(state, res.data);
       try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
       loadNext();
     }
@@ -239,10 +239,10 @@ function cloudPush(immediate) {
     try {
       const res = await sbClient.rpc("get_deck", { p_code: syncCode });   // merge before write
       if (!res.error && res.data) {
-        state = mergeStates(state, ensureDefaults(res.data));
+        state = applyCloud(state, res.data);
         try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
       }
-      await sbClient.rpc("save_deck", { p_code: syncCode, p_state: state });
+      await sbClient.rpc("save_deck", { p_code: syncCode, p_state: toCloud(state) });  // compact
     } catch (e) { console.warn("cloud push failed", e); }
   };
   if (immediate) doPush(); else pushTimer = setTimeout(doPush, 1500);
@@ -274,6 +274,62 @@ function mergeStates(a, b) {
     merged.streak[d] = (sa.days >= sb2.days) ? sa : sb2;
   }
   return ensureDefaults(merged);
+}
+
+// ---- Compact ("incremental") cloud format: send only schedules, not the 2.5 MB deck ----
+// Seed words are reconstructed locally from seed.json, so the cloud stores only:
+//  - schedules of *studied* seed cards (reps/lapses/ease/interval/due), keyed "word_id:dir"
+//  - manually-added words in full (not derivable from the seed)
+//  - the small per-direction meta (intro_log / daily_log / streak / config)
+const MANUAL_BASE = 1000000;
+
+function toCloud(st) {
+  const sched = {};
+  const manual = [];
+  for (const c of st.cards) {
+    if (c.word_id >= MANUAL_BASE) { manual.push(c); continue; }
+    if ((c.reps || 0) > 0 || (c.lapses || 0) > 0) {
+      sched[c.word_id + ":" + c.dir] = [c.reps || 0, c.lapses || 0, c.ease, c.interval_days, c.due_ts];
+    }
+  }
+  return { v: 2, sched, manual, intro_log: st.intro_log, daily_log: st.daily_log,
+           config: { active_dir: st.config.active_dir, new_per_day: st.config.new_per_day },
+           streak: st.streak };
+}
+
+function applyBetter(c, reps, lapses, ease, iv, due) {
+  reps = reps || 0;
+  if (reps > (c.reps || 0) || (reps === (c.reps || 0) && (due || 0) > (c.due_ts || 0))) {
+    c.reps = reps; c.lapses = lapses || 0; c.ease = ease; c.interval_days = iv; c.due_ts = due;
+  }
+}
+
+// Merge a cloud payload into the local state in place (max-progress). Handles both the
+// compact v2 format and any legacy full-state blob still stored from earlier versions.
+function applyCloud(st, cloud) {
+  if (!cloud) return st;
+  if (cloud.cards && !cloud.sched) return mergeStates(st, ensureDefaults(cloud));   // legacy full state
+  const byKey = new Map(st.cards.map(c => [c.word_id + ":" + c.dir, c]));
+  const sched = cloud.sched || {};
+  for (const key in sched) {
+    const c = byKey.get(key); if (!c) continue;    // word not in this device's seed yet — skip
+    const a = sched[key]; applyBetter(c, a[0], a[1], a[2], a[3], a[4]);
+  }
+  for (const mc of (cloud.manual || [])) {
+    const key = mc.word_id + ":" + mc.dir;
+    let c = byKey.get(key);
+    if (!c) { c = newCard(st.next_id++, mc, mc.dir); st.cards.push(c); byKey.set(key, c); }
+    applyBetter(c, mc.reps, mc.lapses, mc.ease, mc.interval_days, mc.due_ts);
+  }
+  for (const d of DIRECTIONS) {
+    st.intro_log[d] = mergeCounts(st.intro_log[d], (cloud.intro_log || {})[d]);
+    st.daily_log[d] = mergeDaily(st.daily_log[d], (cloud.daily_log || {})[d]);
+    const cs = (cloud.streak || {})[d];
+    if (cs && (cs.days || 0) > ((st.streak[d] || {}).days || 0)) st.streak[d] = cs;
+    const cn = ((cloud.config || {}).new_per_day || {})[d];
+    if (typeof cn === "number") st.config.new_per_day[d] = Math.max(st.config.new_per_day[d] || DEFAULT_NEW_PER_DAY, cn);
+  }
+  return st;
 }
 
 function importState(file) {
