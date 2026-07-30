@@ -68,6 +68,17 @@
            box-shadow: 0 6px 18px rgba(0,0,0,.5); max-width: 90vw;
            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .toast.show { opacity: 1; transform: translate(-50%, 0); }
+  .modal { position:fixed; inset:0; background:rgba(0,0,0,.6); display:flex; align-items:center; justify-content:center; z-index:200; padding:1rem; }
+  .modal[hidden] { display:none; }
+  .sheet { position:relative; background:var(--card); border:1px solid var(--border); border-radius:16px; padding:1.5rem 1.25rem; width:min(420px,100%); box-shadow:0 12px 40px rgba(0,0,0,.5); }
+  .sheet h2 { margin:.1rem 0 .6rem; font-size:1.25rem; }
+  .sheet-p { color:var(--muted); font-size:.92rem; line-height:1.45; margin:0 0 1rem; }
+  .sheet input { width:100%; background:var(--bg); color:var(--fg); border:1px solid var(--border); border-radius:10px; padding:.8rem; font-size:1.1rem; font-family:inherit; text-align:center; }
+  .sync-msg { color:var(--accent); font-size:.82rem; min-height:1.1rem; margin:.55rem 0; text-align:center; }
+  .sheet-primary { width:100%; background:var(--accent); color:#1a1d24; border:none; border-radius:10px; padding:.85rem; font-size:1.02rem; font-weight:600; cursor:pointer; font-family:inherit; margin-bottom:.5rem; }
+  .sheet-ghost { width:100%; background:transparent; color:var(--muted); border:1px solid var(--border); border-radius:10px; padding:.7rem; font-size:.9rem; cursor:pointer; font-family:inherit; }
+  .sheet-fine { color:var(--muted); font-size:.72rem; margin:.85rem 0 0; text-align:center; }
+  .sheet-x { position:absolute; top:.5rem; right:.5rem; background:transparent; border:none; color:var(--muted); font-size:1.1rem; cursor:pointer; min-width:auto; padding:.2rem .45rem; flex:0; }
   .streak { color: var(--accent); font-weight: 600; }
 </style>
 </head>
@@ -102,6 +113,25 @@
   </div>
 </footer>
 
+<div id="sync-modal" class="modal" hidden>
+  <div class="sheet">
+    <button id="sync-x" class="sheet-x" title="close">✕</button>
+    <div id="sync-form">
+      <h2>Save your progress ☁︎</h2>
+      <p class="sheet-p">Pick a code so your progress is saved and follows you to any device. Use the <b>same code</b> on your other phone; your partner uses a different one.</p>
+      <input id="sync-code" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="your code — e.g. sam">
+      <div id="sync-msg" class="sync-msg"></div>
+      <button id="sync-go" class="sheet-primary">Save &amp; sync</button>
+      <button id="sync-skip" class="sheet-ghost">Just study on this device</button>
+      <p class="sheet-fine">Remember your code — it&#39;s how you get your progress back.</p>
+    </div>
+    <div id="sync-done" hidden>
+      <h2>You&#39;re synced ✓</h2>
+      <p class="sheet-p">Your progress is saving to the cloud. Enter the same code on another device to pick up where you left off.</p>
+      <button id="sync-signout" class="sheet-ghost">Sign out on this device</button>
+    </div>
+  </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 "use strict";
@@ -132,10 +162,11 @@ let pushTimer = null;
 function initSupabase() {
   if (!window.supabase) return;                 // CDN blocked/offline -> local-only, no crash
   sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
-  sbClient.auth.onAuthStateChange((_evt, session) => {
+  sbClient.auth.onAuthStateChange((evt, session) => {
     sbSession = session;
     updateSyncUI();
     if (session) cloudPullMerge();
+    else if (evt === "INITIAL_SESSION" && !localStorage.getItem("deutsch_onboarded")) openSync();
   });
   updateSyncUI();
 }
@@ -153,28 +184,47 @@ function codeToCred(code) {
   return { email: slug + "@sync.deutschdutch.app", password: "sync:" + code };
 }
 
-async function syncClick() {
-  if (!sbClient) { alert("Sync isn't available right now (offline?)."); return; }
-  if (sbSession) {
-    if (confirm("Sign out on this device? Your progress stays safe in the cloud under your code.")) {
-      await sbClient.auth.signOut(); sbSession = null; updateSyncUI();
-    }
-    return;
-  }
-  const code = (prompt("Enter a sync code.\n\nUse the SAME code on every device to share that progress. Keep it secret — it is your password.") || "").trim();
-  if (!code) return;
-  if (code.length < 3) { alert("Please use a code of at least 3 characters."); return; }
+async function submitCode(code) {
   const cred = codeToCred(code);
   const res = await sbClient.auth.signInWithPassword(cred);
   if (res.error) {                                   // unknown code -> create it
     const su = await sbClient.auth.signUp(cred);
-    if (su.error) { toast("Sync error: " + su.error.message, 3200); return; }
-    if (!su.data.session) {
-      alert("Almost there — in Supabase, turn OFF 'Confirm email' (Authentication -> Providers -> Email), then tap Sync again. Codes then work instantly.");
-      return;
-    }
+    if (su.error) return { ok: false, msg: su.error.message };
+    if (!su.data.session) return { ok: false, msg: "Sync isn't switched on yet. (Owner: turn off ‘Confirm email’ in Supabase → Auth → Providers → Email.)" };
   }
-  // onAuthStateChange fires -> pull + merge automatically
+  return { ok: true };
+}
+
+function openSync() {
+  const modal = document.getElementById("sync-modal");
+  const form = document.getElementById("sync-form");
+  const done = document.getElementById("sync-done");
+  if (sbSession) { form.hidden = true; done.hidden = false; }
+  else {
+    form.hidden = false; done.hidden = true;
+    document.getElementById("sync-msg").textContent = sbClient ? "" : "You appear to be offline — try again when connected.";
+  }
+  modal.hidden = false;
+  if (!sbSession && sbClient) setTimeout(() => { const i = document.getElementById("sync-code"); if (i) i.focus(); }, 60);
+}
+
+function closeSync() { document.getElementById("sync-modal").hidden = true; }
+
+async function onSyncGo() {
+  const input = document.getElementById("sync-code");
+  const msg = document.getElementById("sync-msg");
+  const code = (input.value || "").trim();
+  if (code.length < 3) { msg.textContent = "Please use a code of at least 3 characters."; return; }
+  if (!sbClient) { msg.textContent = "Sync unavailable (offline?)."; return; }
+  msg.textContent = "Connecting…";
+  const r = await submitCode(code);
+  if (r.ok) { localStorage.setItem("deutsch_onboarded", "1"); msg.textContent = ""; input.value = ""; closeSync(); }
+  else { msg.textContent = r.msg; }
+}
+
+async function onSyncSignout() {
+  if (sbClient && sbSession) { await sbClient.auth.signOut(); sbSession = null; updateSyncUI(); }
+  closeSync();
 }
 
 async function cloudPullMerge() {
@@ -694,7 +744,12 @@ document.getElementById("addtoggle").onclick = () => {
   bar.hidden = !bar.hidden;
   if (!bar.hidden) document.getElementById("de").focus();
 };
-document.getElementById("sync").onclick = syncClick;
+document.getElementById("sync").onclick = openSync;
+document.getElementById("sync-go").onclick = onSyncGo;
+document.getElementById("sync-skip").onclick = () => { localStorage.setItem("deutsch_onboarded", "1"); closeSync(); };
+document.getElementById("sync-x").onclick = closeSync;
+document.getElementById("sync-signout").onclick = onSyncSignout;
+document.getElementById("sync-code").addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); onSyncGo(); } });
 document.getElementById("import").onclick = () => document.getElementById("importfile").click();
 document.getElementById("importfile").onchange = (e) => { const f = e.target.files[0]; if (f) importState(f); e.target.value = ""; };
 
