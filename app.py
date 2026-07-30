@@ -385,7 +385,7 @@ let revealed = false;
 let lastStats = null;
 let sessionCombo = 0;
 
-const DIR_LABEL = { de2nl: "🇳🇱 Learning Dutch", nl2de: "🇩🇪 Learning German" };
+const DIR_LABEL = { de2nl: "Currently learning Dutch 🇳🇱", nl2de: "Currently learning German 🇩🇪" };
 
 async function api(path, opts) {
   const r = await fetch(path, opts);
