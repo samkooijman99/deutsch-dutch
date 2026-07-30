@@ -163,7 +163,7 @@ async function syncClick() {
   }
   const code = (prompt("Enter a sync code.\n\nUse the SAME code on every device to share that progress. Keep it secret — it is your password.") || "").trim();
   if (!code) return;
-  if (code.length < 4) { alert("Please use a code of at least 4 characters."); return; }
+  if (code.length < 3) { alert("Please use a code of at least 3 characters."); return; }
   const cred = codeToCred(code);
   const res = await sbClient.auth.signInWithPassword(cred);
   if (res.error) {                                   // unknown code -> create it
