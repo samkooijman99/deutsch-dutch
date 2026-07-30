@@ -1,4 +1,6 @@
-# Deutsch ↔ Nederlands
+# D(e)ut(s)ch
+
+*Read the letters in parentheses → **Deutsch** (German); skip them → **Dutch**. One deck, both directions.*
 
 Tiny Anki-style flashcard app for German↔Dutch vocabulary — a clone of the
 `spanishh` app, with a **direction toggle**. Same SM-2 scheduler; two ways to run.

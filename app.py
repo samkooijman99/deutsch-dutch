@@ -310,7 +310,7 @@ INDEX_HTML = r"""<!doctype html>
 <html lang="de">
 <head>
 <meta charset="utf-8">
-<title>Deutsch — Karteikarten</title>
+<title>D(e)ut(s)ch — Karteikarten</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
   :root { --bg:#0f1115; --fg:#e8e8ea; --muted:#8b8f99; --accent:#ffb86b; --card:#1a1d24; --border:#262a33; }
@@ -363,7 +363,7 @@ INDEX_HTML = r"""<!doctype html>
 </head>
 <body>
 <header>
-  <h1>Deutsch ↔ Nederlands</h1>
+  <h1 title="Deutsch with the (e) and (s), Dutch without — one deck for both">D(e)ut(s)ch</h1>
   <button id="dir-toggle" title="Switch learner — each has fully independent progress">…</button>
   <div class="stats" id="stats">…</div>
 </header>
