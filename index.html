@@ -236,8 +236,14 @@ function cloudPush(immediate) {
   if (!sbClient || !syncCode) return;
   clearTimeout(pushTimer);
   const doPush = async function () {
-    try { await sbClient.rpc("save_deck", { p_code: syncCode, p_state: state }); }
-    catch (e) { console.warn("cloud push failed", e); }
+    try {
+      const res = await sbClient.rpc("get_deck", { p_code: syncCode });   // merge before write
+      if (!res.error && res.data) {
+        state = mergeStates(state, ensureDefaults(res.data));
+        try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+      }
+      await sbClient.rpc("save_deck", { p_code: syncCode, p_state: state });
+    } catch (e) { console.warn("cloud push failed", e); }
   };
   if (immediate) doPush(); else pushTimer = setTimeout(doPush, 1500);
 }
@@ -524,6 +530,12 @@ function dutchPhrase(c) {
   return (c.dutch_article ? c.dutch_article + " " : "") + c.dutch;
 }
 
+function germanDisplay(c) {
+  const w = c.german || "";
+  const noun = c.pos === "Substantiv" || c.pos === "Eigenname";   // German capitalizes nouns
+  return (noun && w) ? w.charAt(0).toUpperCase() + w.slice(1) : w;
+}
+
 function refreshStats() {
   const s = computeStats();
   document.getElementById("dir-toggle").textContent = DIR_LABEL[s.dir] || s.dir;
@@ -581,7 +593,7 @@ function render() {
     return;
   }
   const tag = current.level ? `${current.level}.${current.sublevel || 1}` : "—";
-  const front = current.dir === "de2nl" ? current.german : dutchPhrase(current);
+  const front = current.dir === "de2nl" ? germanDisplay(current) : dutchPhrase(current);
   if (!revealed) {
     m.innerHTML = `
       <div class="card">
@@ -596,7 +608,7 @@ function render() {
       const alt = current.dutch_alt ? `<div class="alt">also: ${escapeHtml(current.dutch_alt)}</div>` : "";
       answerHtml = `<div class="answer">${escapeHtml(dutchPhrase(current))}</div>${alt}`;
     } else {
-      answerHtml = `<div class="answer">${escapeHtml(current.german)}</div>`;
+      answerHtml = `<div class="answer">${escapeHtml(germanDisplay(current))}</div>`;
     }
     m.innerHTML = `
       <div class="card">
@@ -621,7 +633,7 @@ function reveal() { revealed = true; render(); }
 
 function grade(rating) {
   if (!current) return;
-  const word = current.dir === "de2nl" ? current.german : dutchPhrase(current);
+  const word = current.dir === "de2nl" ? germanDisplay(current) : dutchPhrase(current);
   const wasMature = current.interval_days >= 21;
   const wasNew = current.reps === 0;
   const dir = current.dir;
