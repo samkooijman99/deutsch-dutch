@@ -74,3 +74,18 @@ progress in `data.json` / `localStorage` is preserved (cards merge by `word_id`+
 
 Use the **Add** form (German + Dutch + level/sublevel) — it creates both direction
 cards. The server writes to `data.json`; the static app writes to `localStorage`.
+
+## Cloud sync (optional, Supabase)
+
+The static app can sync each learner's progress to Supabase so it survives
+clearing browser data and follows you across phones. Tap **☁︎ Sync** and sign in
+with an email magic link.
+
+- The `anon` key embedded in `index.html` is **public by design** — Row-Level
+  Security (see the `deck_state` table policies) restricts every row to its owner
+  (`auth.uid() = user_id`), so the public key cannot read or write anyone else's
+  data. The `service_role` key must never be committed.
+- On sign-in the app pulls the cloud state and **merges** it with local
+  (`mergeStates`, by `word_id`+`dir`, keeping the more-studied card) — non-destructive.
+- **Export/Import** buttons provide file backup/restore as an offline fallback.
+- The `app.py` desktop server persists to `data.json` only (no cloud).

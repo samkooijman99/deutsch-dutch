@@ -80,9 +80,12 @@
 <main id="main"><div class="empty">Loading…</div></main>
 <div class="toolbar">
   <button id="addtoggle" title="add a word">＋ Word</button>
+  <button id="sync" title="Sign in to sync across your devices">☁︎ Sync</button>
   <button id="export" title="export progress">Export</button>
+  <button id="import" title="import a backup file">Import</button>
   <button id="reset" title="reset all progress">Reset</button>
 </div>
+<input type="file" id="importfile" accept="application/json" hidden>
 <footer id="addbar" hidden>
   <div class="row">
     <input id="de" placeholder="duits" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" list="de-suggest">
@@ -99,6 +102,7 @@
   </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 "use strict";
 
@@ -116,6 +120,113 @@ let wordbank = null;       // lazy-loaded array
 let suggestTimer = null;
 let relearnQueue = [];     // ephemeral [{id, dir, gradesLeft}], lost on reload
 let sessionCombo = 0;      // ephemeral consecutive-good streak
+
+// ---------- Supabase cloud sync (optional) ----------
+// The anon key below is PUBLIC by design; Row-Level Security + login guard the data.
+const SUPABASE_URL = "https://tgbzqmdjgsjillqyqowd.supabase.co";
+const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnYnpxbWRqZ3NqaWxscXlxb3dkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU0MzE0ODAsImV4cCI6MjEwMTAwNzQ4MH0.2RTtOgIRo40Dk6694yDGKRLf7_YSBDmnvhQTuyVPqhI";
+let sbClient = null;
+let sbSession = null;
+let pushTimer = null;
+
+function initSupabase() {
+  if (!window.supabase) return;                 // CDN blocked/offline -> local-only, no crash
+  sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+  sbClient.auth.onAuthStateChange((_evt, session) => {
+    sbSession = session;
+    updateSyncUI();
+    if (session) cloudPullMerge();
+  });
+  updateSyncUI();
+}
+
+function updateSyncUI() {
+  const b = document.getElementById("sync");
+  if (!b) return;
+  if (sbSession) { b.textContent = "☁︎ " + (sbSession.user.email || "synced"); b.title = "Signed in — tap to sign out"; }
+  else { b.textContent = "☁︎ Sync"; b.title = "Sign in to sync across your devices"; }
+}
+
+async function syncClick() {
+  if (!sbClient) { alert("Sync isn't available right now (offline?)."); return; }
+  if (sbSession) {
+    if (confirm(`Synced as ${sbSession.user.email}. Sign out? Local progress stays on this device.`)) {
+      await sbClient.auth.signOut(); sbSession = null; updateSyncUI();
+    }
+    return;
+  }
+  const email = (prompt("Your email — we'll send a one-tap sign-in link so progress syncs across your phones:") || "").trim();
+  if (!email) return;
+  const { error } = await sbClient.auth.signInWithOtp({ email, options: { emailRedirectTo: location.href.split("#")[0] } });
+  toast(error ? ("Sign-in error: " + error.message) : "✉️ Check your email for the sign-in link", 3200);
+}
+
+async function cloudPullMerge() {
+  if (!sbClient || !sbSession) return;
+  try {
+    const { data, error } = await sbClient.from("deck_state").select("state").eq("user_id", sbSession.user.id).maybeSingle();
+    if (error) { console.warn("cloud pull failed", error); return; }
+    if (data && data.state) {
+      state = mergeStates(state, ensureDefaults(data.state));
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+      loadNext();
+    }
+    cloudPush(true);            // ensure the cloud holds the merged result
+    toast("☁︎ Synced");
+  } catch (e) { console.warn("pull error", e); }
+}
+
+function cloudPush(immediate) {
+  if (!sbClient || !sbSession) return;
+  clearTimeout(pushTimer);
+  const doPush = async () => {
+    try {
+      await sbClient.from("deck_state").upsert({ user_id: sbSession.user.id, state, updated_at: new Date().toISOString() });
+    } catch (e) { console.warn("cloud push failed", e); }
+  };
+  if (immediate) doPush(); else pushTimer = setTimeout(doPush, 1500);
+}
+
+// Merge two full states without losing progress: per (word_id,dir) keep the more-studied card.
+function mergeCounts(x, y) { const o = Object.assign({}, x || {}); const yy = y || {}; for (const k in yy) o[k] = Math.max(o[k] || 0, yy[k] || 0); return o; }
+function mergeDaily(x, y) { x = x || {}; y = y || {}; const o = {}; for (const k of new Set(Object.keys(x).concat(Object.keys(y)))) { const a = x[k] || {}, b = y[k] || {}; o[k] = { reviews: Math.max(a.reviews || 0, b.reviews || 0), mastered: Math.max(a.mastered || 0, b.mastered || 0) }; } return o; }
+function mergeStates(a, b) {
+  const byKey = new Map();
+  const consider = (c) => {
+    if (!c || c.word_id == null || !c.dir) return;
+    const k = c.word_id + ":" + c.dir;
+    const p = byKey.get(k);
+    if (!p || (c.reps || 0) > (p.reps || 0) || ((c.reps || 0) === (p.reps || 0) && (c.due_ts || 0) > (p.due_ts || 0))) byKey.set(k, c);
+  };
+  (a.cards || []).forEach(consider); (b.cards || []).forEach(consider);
+  const cards = Array.from(byKey.values());
+  let id = 1; for (const c of cards) c.id = id++;
+  const merged = { next_id: id, cards, config: { active_dir: (a.config && a.config.active_dir) || "de2nl", new_per_day: {} }, intro_log: {}, daily_log: {}, streak: {} };
+  for (const d of DIRECTIONS) {
+    const an = (a.config && a.config.new_per_day && a.config.new_per_day[d]) || DEFAULT_NEW_PER_DAY;
+    const bn = (b.config && b.config.new_per_day && b.config.new_per_day[d]) || DEFAULT_NEW_PER_DAY;
+    merged.config.new_per_day[d] = Math.max(an, bn);
+    merged.intro_log[d] = mergeCounts((a.intro_log || {})[d], (b.intro_log || {})[d]);
+    merged.daily_log[d] = mergeDaily((a.daily_log || {})[d], (b.daily_log || {})[d]);
+    const sa = (a.streak || {})[d] || { days: 0, last_date: null };
+    const sb2 = (b.streak || {})[d] || { days: 0, last_date: null };
+    merged.streak[d] = (sa.days >= sb2.days) ? sa : sb2;
+  }
+  return ensureDefaults(merged);
+}
+
+function importState(file) {
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const incoming = ensureDefaults(JSON.parse(reader.result));
+      state = mergeStates(state, incoming);
+      saveState(); loadNext();
+      toast("✅ Backup imported & merged");
+    } catch (e) { alert("Import failed: " + e); }
+  };
+  reader.readAsText(file);
+}
 
 // --------- state ----------
 
@@ -165,6 +276,7 @@ function toast(html, ms = 2200) {
 function saveState() {
   try { localStorage.setItem(KEY, JSON.stringify(state)); }
   catch (e) { alert("Couldn't save progress (storage full?). " + e); }
+  cloudPush();
 }
 
 function ensureDefaults(s) {
@@ -566,6 +678,9 @@ document.getElementById("addtoggle").onclick = () => {
   bar.hidden = !bar.hidden;
   if (!bar.hidden) document.getElementById("de").focus();
 };
+document.getElementById("sync").onclick = syncClick;
+document.getElementById("import").onclick = () => document.getElementById("importfile").click();
+document.getElementById("importfile").onchange = (e) => { const f = e.target.files[0]; if (f) importState(f); e.target.value = ""; };
 
 for (const id of ["de", "nl", "sub"]) {
   document.getElementById(id).addEventListener("keydown", e => {
@@ -597,6 +712,7 @@ document.addEventListener("keydown", e => {
   state = await loadState();
   saveState();
   loadNext();
+  initSupabase();
 })();
 </script>
 </body>
