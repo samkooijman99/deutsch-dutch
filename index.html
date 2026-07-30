@@ -73,7 +73,7 @@
 <body>
 <header>
   <h1>Deutsch ↔ Nederlands</h1>
-  <button id="dir-toggle" title="Switch study direction">…</button>
+  <button id="dir-toggle" title="Switch learner — each has fully independent progress">…</button>
   <div class="stats" id="stats">…</div>
 </header>
 <main id="main"><div class="empty">Loading…</div></main>
@@ -105,7 +105,7 @@ const LEVEL_ORDER = {A1:1, A2:2, B1:3, B2:4, C1:5, C2:6};
 const DEFAULT_NEW_PER_DAY = 15; // per direction; click "today N/M" to change
 const RELEARN_GAP = 3;          // re-show a failed card after this many other grades
 const DIRECTIONS = ["de2nl", "nl2de"];
-const DIR_LABEL = { de2nl: "🇩🇪 → 🇳🇱", nl2de: "🇳🇱 → 🇩🇪" };
+const DIR_LABEL = { de2nl: "🇳🇱 Learning Dutch", nl2de: "🇩🇪 Learning German" };
 
 let state = null;
 let current = null;
@@ -133,19 +133,18 @@ function activeDir() { return (state.config && state.config.active_dir) || "de2n
 function newIntrosToday(dir) {
   return (state.intro_log && state.intro_log[dir] && state.intro_log[dir][todayKey()]) || 0;
 }
-function newPerDay() {
-  return (state.config && state.config.new_per_day) || DEFAULT_NEW_PER_DAY;
+function newPerDay(dir) {
+  return (state.config.new_per_day && state.config.new_per_day[dir]) || DEFAULT_NEW_PER_DAY;
 }
-function todayLog() {
-  if (!state.daily_log) state.daily_log = {};
+function todayLog(dir) {
+  const dl = state.daily_log[dir];
   const k = todayKey();
-  if (!state.daily_log[k]) state.daily_log[k] = { reviews: 0, mastered: 0 };
-  return state.daily_log[k];
+  if (!dl[k]) dl[k] = { reviews: 0, mastered: 0 };
+  return dl[k];
 }
-function bumpStreak() {
-  if (!state.streak) state.streak = { last_date: null, days: 0 };
+function bumpStreak(dir) {
+  const s = state.streak[dir];
   const today = todayKey();
-  const s = state.streak;
   if (s.last_date === today) return false;
   s.days = (s.last_date === yesterdayKey()) ? s.days + 1 : 1;
   s.last_date = today;
@@ -167,14 +166,27 @@ function saveState() {
 }
 
 function ensureDefaults(s) {
-  if (!s.intro_log || DIRECTIONS.some(d => typeof s.intro_log[d] !== "object")) {
-    s.intro_log = { de2nl: {}, nl2de: {} };
-  }
   if (!s.config) s.config = {};
-  if (typeof s.config.new_per_day !== "number") s.config.new_per_day = DEFAULT_NEW_PER_DAY;
   if (!DIRECTIONS.includes(s.config.active_dir)) s.config.active_dir = "de2nl";
-  if (!s.daily_log) s.daily_log = {};
-  if (!s.streak) s.streak = { last_date: null, days: 0 };
+  // Every progress record is kept PER DIRECTION so the two learners stay independent.
+  const perDir = (v) => {
+    const out = {};
+    for (const d of DIRECTIONS) out[d] = (v && typeof v[d] === "object" && v[d]) ? v[d] : {};
+    return out;
+  };
+  s.intro_log = perDir(s.intro_log);
+  s.daily_log = perDir(s.daily_log);
+  const sk = {};
+  for (const d of DIRECTIONS) {
+    sk[d] = (s.streak && s.streak[d] && typeof s.streak[d].days === "number")
+      ? s.streak[d] : { last_date: null, days: 0 };
+  }
+  s.streak = sk;
+  let npd = s.config.new_per_day;
+  if (typeof npd === "number") { const v = npd; npd = {}; for (const d of DIRECTIONS) npd[d] = v; }
+  if (!npd || typeof npd !== "object") npd = {};
+  for (const d of DIRECTIONS) if (typeof npd[d] !== "number") npd[d] = DEFAULT_NEW_PER_DAY;
+  s.config.new_per_day = npd;
   return s;
 }
 
@@ -325,8 +337,8 @@ function refreshStats() {
   const s = computeStats();
   document.getElementById("dir-toggle").textContent = DIR_LABEL[s.dir] || s.dir;
   const today = newIntrosToday(s.dir);
-  const cap = newPerDay();
-  const streakDays = (state.streak && state.streak.days) || 0;
+  const cap = newPerDay(s.dir);
+  const streakDays = (state.streak[s.dir] && state.streak[s.dir].days) || 0;
   const streakHtml = streakDays >= 2 ? `<span class="streak" title="day streak">🔥 ${streakDays}d</span>` : "";
   document.getElementById("stats").innerHTML =
     `${streakHtml}<span>due <b>${s.due}</b></span><span>new ${s.new}</span><span>learn ${s.learning}</span><span>mature ${s.mature}</span><span>tot ${s.total}</span><span id="today-cap" title="tap to change daily new-card limit" style="cursor:pointer;text-decoration:underline dotted">today ${today}/${cap}</span>`;
@@ -336,12 +348,12 @@ function refreshStats() {
 
 function editDailyCap() {
   const cur = newPerDay();
-  const v = prompt(`New cards per day, per direction (currently ${cur}). Set to a high number like 999 for unlimited.`, String(cur));
+  const v = prompt(`New cards per day for this learner (currently ${cur}). Set to a high number like 999 for unlimited.`, String(cur));
   if (v === null) return;
   const n = parseInt(v, 10);
   if (!Number.isFinite(n) || n < 0) return;
   if (!state.config) state.config = {};
-  state.config.new_per_day = n;
+  state.config.new_per_day[activeDir()] = n;
   saveState();
   refreshStats();
   if (!current) loadNext();
@@ -359,10 +371,10 @@ function render() {
   if (!current) {
     const dir = activeDir();
     const remainingNew = state.cards.filter(c => c.dir === dir && c.reps === 0 && c.dutch).length;
-    const capped = remainingNew > 0 && newIntrosToday(dir) >= newPerDay();
+    const capped = remainingNew > 0 && newIntrosToday(dir) >= newPerDay(dir);
     if (capped) {
       m.innerHTML = `<div class="empty"><h2>Daily new-card limit reached</h2>
-        <p>${newIntrosToday(dir)} new cards introduced today (cap ${newPerDay()}) for this direction.
+        <p>${newIntrosToday(dir)} new cards introduced today (cap ${newPerDay(dir)}) for this learner.
         ${remainingNew} new cards still in the deck. Reviews are caught up.</p>
         <div class="btns" style="margin-top:1rem"><button id="more-btn">+10 more today</button><button id="raise-btn">Change daily cap…</button></div></div>`;
       document.getElementById("more-btn").onclick = () => {
@@ -373,7 +385,7 @@ function render() {
       };
       document.getElementById("raise-btn").onclick = editDailyCap;
     } else {
-      m.innerHTML = `<div class="empty"><h2>All caught up 🎉</h2><p>No cards due in this direction. Flip direction above, add words below, or come back later.</p></div>`;
+      m.innerHTML = `<div class="empty"><h2>All caught up 🎉</h2><p>No cards due for this learner. Switch learner above, add words below, or come back later.</p></div>`;
     }
     return;
   }
@@ -424,20 +436,20 @@ function grade(rating) {
   const dir = current.dir;
   review(current, rating);
 
-  const log = todayLog();
+  const log = todayLog(dir);
   log.reviews = (log.reviews || 0) + 1;
   const isNowMature = current.interval_days >= 21;
   const justMastered = !wasMature && isNowMature;
   if (justMastered) log.mastered = (log.mastered || 0) + 1;
-  const streakBumped = bumpStreak();
+  const streakBumped = bumpStreak(dir);
 
   sessionCombo = rating >= 2 ? sessionCombo + 1 : 0;
   saveState();
 
   if (justMastered) {
     toast(`🌟 Mastered: ${escapeHtml(word)}`);
-  } else if (streakBumped && state.streak.days >= 2) {
-    toast(`🔥 Day ${state.streak.days} streak!`);
+  } else if (streakBumped && state.streak[dir].days >= 2) {
+    toast(`🔥 Day ${state.streak[dir].days} streak!`);
   } else if (wasNew && newIntrosToday(dir) > 0 && newIntrosToday(dir) % 5 === 0) {
     toast(`🌱 ${newIntrosToday(dir)} new words today!`);
   } else if ([25, 50, 100, 200].includes(log.reviews)) {

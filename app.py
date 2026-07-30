@@ -64,49 +64,66 @@ def yesterday_key() -> str:
     return time.strftime("%Y-%m-%d", time.localtime(time.time() - DAY))
 
 
+def _per_dir(value) -> dict:
+    """Coerce a value into {"de2nl": {...}, "nl2de": {...}}, keeping usable parts."""
+    src = value if isinstance(value, dict) else {}
+    return {d: (src[d] if isinstance(src.get(d), dict) else {}) for d in DIRECTIONS}
+
+
 def ensure_state_defaults(state: dict) -> None:
-    """Backfill new fields on existing data.json without disturbing card progress."""
-    if "intro_log" not in state or not isinstance(state.get("intro_log"), dict) \
-            or set(state["intro_log"].keys()) != set(DIRECTIONS):
-        # intro_log is per-direction: {"de2nl": {date: n}, "nl2de": {date: n}}
-        old = state.get("intro_log") if isinstance(state.get("intro_log"), dict) else {}
-        state["intro_log"] = {d: (old.get(d, {}) if isinstance(old.get(d), dict) else {})
-                              for d in DIRECTIONS}
+    """Backfill fields on existing data.json without disturbing card progress.
+    ALL progress (intro_log, daily_log, streak, pace) is tracked PER DIRECTION so
+    the two learners — one studying German, one studying Dutch — stay independent."""
     if "config" not in state:
         state["config"] = {}
-    if not isinstance(state["config"].get("new_per_day"), int):
-        state["config"]["new_per_day"] = DEFAULT_NEW_PER_DAY
     if state["config"].get("active_dir") not in DIRECTIONS:
         state["config"]["active_dir"] = "de2nl"
-    if "daily_log" not in state:
-        state["daily_log"] = {}
-    if "streak" not in state:
-        state["streak"] = {"last_date": None, "days": 0}
+    # new_per_day is per direction (each learner sets their own pace).
+    npd = state["config"].get("new_per_day")
+    if isinstance(npd, int):                       # migrate legacy shared int
+        npd = {d: npd for d in DIRECTIONS}
+    if not isinstance(npd, dict):
+        npd = {}
+    state["config"]["new_per_day"] = {
+        d: (npd.get(d) if isinstance(npd.get(d), int) else DEFAULT_NEW_PER_DAY)
+        for d in DIRECTIONS}
+    # intro_log / daily_log: one independent record per direction.
+    state["intro_log"] = _per_dir(state.get("intro_log"))
+    state["daily_log"] = _per_dir(state.get("daily_log"))
+    # streak: one independent day-streak per direction.
+    sk = state.get("streak") if isinstance(state.get("streak"), dict) else {}
+    state["streak"] = {
+        d: (sk[d] if isinstance(sk.get(d), dict) and "days" in sk[d]
+            else {"last_date": None, "days": 0})
+        for d in DIRECTIONS}
 
 
 def active_dir(state: dict) -> str:
     return state.get("config", {}).get("active_dir", "de2nl")
 
 
-def today_log(state: dict) -> dict:
+# --- per-direction progress accessors: `d` selects which learner's track ---
+
+def today_log(state: dict, d: str) -> dict:
+    dl = state["daily_log"][d]
     k = today_key()
-    if k not in state["daily_log"]:
-        state["daily_log"][k] = {"reviews": 0, "mastered": 0}
-    return state["daily_log"][k]
+    if k not in dl:
+        dl[k] = {"reviews": 0, "mastered": 0}
+    return dl[k]
 
 
 def new_intros_today(state: dict, d: str) -> int:
-    return state.get("intro_log", {}).get(d, {}).get(today_key(), 0)
+    return state["intro_log"][d].get(today_key(), 0)
 
 
-def new_per_day(state: dict) -> int:
-    return state.get("config", {}).get("new_per_day", DEFAULT_NEW_PER_DAY)
+def new_per_day(state: dict, d: str) -> int:
+    return state["config"]["new_per_day"].get(d, DEFAULT_NEW_PER_DAY)
 
 
-def bump_streak(state: dict) -> bool:
-    """Update day-streak; returns True if today is the first review of a new day."""
+def bump_streak(state: dict, d: str) -> bool:
+    """Update direction d's day-streak; True if it's the first review of a new day."""
+    s = state["streak"][d]
     today = today_key()
-    s = state["streak"]
     if s["last_date"] == today:
         return False
     if s["last_date"] == yesterday_key():
@@ -203,13 +220,13 @@ def review(card: dict, rating: int, state: dict) -> dict:
         k = today_key()
         state["intro_log"][d][k] = state["intro_log"][d].get(k, 0) + 1
 
-    log = today_log(state)
+    log = today_log(state, d)
     log["reviews"] = log.get("reviews", 0) + 1
     is_mature = card["interval_days"] >= 21
     if not was_mature and is_mature:
         log["mastered"] = log.get("mastered", 0) + 1
 
-    streak_bumped = bump_streak(state)
+    streak_bumped = bump_streak(state, d)
 
     for r in RELEARN_QUEUE:
         r["grades_left"] -= 1
@@ -220,7 +237,7 @@ def review(card: dict, rating: int, state: dict) -> dict:
         "card": card,
         "mastered": (not was_mature) and is_mature,
         "streak_bumped": streak_bumped,
-        "streak_days": state["streak"]["days"],
+        "streak_days": state["streak"][d]["days"],
         "new_today": new_intros_today(state, d),
         "reviews_today": log["reviews"],
         "was_new": was_new,
@@ -249,7 +266,7 @@ def pick_due(state: dict) -> dict | None:
         review_due.sort(key=lambda c: (-c["lapses"], c["due_ts"]))
         return review_due[0]
     # 3. New cards, capped per local day per direction.
-    if new_intros_today(state, d) < new_per_day(state):
+    if new_intros_today(state, d) < new_per_day(state, d):
         new_cards = [c for c in state["cards"]
                      if c["dir"] == d and c["reps"] == 0 and c.get("dutch")]
         if new_cards:
@@ -273,16 +290,16 @@ def stats(state: dict) -> dict:
     learning = sum(1 for c in cards if c["interval_days"] < 1 and c["reps"] > 0)
     new = sum(1 for c in cards if c["reps"] == 0)
     mature = sum(1 for c in cards if c["interval_days"] >= 21)
-    log = state.get("daily_log", {}).get(today_key(), {})
+    log = state["daily_log"][d].get(today_key(), {})
     return {
         "dir": d,
         "total": len(cards), "due": due, "new": new,
         "learning": learning, "mature": mature,
         "new_today": new_intros_today(state, d),
-        "new_per_day": new_per_day(state),
+        "new_per_day": new_per_day(state, d),
         "reviews_today": log.get("reviews", 0),
         "mastered_today": log.get("mastered", 0),
-        "streak_days": state.get("streak", {}).get("days", 0),
+        "streak_days": state["streak"][d]["days"],
     }
 
 
@@ -347,7 +364,7 @@ INDEX_HTML = r"""<!doctype html>
 <body>
 <header>
   <h1>Deutsch ↔ Nederlands</h1>
-  <button id="dir-toggle" title="Switch study direction">…</button>
+  <button id="dir-toggle" title="Switch learner — each has fully independent progress">…</button>
   <div class="stats" id="stats">…</div>
 </header>
 <main id="main"><div class="empty">Loading…</div></main>
@@ -368,7 +385,7 @@ let revealed = false;
 let lastStats = null;
 let sessionCombo = 0;
 
-const DIR_LABEL = { de2nl: "🇩🇪 → 🇳🇱", nl2de: "🇳🇱 → 🇩🇪" };
+const DIR_LABEL = { de2nl: "🇳🇱 Learning Dutch", nl2de: "🇩🇪 Learning German" };
 
 async function api(path, opts) {
   const r = await fetch(path, opts);
@@ -391,7 +408,7 @@ async function refreshStats() {
 
 async function editDailyCap() {
   const cur = lastStats ? lastStats.new_per_day : 15;
-  const v = prompt(`New cards per day, per direction (currently ${cur}). Use a high number like 999 for unlimited.`, String(cur));
+  const v = prompt(`New cards per day for this learner (currently ${cur}). Use a high number like 999 for unlimited.`, String(cur));
   if (v === null) return;
   const n = parseInt(v, 10);
   if (!Number.isFinite(n) || n < 0) return;
@@ -430,11 +447,11 @@ function render() {
     const capped = lastStats && lastStats.new > 0 && lastStats.new_today >= lastStats.new_per_day;
     if (capped) {
       m.innerHTML = `<div class="empty"><h2>Daily new-card limit reached</h2>
-        <p>${lastStats.new_today} new cards introduced today (cap ${lastStats.new_per_day}) for this direction.
+        <p>${lastStats.new_today} new cards introduced today (cap ${lastStats.new_per_day}) for this learner.
         ${lastStats.new} new cards still in the deck. Reviews are caught up.</p>
         <div class="btns" style="margin-top:1rem"><button onclick="loadMore()">+10 more today</button><button onclick="editDailyCap()">Change cap…</button></div></div>`;
     } else {
-      m.innerHTML = `<div class="empty"><h2>All caught up 🎉</h2><p>No cards due right now in this direction. Try the other direction, add words below, or come back later.</p></div>`;
+      m.innerHTML = `<div class="empty"><h2>All caught up 🎉</h2><p>No cards due right now for this learner. Switch learner above, add words below, or come back later.</p></div>`;
     }
     return;
   }
@@ -636,7 +653,7 @@ class Handler(BaseHTTPRequestHandler):
                 return
             with LOCK:
                 state = load_state()
-                state["config"]["new_per_day"] = n
+                state["config"]["new_per_day"][active_dir(state)] = n
                 save_state(state)
             self._send_json({"ok": True, "new_per_day": n})
             return
