@@ -16,7 +16,7 @@ FREQ_PATH = os.path.join(ROOT, "de_full.txt")
 SEED_PATH = os.path.join(ROOT, "seed.json")
 WORDBANK_PATH = os.path.join(ROOT, "wordbank.txt")
 
-DECK_SIZE = 1000          # number of vocab words -> 2x cards. Raise freely.
+DECK_SIZE = 5000          # number of vocab words -> 2x cards. Raise freely.
 WORDBANK_SIZE = 50_000    # German words offered for Add-form autocomplete.
 
 GERMAN_RE = re.compile(r"^[a-zäöüß]+$")
