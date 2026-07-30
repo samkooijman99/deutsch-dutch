@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Deutsch — Karteikarten</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0f1115">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f1115'/><text x='50' y='66' font-family='system-ui' font-size='52' font-weight='600' text-anchor='middle' fill='%23ffb86b'>D</text></svg>">
+<style>
+  :root { --bg:#0f1115; --fg:#e8e8ea; --muted:#8b8f99; --accent:#ffb86b; --card:#1a1d24; --border:#262a33; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin:0; height:100%; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro", system-ui, sans-serif;
+         background:var(--bg); color:var(--fg); display:flex; flex-direction:column;
+         min-height:100vh; min-height:100dvh; padding-bottom: env(safe-area-inset-bottom); }
+  header { padding:.85rem 1rem; border-bottom:1px solid var(--border);
+           display:flex; justify-content:space-between; align-items:center; gap:.6rem;
+           padding-top: calc(.85rem + env(safe-area-inset-top)); }
+  header h1 { margin:0; font-size:1.05rem; font-weight:600; letter-spacing:.02em; white-space:nowrap; }
+  .stats { color:var(--muted); font-size:.78rem; font-variant-numeric:tabular-nums; text-align:right; }
+  .stats span { margin-left:.65rem; }
+  #dir-toggle { background:var(--card); color:var(--fg); border:1px solid var(--border); border-radius:999px;
+                padding:.3rem .7rem; cursor:pointer; font-size:.85rem; font-family:inherit; white-space:nowrap;
+                touch-action:manipulation; }
+  #dir-toggle:active { background:#222633; }
+  main { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+         padding:1.25rem 1rem; gap: 1rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px;
+          width:min(560px, 100%); padding:2rem 1.25rem; text-align:center; min-height:220px;
+          display:flex; flex-direction:column; justify-content:center; gap:.75rem; }
+  .word { font-size: clamp(1.8rem, 7vw, 2.6rem); font-weight:600; word-break:break-word; }
+  .answer { font-size: clamp(1.2rem, 5vw, 1.7rem); color:var(--accent); }
+  .alt { color:var(--muted); font-size: clamp(.85rem, 3.5vw, 1rem); }
+  .hint { color:var(--muted); font-size:.8rem; }
+  .badge { display:inline-block; align-self:center; font-size:.7rem; letter-spacing:.06em;
+           color:var(--muted); border:1px solid var(--border); border-radius:999px;
+           padding:.15rem .55rem; font-variant-numeric:tabular-nums; }
+  .btns { display:flex; gap:.4rem; flex-wrap:wrap; justify-content:center; width:min(560px, 100%); }
+  button { background:var(--card); color:var(--fg); border:1px solid var(--border);
+           padding:.85rem .9rem; border-radius:10px; cursor:pointer;
+           font-size:.95rem; font-family:inherit; flex:1; min-width:80px;
+           touch-action: manipulation; }
+  button:active { background:#222633; }
+  button.show { background:var(--accent); color:#1a1d24; border-color:var(--accent); flex:1; }
+  .r0 { color:#ff6b6b; } .r1 { color:#f8d36b; } .r2 { color:#7bd88f; } .r3 { color:#6bb7ff; }
+  .empty { text-align:center; color:var(--muted); padding: 1rem; }
+  .empty h2 { color:var(--fg); margin: 0 0 .5rem; }
+  footer { border-top:1px solid var(--border); padding:.6rem .75rem;
+           display:grid; gap:.4rem; grid-template-columns: 1fr 1fr; }
+  footer .row { display:flex; gap:.4rem; grid-column: 1 / -1; }
+  footer input, footer select { background:var(--bg); color:var(--fg); border:1px solid var(--border);
+                 padding:.55rem .65rem; border-radius:8px; font-family:inherit; font-size:.95rem;
+                 min-width: 0; flex:1; }
+  footer #sub { width: 4rem; flex:0 0 4rem; }
+  footer #lvl { flex: 0 0 auto; }
+  footer button#add { flex: 0 0 auto; padding:.55rem 1rem; }
+  kbd { background:var(--bg); border:1px solid var(--border); border-radius:4px; padding:1px 5px; font-size:.7rem; }
+  .toolbar { display:flex; gap:.4rem; padding:0 1rem .5rem; justify-content:flex-end; }
+  .toolbar button { flex: 0 0 auto; padding:.45rem .8rem; font-size:.8rem; min-width: auto; }
+  .toast { position: fixed; left: 50%; transform: translate(-50%, -16px);
+           top: calc(env(safe-area-inset-top, 0px) + .85rem);
+           background: var(--accent); color: #1a1d24; padding: .5rem .9rem; border-radius: 999px;
+           font-weight: 600; font-size: .85rem; opacity: 0; pointer-events: none;
+           transition: opacity .25s ease, transform .25s ease; z-index: 100;
+           box-shadow: 0 6px 18px rgba(0,0,0,.5); max-width: 90vw;
+           white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+  .streak { color: var(--accent); font-weight: 600; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Deutsch ↔ Nederlands</h1>
+  <button id="dir-toggle" title="Switch study direction">…</button>
+  <div class="stats" id="stats">…</div>
+</header>
+<main id="main"><div class="empty">Loading…</div></main>
+<div class="toolbar">
+  <button id="export" title="export progress">Export</button>
+  <button id="reset" title="reset all progress">Reset</button>
+</div>
+<footer>
+  <div class="row">
+    <input id="de" placeholder="duits" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" list="de-suggest">
+    <datalist id="de-suggest"></datalist>
+    <input id="nl" placeholder="nederlands" autocomplete="off">
+  </div>
+  <div class="row">
+    <select id="lvl">
+      <option>A1</option><option>A2</option><option>B1</option>
+      <option>B2</option><option>C1</option><option>C2</option>
+    </select>
+    <input id="sub" type="number" min="1" max="99" value="1" inputmode="numeric">
+    <button id="add">Add</button>
+  </div>
+</footer>
+
+<script>
+"use strict";
+
+const KEY = "deutsch_v1";
+const LEVEL_ORDER = {A1:1, A2:2, B1:3, B2:4, C1:5, C2:6};
+const DEFAULT_NEW_PER_DAY = 15; // per direction; click "today N/M" to change
+const RELEARN_GAP = 3;          // re-show a failed card after this many other grades
+const DIRECTIONS = ["de2nl", "nl2de"];
+const DIR_LABEL = { de2nl: "🇩🇪 → 🇳🇱", nl2de: "🇳🇱 → 🇩🇪" };
+
+let state = null;
+let current = null;
+let revealed = false;
+let wordbank = null;       // lazy-loaded array
+let suggestTimer = null;
+let relearnQueue = [];     // ephemeral [{id, dir, gradesLeft}], lost on reload
+let sessionCombo = 0;      // ephemeral consecutive-good streak
+
+// --------- state ----------
+
+function nowSec() { return Math.floor(Date.now() / 1000); }
+
+function todayKey() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+}
+function yesterdayKey() {
+  const d = new Date(); d.setDate(d.getDate() - 1);
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+}
+
+function activeDir() { return (state.config && state.config.active_dir) || "de2nl"; }
+
+function newIntrosToday(dir) {
+  return (state.intro_log && state.intro_log[dir] && state.intro_log[dir][todayKey()]) || 0;
+}
+function newPerDay() {
+  return (state.config && state.config.new_per_day) || DEFAULT_NEW_PER_DAY;
+}
+function todayLog() {
+  if (!state.daily_log) state.daily_log = {};
+  const k = todayKey();
+  if (!state.daily_log[k]) state.daily_log[k] = { reviews: 0, mastered: 0 };
+  return state.daily_log[k];
+}
+function bumpStreak() {
+  if (!state.streak) state.streak = { last_date: null, days: 0 };
+  const today = todayKey();
+  const s = state.streak;
+  if (s.last_date === today) return false;
+  s.days = (s.last_date === yesterdayKey()) ? s.days + 1 : 1;
+  s.last_date = today;
+  return true;
+}
+
+function toast(html, ms = 2200) {
+  const t = document.createElement("div");
+  t.className = "toast";
+  t.innerHTML = html;
+  document.body.appendChild(t);
+  requestAnimationFrame(() => t.classList.add("show"));
+  setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, ms);
+}
+
+function saveState() {
+  try { localStorage.setItem(KEY, JSON.stringify(state)); }
+  catch (e) { alert("Couldn't save progress (storage full?). " + e); }
+}
+
+function ensureDefaults(s) {
+  if (!s.intro_log || DIRECTIONS.some(d => typeof s.intro_log[d] !== "object")) {
+    s.intro_log = { de2nl: {}, nl2de: {} };
+  }
+  if (!s.config) s.config = {};
+  if (typeof s.config.new_per_day !== "number") s.config.new_per_day = DEFAULT_NEW_PER_DAY;
+  if (!DIRECTIONS.includes(s.config.active_dir)) s.config.active_dir = "de2nl";
+  if (!s.daily_log) s.daily_log = {};
+  if (!s.streak) s.streak = { last_date: null, days: 0 };
+  return s;
+}
+
+async function loadState() {
+  const raw = localStorage.getItem(KEY);
+  if (raw) {
+    try { return ensureDefaults(JSON.parse(raw)); }
+    catch (e) { console.warn("corrupt local state, re-bootstrapping", e); }
+  }
+  // First run: try bootstrap.json (snapshot of desktop progress), else build from seed.json.
+  try {
+    const r = await fetch("bootstrap.json", { cache: "no-cache" });
+    if (r.ok) {
+      const s = await r.json();
+      if (s.cards && s.cards.length) return ensureDefaults(s);
+    }
+  } catch (e) { /* ignore, try seed */ }
+
+  const r2 = await fetch("seed.json", { cache: "no-cache" });
+  const seed = await r2.json();
+  const cards = [];
+  let id = 1;
+  for (const w of seed) {
+    for (const dir of DIRECTIONS) cards.push(newCard(id++, w, dir));
+  }
+  return ensureDefaults({ next_id: id, cards });
+}
+
+function newCard(id, word, dir) {
+  return {
+    id, word_id: word.word_id, dir,
+    german: word.german || "", dutch: word.dutch || "",
+    dutch_alt: word.dutch_alt || "", dutch_article: word.dutch_article || "",
+    pos: word.pos || "",
+    level: word.level || null, sublevel: word.sublevel || null,
+    ease: 2.5, interval_days: 0.0,
+    due_ts: nowSec(), reps: 0, lapses: 0,
+  };
+}
+
+// --------- scheduling ----------
+
+function levelRank(c) {
+  const lvl = LEVEL_ORDER[c.level] || 99;
+  const sub = c.sublevel || 1;
+  return lvl * 1000 + sub;
+}
+
+function pickDue() {
+  const dir = activeDir();
+  // 1. In-session relearn queue: elapsed entry for the active direction.
+  for (let i = 0; i < relearnQueue.length; i++) {
+    if (relearnQueue[i].gradesLeft <= 0 && relearnQueue[i].dir === dir) {
+      const id = relearnQueue[i].id;
+      relearnQueue.splice(i, 1);
+      const c = state.cards.find(x => x.id === id);
+      if (c) return c;
+    }
+  }
+  // 2. Review-due within this direction, skipping queued cards.
+  const t = nowSec();
+  const inQueue = new Set(relearnQueue.map(r => r.id));
+  const due = state.cards.filter(c => c.dir === dir && c.due_ts <= t && c.reps > 0 && c.dutch && !inQueue.has(c.id));
+  if (due.length) {
+    due.sort((a, b) => (b.lapses - a.lapses) || (a.due_ts - b.due_ts));
+    return due[0];
+  }
+  // 3. New cards, capped per local day per direction.
+  if (newIntrosToday(dir) < newPerDay()) {
+    const fresh = state.cards.filter(c => c.dir === dir && c.reps === 0 && c.dutch);
+    if (fresh.length) {
+      fresh.sort((a, b) => levelRank(a) - levelRank(b) || a.word_id - b.word_id);
+      return fresh[0];
+    }
+  }
+  // 4. Fallback: a queued relearn entry for this direction is still pending.
+  for (let i = 0; i < relearnQueue.length; i++) {
+    if (relearnQueue[i].dir === dir) {
+      const id = relearnQueue[i].id;
+      relearnQueue.splice(i, 1);
+      const c = state.cards.find(x => x.id === id);
+      if (c) return c;
+    }
+  }
+  return null;
+}
+
+function review(card, rating) {
+  const wasNew = card.reps === 0;
+  let ease = card.ease;
+  let interval = card.interval_days;
+  if (rating === 0) {
+    card.lapses++;
+    ease = Math.max(1.3, ease - 0.2);
+    interval = 0.007;
+  } else {
+    if (interval < 1) {
+      interval = rating >= 2 ? 1.0 : 0.5;
+    } else {
+      const mult = {1: 1.2, 2: ease, 3: ease * 1.3}[rating];
+      interval *= mult;
+    }
+    const d = {1: -0.15, 2: 0.0, 3: 0.15}[rating];
+    ease = Math.max(1.3, ease + d);
+  }
+  card.ease = Math.round(ease * 1000) / 1000;
+  card.interval_days = Math.round(interval * 1000) / 1000;
+  card.due_ts = nowSec() + Math.floor(interval * 86400);
+  card.reps++;
+
+  if (wasNew) {
+    const k = todayKey();
+    state.intro_log[card.dir][k] = (state.intro_log[card.dir][k] || 0) + 1;
+  }
+
+  for (const r of relearnQueue) r.gradesLeft--;
+  if (rating <= 1 && card.interval_days < 1) {
+    relearnQueue.push({ id: card.id, dir: card.dir, gradesLeft: RELEARN_GAP });
+  }
+}
+
+function computeStats() {
+  const dir = activeDir();
+  const t = nowSec();
+  const cards = state.cards.filter(c => c.dir === dir && c.dutch);
+  return {
+    dir,
+    total: cards.length,
+    due: cards.filter(c => c.due_ts <= t && c.reps > 0).length,
+    learning: cards.filter(c => c.interval_days < 1 && c.reps > 0).length,
+    new: cards.filter(c => c.reps === 0).length,
+    mature: cards.filter(c => c.interval_days >= 21).length,
+  };
+}
+
+// --------- UI ----------
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c =>
+    ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c]));
+}
+
+function dutchPhrase(c) {
+  return (c.dutch_article ? c.dutch_article + " " : "") + c.dutch;
+}
+
+function refreshStats() {
+  const s = computeStats();
+  document.getElementById("dir-toggle").textContent = DIR_LABEL[s.dir] || s.dir;
+  const today = newIntrosToday(s.dir);
+  const cap = newPerDay();
+  const streakDays = (state.streak && state.streak.days) || 0;
+  const streakHtml = streakDays >= 2 ? `<span class="streak" title="day streak">🔥 ${streakDays}d</span>` : "";
+  document.getElementById("stats").innerHTML =
+    `${streakHtml}<span>due <b>${s.due}</b></span><span>new ${s.new}</span><span>learn ${s.learning}</span><span>mature ${s.mature}</span><span>tot ${s.total}</span><span id="today-cap" title="tap to change daily new-card limit" style="cursor:pointer;text-decoration:underline dotted">today ${today}/${cap}</span>`;
+  const el = document.getElementById("today-cap");
+  if (el) el.onclick = editDailyCap;
+}
+
+function editDailyCap() {
+  const cur = newPerDay();
+  const v = prompt(`New cards per day, per direction (currently ${cur}). Set to a high number like 999 for unlimited.`, String(cur));
+  if (v === null) return;
+  const n = parseInt(v, 10);
+  if (!Number.isFinite(n) || n < 0) return;
+  if (!state.config) state.config = {};
+  state.config.new_per_day = n;
+  saveState();
+  refreshStats();
+  if (!current) loadNext();
+}
+
+function toggleDir() {
+  state.config.active_dir = activeDir() === "de2nl" ? "nl2de" : "de2nl";
+  sessionCombo = 0;
+  saveState();
+  loadNext();
+}
+
+function render() {
+  const m = document.getElementById("main");
+  if (!current) {
+    const dir = activeDir();
+    const remainingNew = state.cards.filter(c => c.dir === dir && c.reps === 0 && c.dutch).length;
+    const capped = remainingNew > 0 && newIntrosToday(dir) >= newPerDay();
+    if (capped) {
+      m.innerHTML = `<div class="empty"><h2>Daily new-card limit reached</h2>
+        <p>${newIntrosToday(dir)} new cards introduced today (cap ${newPerDay()}) for this direction.
+        ${remainingNew} new cards still in the deck. Reviews are caught up.</p>
+        <div class="btns" style="margin-top:1rem"><button id="more-btn">+10 more today</button><button id="raise-btn">Change daily cap…</button></div></div>`;
+      document.getElementById("more-btn").onclick = () => {
+        const k = todayKey();
+        state.intro_log[dir][k] = Math.max(0, (state.intro_log[dir][k] || 0) - 10);
+        saveState();
+        loadNext();
+      };
+      document.getElementById("raise-btn").onclick = editDailyCap;
+    } else {
+      m.innerHTML = `<div class="empty"><h2>All caught up 🎉</h2><p>No cards due in this direction. Flip direction above, add words below, or come back later.</p></div>`;
+    }
+    return;
+  }
+  const tag = current.level ? `${current.level}.${current.sublevel || 1}` : "—";
+  const front = current.dir === "de2nl" ? current.german : dutchPhrase(current);
+  if (!revealed) {
+    m.innerHTML = `
+      <div class="card">
+        <div class="badge">${tag}</div>
+        <div class="word">${escapeHtml(front)}</div>
+      </div>
+      <div class="btns"><button class="show" id="show-btn">Show answer <kbd>enter</kbd></button></div>`;
+    document.getElementById("show-btn").onclick = reveal;
+  } else {
+    let answerHtml;
+    if (current.dir === "de2nl") {
+      const alt = current.dutch_alt ? `<div class="alt">also: ${escapeHtml(current.dutch_alt)}</div>` : "";
+      answerHtml = `<div class="answer">${escapeHtml(dutchPhrase(current))}</div>${alt}`;
+    } else {
+      answerHtml = `<div class="answer">${escapeHtml(current.german)}</div>`;
+    }
+    m.innerHTML = `
+      <div class="card">
+        <div class="badge">${tag}</div>
+        <div class="word">${escapeHtml(front)}</div>
+        ${answerHtml}
+        <div class="hint">reps ${current.reps} · ease ${current.ease} · interval ${current.interval_days}d</div>
+      </div>
+      <div class="btns">
+        <button class="r0" data-r="0">Again <kbd>1</kbd></button>
+        <button class="r1" data-r="1">Hard <kbd>2</kbd></button>
+        <button class="r2" data-r="2">Good <kbd>3</kbd></button>
+        <button class="r3" data-r="3">Easy <kbd>4</kbd></button>
+      </div>`;
+    for (const b of m.querySelectorAll("[data-r]")) {
+      b.onclick = () => grade(parseInt(b.dataset.r, 10));
+    }
+  }
+}
+
+function reveal() { revealed = true; render(); }
+
+function grade(rating) {
+  if (!current) return;
+  const word = current.dir === "de2nl" ? current.german : dutchPhrase(current);
+  const wasMature = current.interval_days >= 21;
+  const wasNew = current.reps === 0;
+  const dir = current.dir;
+  review(current, rating);
+
+  const log = todayLog();
+  log.reviews = (log.reviews || 0) + 1;
+  const isNowMature = current.interval_days >= 21;
+  const justMastered = !wasMature && isNowMature;
+  if (justMastered) log.mastered = (log.mastered || 0) + 1;
+  const streakBumped = bumpStreak();
+
+  sessionCombo = rating >= 2 ? sessionCombo + 1 : 0;
+  saveState();
+
+  if (justMastered) {
+    toast(`🌟 Mastered: ${escapeHtml(word)}`);
+  } else if (streakBumped && state.streak.days >= 2) {
+    toast(`🔥 Day ${state.streak.days} streak!`);
+  } else if (wasNew && newIntrosToday(dir) > 0 && newIntrosToday(dir) % 5 === 0) {
+    toast(`🌱 ${newIntrosToday(dir)} new words today!`);
+  } else if ([25, 50, 100, 200].includes(log.reviews)) {
+    toast(`⚡ ${log.reviews} reviews today!`);
+  } else if ([5, 10, 20, 50].includes(sessionCombo)) {
+    toast(`💫 ${sessionCombo}× combo!`);
+  }
+
+  loadNext();
+}
+
+function loadNext() {
+  revealed = false;
+  current = pickDue();
+  render();
+  refreshStats();
+}
+
+function addWord() {
+  const de = document.getElementById("de").value.trim();
+  const nl = document.getElementById("nl").value.trim();
+  const lvl = document.getElementById("lvl").value;
+  const sub = parseInt(document.getElementById("sub").value, 10) || 1;
+  if (!de || !nl) return;
+  const wid = state.cards.reduce((mx, c) => Math.max(mx, c.word_id || 0), 0) + 1;
+  const word = { word_id: wid, german: de, dutch: nl, dutch_alt: "", dutch_article: "", pos: "", level: lvl, sublevel: sub };
+  for (const dir of DIRECTIONS) state.cards.push(newCard(state.next_id++, word, dir));
+  saveState();
+  document.getElementById("de").value = "";
+  document.getElementById("nl").value = "";
+  document.getElementById("de").focus();
+  refreshStats();
+  if (!current) loadNext();
+}
+
+// --------- wordbank autocomplete ----------
+
+async function ensureWordbank() {
+  if (wordbank !== null) return wordbank;
+  try {
+    const r = await fetch("wordbank.txt", { cache: "force-cache" });
+    if (!r.ok) { wordbank = []; return wordbank; }
+    const txt = await r.text();
+    wordbank = txt.split("\n").map(s => s.trim()).filter(Boolean);
+  } catch (e) { console.warn("wordbank fetch failed", e); wordbank = []; }
+  return wordbank;
+}
+
+async function suggest(q) {
+  q = q.trim().toLowerCase();
+  if (q.length < 2) return [];
+  const wb = await ensureWordbank();
+  const prefix = [], contains = [];
+  for (const w of wb) {
+    const lw = w.toLowerCase();
+    if (lw.startsWith(q)) prefix.push(w);
+    else if (lw.includes(q)) contains.push(w);
+    if (prefix.length >= 10) break;
+  }
+  return prefix.length >= 10 ? prefix.slice(0, 10) : prefix.concat(contains).slice(0, 10);
+}
+
+// --------- export / reset ----------
+
+function exportState() {
+  const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `deutsch-${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  setTimeout(() => URL.revokeObjectURL(url), 5000);
+}
+
+function resetState() {
+  if (!confirm("Wipe all progress and start fresh? This can't be undone.")) return;
+  localStorage.removeItem(KEY);
+  location.reload();
+}
+
+// --------- bindings ----------
+
+document.getElementById("add").onclick = addWord;
+document.getElementById("dir-toggle").onclick = toggleDir;
+document.getElementById("export").onclick = exportState;
+document.getElementById("reset").onclick = resetState;
+
+for (const id of ["de", "nl", "sub"]) {
+  document.getElementById(id).addEventListener("keydown", e => {
+    if (e.key === "Enter") { e.preventDefault(); addWord(); }
+  });
+}
+
+document.getElementById("de").addEventListener("input", e => {
+  const q = e.target.value.trim();
+  clearTimeout(suggestTimer);
+  if (q.length < 2) { document.getElementById("de-suggest").innerHTML = ""; return; }
+  suggestTimer = setTimeout(async () => {
+    const matches = await suggest(q);
+    document.getElementById("de-suggest").innerHTML =
+      matches.map(w => `<option value="${escapeHtml(w)}">`).join("");
+  }, 150);
+});
+
+document.addEventListener("keydown", e => {
+  if (e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+  if (!current) return;
+  if (!revealed && (e.key === " " || e.key === "Enter")) { e.preventDefault(); reveal(); return; }
+  if (revealed && ["1","2","3","4"].includes(e.key)) { grade(parseInt(e.key, 10) - 1); }
+});
+
+// --------- boot ----------
+
+(async () => {
+  state = await loadState();
+  saveState();
+  loadNext();
+})();
+</script>
+</body>
+</html>

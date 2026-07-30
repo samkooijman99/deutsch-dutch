@@ -1,0 +1,54 @@
+german_dutch_vocab.csv — data sources and licensing
+=====================================================
+
+This dataset is DERIVED from two open-licensed sources. The derived CSV
+inherits their license terms (notably CC BY-SA for the dictionary data).
+
+-----------------------------------------------------------------------
+1. Dutch translations, part-of-speech, and gender/article
+-----------------------------------------------------------------------
+Source:   WikDict — https://www.wikdict.com/
+Files:    de-nl.sqlite3 (German->Dutch), nl.sqlite3 (Dutch monolingual),
+          build 2_2025-11
+          https://download.wikdict.com/dictionaries/sqlite/2_2025-11/
+Based on: Wiktionary (https://www.wiktionary.org/)
+License:  Creative Commons Attribution-ShareAlike 3.0 (CC BY-SA 3.0)
+          https://creativecommons.org/licenses/by-sa/3.0/
+
+Attribution string:
+  "Dictionary data from WikDict (https://www.wikdict.com/), derived from
+   Wiktionary, licensed under CC BY-SA 3.0."
+
+Because this source is ShareAlike, any redistribution of this CSV must
+also be licensed under CC BY-SA 3.0 (or a compatible license) and must
+retain the attribution above.
+
+-----------------------------------------------------------------------
+2. German frequency ranking (word counts / rank / per-million)
+-----------------------------------------------------------------------
+Source:   FrequencyWords — hermitdave/FrequencyWords
+          https://github.com/hermitdave/FrequencyWords
+File:     content/2018/de/de_full.txt
+Derived:  from OpenSubtitles (subtitle corpus)
+License:  MIT License
+
+  Copyright (c) 2016 Hermit Dave
+
+  Permission is hereby granted, free of charge, to any person obtaining a
+  copy of this software and associated documentation files (the
+  "Software"), to deal in the Software without restriction, including
+  without limitation the rights to use, copy, modify, merge, publish,
+  distribute, sublicense, and/or sell copies of the Software, and to
+  permit persons to whom the Software is furnished to do so, subject to
+  the following conditions:
+
+  The above copyright notice and this permission notice shall be included
+  in all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+  IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

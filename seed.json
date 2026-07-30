@@ -1,0 +1,10002 @@
+[
+ {
+  "word_id": 1,
+  "german": "ich",
+  "dutch": "ik",
+  "dutch_alt": "ikke",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 2,
+  "german": "sie",
+  "dutch": "zij",
+  "dutch_alt": "ze; haar; hen",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 3,
+  "german": "das",
+  "dutch": "dat",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 4,
+  "german": "ist",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 5,
+  "german": "du",
+  "dutch": "jij",
+  "dutch_alt": "je",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 6,
+  "german": "nicht",
+  "dutch": "niet",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 7,
+  "german": "die",
+  "dutch": "de",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Artikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 8,
+  "german": "es",
+  "dutch": "het",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 9,
+  "german": "und",
+  "dutch": "en",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Konjunktion",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 10,
+  "german": "der",
+  "dutch": "de",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Artikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 11,
+  "german": "wir",
+  "dutch": "wij",
+  "dutch_alt": "we",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 12,
+  "german": "was",
+  "dutch": "wat",
+  "dutch_alt": "hetgeen",
+  "dutch_article": "",
+  "pos": "Pronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 13,
+  "german": "zu",
+  "dutch": "te",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 14,
+  "german": "er",
+  "dutch": "hij",
+  "dutch_alt": "'ie",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 15,
+  "german": "ein",
+  "dutch": "een",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Artikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 16,
+  "german": "in",
+  "dutch": "in",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 17,
+  "german": "ja",
+  "dutch": "ja",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Antwortpartikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 18,
+  "german": "mir",
+  "dutch": "mij",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 19,
+  "german": "mit",
+  "dutch": "met",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 20,
+  "german": "wie",
+  "dutch": "hoe",
+  "dutch_alt": "als",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 21,
+  "german": "den",
+  "dutch": "de",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Artikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 22,
+  "german": "mich",
+  "dutch": "me",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Reflexivpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 23,
+  "german": "auf",
+  "dutch": "op",
+  "dutch_alt": "open",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 24,
+  "german": "dass",
+  "dutch": "dat",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 25,
+  "german": "aber",
+  "dutch": "maar",
+  "dutch_alt": "echter",
+  "dutch_article": "",
+  "pos": "Konjunktion",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 26,
+  "german": "eine",
+  "dutch": "een",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Artikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 27,
+  "german": "so",
+  "dutch": "zo",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Gradpartikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 28,
+  "german": "hat",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 29,
+  "german": "hier",
+  "dutch": "hier",
+  "dutch_alt": "alhier",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 30,
+  "german": "haben",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 31,
+  "german": "für",
+  "dutch": "voor",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 32,
+  "german": "sind",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 33,
+  "german": "war",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 34,
+  "german": "von",
+  "dutch": "van",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 35,
+  "german": "wenn",
+  "dutch": "als",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 36,
+  "german": "dich",
+  "dutch": "jou",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 37,
+  "german": "ihr",
+  "dutch": "jullie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 38,
+  "german": "nein",
+  "dutch": "nee",
+  "dutch_alt": "neen",
+  "dutch_article": "",
+  "pos": "Antwortpartikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 39,
+  "german": "habe",
+  "dutch": "bezit",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 40,
+  "german": "an",
+  "dutch": "aan",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 41,
+  "german": "bin",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 42,
+  "german": "noch",
+  "dutch": "nog",
+  "dutch_alt": "nog steeds",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 43,
+  "german": "nur",
+  "dutch": "alleen",
+  "dutch_alt": "slechts; maar; nou",
+  "dutch_article": "",
+  "pos": "Fokuspartikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 44,
+  "german": "da",
+  "dutch": "daar",
+  "dutch_alt": "omdat",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 45,
+  "german": "dir",
+  "dutch": "jou",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 46,
+  "german": "sich",
+  "dutch": "zich",
+  "dutch_alt": "zichzelf",
+  "dutch_article": "",
+  "pos": "Reflexivpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 47,
+  "german": "einen",
+  "dutch": "verenigen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 48,
+  "german": "uns",
+  "dutch": "ons",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 49,
+  "german": "hast",
+  "dutch": "haast",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 50,
+  "german": "dem",
+  "dutch": "de",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Artikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 51,
+  "german": "kann",
+  "dutch": "kunnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 52,
+  "german": "gut",
+  "dutch": "goed",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 53,
+  "german": "auch",
+  "dutch": "ook",
+  "dutch_alt": "eveneens",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 54,
+  "german": "schon",
+  "dutch": "al",
+  "dutch_alt": "reeds",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 55,
+  "german": "als",
+  "dutch": "toen",
+  "dutch_alt": "dan",
+  "dutch_article": "",
+  "pos": "Konjunktion",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 56,
+  "german": "sein",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 57,
+  "german": "mal",
+  "dutch": "keer",
+  "dutch_alt": "moedervlek; brandmerk",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 58,
+  "german": "jetzt",
+  "dutch": "nu",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 59,
+  "german": "ihn",
+  "dutch": "hem",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 60,
+  "german": "dann",
+  "dutch": "toen",
+  "dutch_alt": "dan",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 61,
+  "german": "aus",
+  "dutch": "uit",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 62,
+  "german": "meine",
+  "dutch": "denken",
+  "dutch_alt": "menen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 63,
+  "german": "um",
+  "dutch": "rondom",
+  "dutch_alt": "om; met; heen",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 64,
+  "german": "im",
+  "dutch": "in",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Kontraktion",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 65,
+  "german": "wird",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 66,
+  "german": "mein",
+  "dutch": "mijn",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 67,
+  "german": "bist",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 68,
+  "german": "doch",
+  "dutch": "jawel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Antwortpartikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 69,
+  "german": "alles",
+  "dutch": "alles",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 70,
+  "german": "weiß",
+  "dutch": "wit",
+  "dutch_alt": "blank",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 71,
+  "german": "keine",
+  "dutch": "geen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 72,
+  "german": "oder",
+  "dutch": "of",
+  "dutch_alt": "dan wel",
+  "dutch_article": "",
+  "pos": "Konjunktion",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 73,
+  "german": "nach",
+  "dutch": "na",
+  "dutch_alt": "achter; naar; volgens",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 74,
+  "german": "nichts",
+  "dutch": "niets",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 75,
+  "german": "man",
+  "dutch": "ze",
+  "dutch_alt": "zij",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 76,
+  "german": "muss",
+  "dutch": "must",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 77,
+  "german": "werden",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 78,
+  "german": "will",
+  "dutch": "willen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 79,
+  "german": "ihnen",
+  "dutch": "hen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 80,
+  "german": "geht",
+  "dutch": "gaan",
+  "dutch_alt": "lopen; rijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 81,
+  "german": "wo",
+  "dutch": "waar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 82,
+  "german": "etwas",
+  "dutch": "iets",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 83,
+  "german": "oh",
+  "dutch": "o",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 84,
+  "german": "mehr",
+  "dutch": "meer",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 85,
+  "german": "bei",
+  "dutch": "bij",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 86,
+  "german": "also",
+  "dutch": "dus",
+  "dutch_alt": "aldus",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 87,
+  "german": "bitte",
+  "dutch": "alstublieft",
+  "dutch_alt": "graag gedaan",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 88,
+  "german": "immer",
+  "dutch": "altijd",
+  "dutch_alt": "steeds",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 89,
+  "german": "hab",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 90,
+  "german": "warum",
+  "dutch": "waarom",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 91,
+  "german": "vor",
+  "dutch": "voor",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 92,
+  "german": "los",
+  "dutch": "vooruit",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 93,
+  "german": "können",
+  "dutch": "kunnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 94,
+  "german": "wieder",
+  "dutch": "weer",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 95,
+  "german": "sagen",
+  "dutch": "zeggen",
+  "dutch_alt": "spreken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 96,
+  "german": "machen",
+  "dutch": "doen",
+  "dutch_alt": "maken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 97,
+  "german": "danke",
+  "dutch": "bedankt",
+  "dutch_alt": "dank u; dank je",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 98,
+  "german": "sehr",
+  "dutch": "heel",
+  "dutch_alt": "zeer; uiterst",
+  "dutch_article": "",
+  "pos": "Gradpartikel",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 99,
+  "german": "alle",
+  "dutch": "op",
+  "dutch_alt": "uit",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 100,
+  "german": "denn",
+  "dutch": "aangezien",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Konjunktion",
+  "level": "A1",
+  "sublevel": 1
+ },
+ {
+  "word_id": 101,
+  "german": "mann",
+  "dutch": "man",
+  "dutch_alt": "echtgenoot",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 102,
+  "german": "tun",
+  "dutch": "doen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 103,
+  "german": "ihm",
+  "dutch": "hem",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 104,
+  "german": "zum",
+  "dutch": "à la",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Kontraktion",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 105,
+  "german": "gehen",
+  "dutch": "gaan",
+  "dutch_alt": "lopen; rijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 106,
+  "german": "sehen",
+  "dutch": "zien",
+  "dutch_alt": "aanschouwen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 107,
+  "german": "vielleicht",
+  "dutch": "misschien",
+  "dutch_alt": "wellicht",
+  "dutch_article": "",
+  "pos": "Modaladverb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 108,
+  "german": "einem",
+  "dutch": "een",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Artikel",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 109,
+  "german": "wer",
+  "dutch": "wie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interrogativpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 110,
+  "german": "ihre",
+  "dutch": "jullie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 111,
+  "german": "diese",
+  "dutch": "dit",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 112,
+  "german": "euch",
+  "dutch": "ge",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 113,
+  "german": "einer",
+  "dutch": "een",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Artikel",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 114,
+  "german": "komm",
+  "dutch": "komen",
+  "dutch_alt": "klaarkomen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 115,
+  "german": "über",
+  "dutch": "boven",
+  "dutch_alt": "over; bovenop",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 116,
+  "german": "gibt",
+  "dutch": "geven",
+  "dutch_alt": "zijn; verstrekken; bestaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 117,
+  "german": "okay",
+  "dutch": "OK",
+  "dutch_alt": "oké",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 118,
+  "german": "wissen",
+  "dutch": "weten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 119,
+  "german": "deine",
+  "dutch": "jouw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 120,
+  "german": "müssen",
+  "dutch": "moeten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 121,
+  "german": "soll",
+  "dutch": "debet",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 122,
+  "german": "werde",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 123,
+  "german": "nie",
+  "dutch": "nooit",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 124,
+  "german": "wirklich",
+  "dutch": "werkelijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 125,
+  "german": "hey",
+  "dutch": "begroeting",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 126,
+  "german": "kein",
+  "dutch": "geen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 127,
+  "german": "viel",
+  "dutch": "veel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 128,
+  "german": "weg",
+  "dutch": "weg",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 129,
+  "german": "würde",
+  "dutch": "waardigheid",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 130,
+  "german": "tut",
+  "dutch": "doen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 132,
+  "german": "des",
+  "dutch": "des",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 133,
+  "german": "einfach",
+  "dutch": "eenvoudig",
+  "dutch_alt": "enkel; gewoonweg",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 134,
+  "german": "leben",
+  "dutch": "leven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 135,
+  "german": "hatte",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 136,
+  "german": "zeit",
+  "dutch": "tijd",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 137,
+  "german": "weil",
+  "dutch": "omdat",
+  "dutch_alt": "Men moet het ijzer smeden als het heet is; zolang",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 138,
+  "german": "willst",
+  "dutch": "willen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 139,
+  "german": "kommen",
+  "dutch": "komen",
+  "dutch_alt": "klaarkomen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 140,
+  "german": "dein",
+  "dutch": "jouw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 141,
+  "german": "heute",
+  "dutch": "vandaag",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Temporaladverb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 142,
+  "german": "kommt",
+  "dutch": "komen",
+  "dutch_alt": "klaarkomen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 143,
+  "german": "wollen",
+  "dutch": "willen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 144,
+  "german": "damit",
+  "dutch": "opdat",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 145,
+  "german": "ganz",
+  "dutch": "heel",
+  "dutch_alt": "geheel; compleet; gaaf",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 146,
+  "german": "wäre",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 147,
+  "german": "wollte",
+  "dutch": "willen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 148,
+  "german": "weißt",
+  "dutch": "bleken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 150,
+  "german": "sicher",
+  "dutch": "veilig",
+  "dutch_alt": "zeker",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 151,
+  "german": "gesagt",
+  "dutch": "zeggen",
+  "dutch_alt": "spreken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 152,
+  "german": "frau",
+  "dutch": "vrouw",
+  "dutch_alt": "mevrouw; echtgenote",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 153,
+  "german": "nun",
+  "dutch": "nu",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 154,
+  "german": "bis",
+  "dutch": "tot",
+  "dutch_alt": "tot en met",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 155,
+  "german": "wurde",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 156,
+  "german": "leid",
+  "dutch": "verdriet",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 157,
+  "german": "na",
+  "dutch": "nou",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Partikel",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 158,
+  "german": "kannst",
+  "dutch": "kunnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 159,
+  "german": "macht",
+  "dutch": "macht",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 160,
+  "german": "dieser",
+  "dutch": "deze",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Demonstrativpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 161,
+  "german": "zurück",
+  "dutch": "terug",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 162,
+  "german": "lassen",
+  "dutch": "laten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 163,
+  "german": "hallo",
+  "dutch": "hallo",
+  "dutch_alt": "hoi",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 164,
+  "german": "meinen",
+  "dutch": "denken",
+  "dutch_alt": "menen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 165,
+  "german": "gott",
+  "dutch": "God",
+  "dutch_alt": "god",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 166,
+  "german": "seine",
+  "dutch": "Seine",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 167,
+  "german": "hätte",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 168,
+  "german": "zwei",
+  "dutch": "twee",
+  "dutch_alt": "tweejarig",
+  "dutch_article": "",
+  "pos": "Numerale",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 169,
+  "german": "könnte",
+  "dutch": "kunnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 170,
+  "german": "genau",
+  "dutch": "exact",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Antwortpartikel",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 171,
+  "german": "waren",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 173,
+  "german": "lass",
+  "dutch": "flauw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 174,
+  "german": "klar",
+  "dutch": "sereen",
+  "dutch_alt": "helder",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 175,
+  "german": "morgen",
+  "dutch": "morgen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 176,
+  "german": "leute",
+  "dutch": "mensen",
+  "dutch_alt": "lui; lieden",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 177,
+  "german": "vater",
+  "dutch": "vader",
+  "dutch_alt": "papa",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 178,
+  "german": "schön",
+  "dutch": "mooi",
+  "dutch_alt": "leuk",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 179,
+  "german": "glaube",
+  "dutch": "geloof",
+  "dutch_alt": "vertrouwen",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 180,
+  "german": "ab",
+  "dutch": "vanaf",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 181,
+  "german": "gerade",
+  "dutch": "recht",
+  "dutch_alt": "even",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 182,
+  "german": "tag",
+  "dutch": "dag",
+  "dutch_alt": "etmaal",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 183,
+  "german": "gesehen",
+  "dutch": "zien",
+  "dutch_alt": "aanschouwen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 184,
+  "german": "reden",
+  "dutch": "spreken",
+  "dutch_alt": "praten",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 185,
+  "german": "wohl",
+  "dutch": "welzijn",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 186,
+  "german": "liebe",
+  "dutch": "liefde",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 187,
+  "german": "sollte",
+  "dutch": "moeten",
+  "dutch_alt": "zullen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 188,
+  "german": "sagte",
+  "dutch": "zeggen",
+  "dutch_alt": "spreken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 189,
+  "german": "unsere",
+  "dutch": "ons",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 190,
+  "german": "jemand",
+  "dutch": "iemand",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 191,
+  "german": "geld",
+  "dutch": "geld",
+  "dutch_alt": "poen",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 192,
+  "german": "durch",
+  "dutch": "door",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 193,
+  "german": "ob",
+  "dutch": "of",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 194,
+  "german": "keinen",
+  "dutch": "geen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 195,
+  "german": "mutter",
+  "dutch": "moeder",
+  "dutch_alt": "moer",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 196,
+  "german": "raus",
+  "dutch": "out",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 197,
+  "german": "gemacht",
+  "dutch": "doen",
+  "dutch_alt": "maken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 198,
+  "german": "paar",
+  "dutch": "paar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 199,
+  "german": "mach",
+  "dutch": "doen",
+  "dutch_alt": "maken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 2
+ },
+ {
+  "word_id": 202,
+  "german": "besser",
+  "dutch": "beter",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 203,
+  "german": "musst",
+  "dutch": "moeten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 204,
+  "german": "wieso",
+  "dutch": "waarom",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 205,
+  "german": "sir",
+  "dutch": "heer",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 206,
+  "german": "dieses",
+  "dutch": "dit",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 207,
+  "german": "selbst",
+  "dutch": "zelf",
+  "dutch_alt": "zelfs",
+  "dutch_article": "",
+  "pos": "Demonstrativpronomen",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 208,
+  "german": "gehört",
+  "dutch": "horen",
+  "dutch_alt": "luisteren",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 209,
+  "german": "möchte",
+  "dutch": "mogen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 210,
+  "german": "ohne",
+  "dutch": "zonder",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 211,
+  "german": "hör",
+  "dutch": "horen",
+  "dutch_alt": "luisteren",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 212,
+  "german": "her",
+  "dutch": "geleden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 213,
+  "german": "sag",
+  "dutch": "zeggen",
+  "dutch_alt": "spreken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 214,
+  "german": "meiner",
+  "dutch": "mijn",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 215,
+  "german": "anderen",
+  "dutch": "ander",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 216,
+  "german": "helfen",
+  "dutch": "helpen",
+  "dutch_alt": "bijstaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 217,
+  "german": "nacht",
+  "dutch": "nacht",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 218,
+  "german": "finden",
+  "dutch": "vinden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 219,
+  "german": "diesen",
+  "dutch": "dit",
+  "dutch_alt": "deze",
+  "dutch_article": "",
+  "pos": "Pronomen",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 220,
+  "german": "gute",
+  "dutch": "goed",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 221,
+  "german": "wirst",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 222,
+  "german": "lange",
+  "dutch": "lang",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 223,
+  "german": "natürlich",
+  "dutch": "natuurlijk",
+  "dutch_alt": "uiteraard; vanzelfsprekend",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 224,
+  "german": "ach",
+  "dutch": "genade",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 225,
+  "german": "meinem",
+  "dutch": "mijn",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 226,
+  "german": "gar",
+  "dutch": "gaar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 228,
+  "german": "sei",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 229,
+  "german": "dort",
+  "dutch": "daar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 230,
+  "german": "weiter",
+  "dutch": "verder",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 231,
+  "german": "geben",
+  "dutch": "geven",
+  "dutch_alt": "zijn; verstrekken; bestaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 232,
+  "german": "seit",
+  "dutch": "sinds",
+  "dutch_alt": "sedert",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 233,
+  "german": "gleich",
+  "dutch": "gelijk",
+  "dutch_alt": "meteen; dadelijk; onmiddellijk",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 234,
+  "german": "sagt",
+  "dutch": "zeggen",
+  "dutch_alt": "spreken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 235,
+  "german": "recht",
+  "dutch": "recht",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 236,
+  "german": "ihren",
+  "dutch": "jullie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 237,
+  "german": "richtig",
+  "dutch": "correct",
+  "dutch_alt": "juist",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 238,
+  "german": "ordnung",
+  "dutch": "orde",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 239,
+  "german": "vom",
+  "dutch": "van",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Kontraktion",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 240,
+  "german": "hören",
+  "dutch": "horen",
+  "dutch_alt": "luisteren",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 241,
+  "german": "sieht",
+  "dutch": "zien",
+  "dutch_alt": "aanschouwen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 242,
+  "german": "davon",
+  "dutch": "daarvan",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Pronominaladverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 243,
+  "german": "dafür",
+  "dutch": "ervoor",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Pronominaladverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 244,
+  "german": "geh",
+  "dutch": "gaan",
+  "dutch_alt": "lopen; rijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 245,
+  "german": "diesem",
+  "dutch": "dit",
+  "dutch_alt": "deze",
+  "dutch_article": "",
+  "pos": "Pronomen",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 246,
+  "german": "wegen",
+  "dutch": "wegens",
+  "dutch_alt": "vanwege",
+  "dutch_article": "",
+  "pos": "Postposition",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 247,
+  "german": "hause",
+  "dutch": "wachten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 248,
+  "german": "sollten",
+  "dutch": "moeten",
+  "dutch_alt": "zullen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 249,
+  "german": "mädchen",
+  "dutch": "meisje",
+  "dutch_alt": "meid",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 250,
+  "german": "hin",
+  "dutch": "heengegaan",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 251,
+  "german": "sollen",
+  "dutch": "moeten",
+  "dutch_alt": "zullen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 252,
+  "german": "abend",
+  "dutch": "avond",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 253,
+  "german": "haus",
+  "dutch": "huis",
+  "dutch_alt": "kamer; jongen",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 254,
+  "german": "denke",
+  "dutch": "denken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 255,
+  "german": "viele",
+  "dutch": "veel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 256,
+  "german": "drei",
+  "dutch": "drie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Numerale",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 257,
+  "german": "deinen",
+  "dutch": "jouw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 258,
+  "german": "freund",
+  "dutch": "vriend",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 259,
+  "german": "guten",
+  "dutch": "goed",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 260,
+  "german": "unser",
+  "dutch": "ons",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 261,
+  "german": "warte",
+  "dutch": "wachttoren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 262,
+  "german": "machst",
+  "dutch": "doen",
+  "dutch_alt": "maken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 263,
+  "german": "menschen",
+  "dutch": "mens",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 264,
+  "german": "essen",
+  "dutch": "eten",
+  "dutch_alt": "schaften",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 265,
+  "german": "angst",
+  "dutch": "angst",
+  "dutch_alt": "vrees",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 266,
+  "german": "bleiben",
+  "dutch": "blijven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 267,
+  "german": "zusammen",
+  "dutch": "samen",
+  "dutch_alt": "met elkaar; onderling",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 268,
+  "german": "welt",
+  "dutch": "wereld",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 269,
+  "german": "unter",
+  "dutch": "onder",
+  "dutch_alt": "te midden van",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 270,
+  "german": "habt",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 271,
+  "german": "schnell",
+  "dutch": "snel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 272,
+  "german": "andere",
+  "dutch": "ander",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 273,
+  "german": "tot",
+  "dutch": "dood",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 274,
+  "german": "getan",
+  "dutch": "doen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 275,
+  "german": "darf",
+  "dutch": "mogen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 276,
+  "german": "erst",
+  "dutch": "pas",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 277,
+  "german": "rein",
+  "dutch": "puur",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 278,
+  "german": "stimmt",
+  "dutch": "klopt",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 279,
+  "german": "nehmen",
+  "dutch": "nemen",
+  "dutch_alt": "pakken; benemen; gebruiken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 280,
+  "german": "kinder",
+  "dutch": "kind",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 281,
+  "german": "eines",
+  "dutch": "een",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Artikel",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 282,
+  "german": "glauben",
+  "dutch": "geloven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 283,
+  "german": "bringen",
+  "dutch": "brengen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 284,
+  "german": "ganze",
+  "dutch": "geheel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 285,
+  "german": "genug",
+  "dutch": "genoeg",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 286,
+  "german": "scheiße",
+  "dutch": "schijt",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 287,
+  "german": "brauchen",
+  "dutch": "nodig hebben",
+  "dutch_alt": "behoeven; gebruiken; hoeven",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 288,
+  "german": "gegen",
+  "dutch": "tegen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 289,
+  "german": "moment",
+  "dutch": "moment",
+  "dutch_alt": "tijdstip; ogenblik",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 290,
+  "german": "junge",
+  "dutch": "jongen",
+  "dutch_alt": "joch; jochie",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 291,
+  "german": "steht",
+  "dutch": "staan",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 292,
+  "german": "sonst",
+  "dutch": "afgezien van",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 293,
+  "german": "musik",
+  "dutch": "muziek",
+  "dutch_alt": "toonkunst",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 294,
+  "german": "arbeit",
+  "dutch": "werk",
+  "dutch_alt": "arbeid; baan; huiswerk",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 295,
+  "german": "seid",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 296,
+  "german": "ihrer",
+  "dutch": "haar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 297,
+  "german": "fragen",
+  "dutch": "vragen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 298,
+  "german": "herr",
+  "dutch": "heer",
+  "dutch_alt": "Heer; mijnheer; meneer",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 299,
+  "german": "dabei",
+  "dutch": "naast",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Pronominaladverb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 300,
+  "german": "heißt",
+  "dutch": "heten",
+  "dutch_alt": "betekenen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 3
+ },
+ {
+  "word_id": 301,
+  "german": "familie",
+  "dutch": "familie",
+  "dutch_alt": "gezin",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 302,
+  "german": "warten",
+  "dutch": "wachten",
+  "dutch_alt": "onderhouden; verzorgen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 303,
+  "german": "niemand",
+  "dutch": "niemand",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 304,
+  "german": "sofort",
+  "dutch": "meteen",
+  "dutch_alt": "onmiddellijk; ogenblikkelijk",
+  "dutch_article": "",
+  "pos": "Temporaladverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 305,
+  "german": "bevor",
+  "dutch": "voordat",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 306,
+  "german": "jahre",
+  "dutch": "jaar",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 307,
+  "german": "einmal",
+  "dutch": "eens",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 308,
+  "german": "problem",
+  "dutch": "probleem",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 309,
+  "german": "sohn",
+  "dutch": "zoon",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 310,
+  "german": "wann",
+  "dutch": "wanneer",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 311,
+  "german": "brauche",
+  "dutch": "nodig hebben",
+  "dutch_alt": "behoeven; gebruiken; hoeven",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 312,
+  "german": "fertig",
+  "dutch": "klaar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 313,
+  "german": "halt",
+  "dutch": "halte",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 314,
+  "german": "allein",
+  "dutch": "alleen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 316,
+  "german": "sprechen",
+  "dutch": "spreken",
+  "dutch_alt": "praten",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 317,
+  "german": "beide",
+  "dutch": "beide",
+  "dutch_alt": "allebei",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 318,
+  "german": "gefunden",
+  "dutch": "terecht",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 319,
+  "german": "hatten",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 320,
+  "german": "sache",
+  "dutch": "zaak",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 321,
+  "german": "hilfe",
+  "dutch": "hulp",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 322,
+  "german": "verdammt",
+  "dutch": "doemen",
+  "dutch_alt": "verdomd",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 324,
+  "german": "jeder",
+  "dutch": "ieder",
+  "dutch_alt": "iedereen; elk",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 325,
+  "german": "warst",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 326,
+  "german": "gern",
+  "dutch": "graag",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 327,
+  "german": "konnte",
+  "dutch": "kunnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 328,
+  "german": "darüber",
+  "dutch": "overheen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Pronominaladverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 329,
+  "german": "halten",
+  "dutch": "houden",
+  "dutch_alt": "vasthouden",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 330,
+  "german": "siehst",
+  "dutch": "zien",
+  "dutch_alt": "aanschouwen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 331,
+  "german": "verstehe",
+  "dutch": "verstaan",
+  "dutch_alt": "overweg komen; begrijpen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 332,
+  "german": "jahren",
+  "dutch": "jaar",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 333,
+  "german": "kam",
+  "dutch": "komen",
+  "dutch_alt": "klaarkomen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 334,
+  "german": "kind",
+  "dutch": "kind",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 335,
+  "german": "wusste",
+  "dutch": "weten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 336,
+  "german": "wahr",
+  "dutch": "waar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 337,
+  "german": "seinen",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 338,
+  "german": "dazu",
+  "dutch": "daarbij",
+  "dutch_alt": "daartoe; erbij; ten",
+  "dutch_article": "",
+  "pos": "Pronominaladverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 339,
+  "german": "bruder",
+  "dutch": "broer",
+  "dutch_alt": "broeder",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 340,
+  "german": "daran",
+  "dutch": "daarop",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 341,
+  "german": "ihrem",
+  "dutch": "jullie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 342,
+  "german": "denken",
+  "dutch": "denken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 343,
+  "german": "könnten",
+  "dutch": "kunnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 344,
+  "german": "dank",
+  "dutch": "dankzij",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 345,
+  "german": "würden",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 346,
+  "german": "lieber",
+  "dutch": "liever",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 347,
+  "german": "fall",
+  "dutch": "geval",
+  "dutch_alt": "val; naamval; zaak",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 348,
+  "german": "deiner",
+  "dutch": "jouw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 349,
+  "german": "sehe",
+  "dutch": "zien",
+  "dutch_alt": "aanschouwen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 350,
+  "german": "egal",
+  "dutch": "altijd",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 351,
+  "german": "kennen",
+  "dutch": "kennen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 352,
+  "german": "deinem",
+  "dutch": "jouw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 353,
+  "german": "vergessen",
+  "dutch": "vergeten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 354,
+  "german": "frage",
+  "dutch": "vraag",
+  "dutch_alt": "vraagstuk",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 355,
+  "german": "mache",
+  "dutch": "brengen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 356,
+  "german": "komme",
+  "dutch": "komen",
+  "dutch_alt": "klaarkomen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 357,
+  "german": "sage",
+  "dutch": "sage",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 358,
+  "german": "mag",
+  "dutch": "wel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 359,
+  "german": "sieh",
+  "dutch": "zien",
+  "dutch_alt": "aanschouwen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 360,
+  "german": "echt",
+  "dutch": "echt",
+  "dutch_alt": "echte",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 361,
+  "german": "gib",
+  "dutch": "geven",
+  "dutch_alt": "zijn; verstrekken; bestaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 362,
+  "german": "eigentlich",
+  "dutch": "eigenlijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 363,
+  "german": "jeden",
+  "dutch": "ieder",
+  "dutch_alt": "iedereen; elk",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 365,
+  "german": "gab",
+  "dutch": "geven",
+  "dutch_alt": "zijn; verstrekken; bestaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 366,
+  "german": "uhr",
+  "dutch": "klok",
+  "dutch_alt": "uur; tijdklok; meetklok",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 367,
+  "german": "stadt",
+  "dutch": "stad",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 368,
+  "german": "männer",
+  "dutch": "man",
+  "dutch_alt": "echtgenoot",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 369,
+  "german": "baby",
+  "dutch": "baby",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 370,
+  "german": "fahren",
+  "dutch": "rijden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 371,
+  "german": "namen",
+  "dutch": "naam",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 372,
+  "german": "bekommen",
+  "dutch": "krijgen",
+  "dutch_alt": "bekomen; pakken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 373,
+  "german": "kopf",
+  "dutch": "hoofd",
+  "dutch_alt": "kop",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 374,
+  "german": "hi",
+  "dutch": "-en",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 375,
+  "german": "gehe",
+  "dutch": "gaan",
+  "dutch_alt": "lopen; rijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 376,
+  "german": "kleine",
+  "dutch": "klein",
+  "dutch_alt": "minuscuul",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 377,
+  "german": "später",
+  "dutch": "later",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 378,
+  "german": "glück",
+  "dutch": "geluk",
+  "dutch_alt": "voorspoed",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 379,
+  "german": "letzte",
+  "dutch": "laatst",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 381,
+  "german": "all",
+  "dutch": "al",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 382,
+  "german": "darauf",
+  "dutch": "daarop",
+  "dutch_alt": "erop",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 383,
+  "german": "ende",
+  "dutch": "einde",
+  "dutch_alt": "stuk; touw",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 384,
+  "german": "bald",
+  "dutch": "straks",
+  "dutch_alt": "spoedig; weldra",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 385,
+  "german": "töten",
+  "dutch": "doden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 386,
+  "german": "dinge",
+  "dutch": "spullen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 387,
+  "german": "meinst",
+  "dutch": "denken",
+  "dutch_alt": "menen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 388,
+  "german": "toll",
+  "dutch": "leuk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 389,
+  "german": "eins",
+  "dutch": "één",
+  "dutch_alt": "een",
+  "dutch_article": "",
+  "pos": "Numerale",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 390,
+  "german": "minuten",
+  "dutch": "minuut",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 391,
+  "german": "vielen",
+  "dutch": "veel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 392,
+  "german": "bereit",
+  "dutch": "klaar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 393,
+  "german": "weit",
+  "dutch": "wijd",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 394,
+  "german": "ahnung",
+  "dutch": "denkbeeld",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 395,
+  "german": "seiner",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 396,
+  "german": "bisschen",
+  "dutch": "beetje",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 397,
+  "german": "tür",
+  "dutch": "deur",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 398,
+  "german": "auto",
+  "dutch": "auto",
+  "dutch_alt": "autootje",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 399,
+  "german": "jungs",
+  "dutch": "jongen",
+  "dutch_alt": "joch; jochie",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 400,
+  "german": "eure",
+  "dutch": "jullie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 4
+ },
+ {
+  "word_id": 401,
+  "german": "augen",
+  "dutch": "oog",
+  "dutch_alt": "kijker",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 402,
+  "german": "polizei",
+  "dutch": "politie",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 403,
+  "german": "stehen",
+  "dutch": "staan",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 404,
+  "german": "sterben",
+  "dutch": "sterven",
+  "dutch_alt": "doodgaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 405,
+  "german": "hätten",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 406,
+  "german": "draußen",
+  "dutch": "buiten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 407,
+  "german": "kenne",
+  "dutch": "kennen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 408,
+  "german": "fast",
+  "dutch": "bijna",
+  "dutch_alt": "haast",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 409,
+  "german": "runter",
+  "dutch": "naar beneden",
+  "dutch_alt": "neerwaarts",
+  "dutch_article": "",
+  "pos": "Lokaladverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 410,
+  "german": "vorbei",
+  "dutch": "voorbij",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Lokaladverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 411,
+  "german": "treffen",
+  "dutch": "treffen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 412,
+  "german": "gerne",
+  "dutch": "graag",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 413,
+  "german": "dran",
+  "dutch": "beurt",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 414,
+  "german": "wurden",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 415,
+  "german": "arbeiten",
+  "dutch": "werken",
+  "dutch_alt": "arbeiden",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 417,
+  "german": "verrückt",
+  "dutch": "gek",
+  "dutch_alt": "idioot; verschoven",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 418,
+  "german": "neue",
+  "dutch": "nieuw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 419,
+  "german": "ging",
+  "dutch": "gaan",
+  "dutch_alt": "lopen; rijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 420,
+  "german": "hinter",
+  "dutch": "achter",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 421,
+  "german": "sorgen",
+  "dutch": "zorgen",
+  "dutch_alt": "verzorgen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 422,
+  "german": "einzige",
+  "dutch": "enig",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 423,
+  "german": "jemanden",
+  "dutch": "iemand",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 424,
+  "german": "darum",
+  "dutch": "daarom",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 425,
+  "german": "tochter",
+  "dutch": "dochter",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 426,
+  "german": "braucht",
+  "dutch": "nodig hebben",
+  "dutch_alt": "behoeven; gebruiken; hoeven",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 427,
+  "german": "idee",
+  "dutch": "idee",
+  "dutch_alt": "notie",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 428,
+  "german": "schwester",
+  "dutch": "zuster",
+  "dutch_alt": "zus",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 429,
+  "german": "drin",
+  "dutch": "binnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 430,
+  "german": "ruhig",
+  "dutch": "rustig",
+  "dutch_alt": "sereen",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 431,
+  "german": "sah",
+  "dutch": "zien",
+  "dutch_alt": "aanschouwen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 432,
+  "german": "ganzen",
+  "dutch": "heel",
+  "dutch_alt": "geheel; compleet; gaaf",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 433,
+  "german": "spät",
+  "dutch": "laat",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 434,
+  "german": "ziemlich",
+  "dutch": "vrij",
+  "dutch_alt": "tamelijk; redelijk; nogal",
+  "dutch_article": "",
+  "pos": "Gradpartikel",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 435,
+  "german": "solltest",
+  "dutch": "moeten",
+  "dutch_alt": "zullen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 436,
+  "german": "name",
+  "dutch": "naam",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 437,
+  "german": "sogar",
+  "dutch": "zelfs",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 438,
+  "german": "kurz",
+  "dutch": "kort",
+  "dutch_alt": "kortstondig",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 439,
+  "german": "kerl",
+  "dutch": "kerel",
+  "dutch_alt": "vent; pik",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 440,
+  "german": "frauen",
+  "dutch": "vrouw",
+  "dutch_alt": "mevrouw; echtgenote",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 441,
+  "german": "liegt",
+  "dutch": "liggen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 442,
+  "german": "suchen",
+  "dutch": "zoeken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 443,
+  "german": "finde",
+  "dutch": "vinden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 444,
+  "german": "je",
+  "dutch": "ooit",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 445,
+  "german": "woher",
+  "dutch": "vanwaar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 446,
+  "german": "lang",
+  "dutch": "lang",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 447,
+  "german": "job",
+  "dutch": "job",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 448,
+  "german": "keiner",
+  "dutch": "geen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 449,
+  "german": "seinem",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 450,
+  "german": "hört",
+  "dutch": "horen",
+  "dutch_alt": "luisteren",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 451,
+  "german": "verstehen",
+  "dutch": "verstaan",
+  "dutch_alt": "overweg komen; begrijpen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 452,
+  "german": "spielen",
+  "dutch": "spelen",
+  "dutch_alt": "meespelen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 453,
+  "german": "überhaupt",
+  "dutch": "überhaupt",
+  "dutch_alt": "helemaal; bovendien; eigenlijk",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 454,
+  "german": "teufel",
+  "dutch": "duivel",
+  "dutch_alt": "duvel",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 455,
+  "german": "verstanden",
+  "dutch": "verstaan",
+  "dutch_alt": "overweg komen; begrijpen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 456,
+  "german": "verloren",
+  "dutch": "verloren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 457,
+  "german": "große",
+  "dutch": "groot",
+  "dutch_alt": "volwassene",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 458,
+  "german": "hand",
+  "dutch": "hand",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 459,
+  "german": "grund",
+  "dutch": "grond",
+  "dutch_alt": "reden",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 460,
+  "german": "jahr",
+  "dutch": "jaar",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 461,
+  "german": "kommst",
+  "dutch": "komen",
+  "dutch_alt": "klaarkomen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 462,
+  "german": "mama",
+  "dutch": "mammie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 463,
+  "german": "ruhe",
+  "dutch": "rust",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 464,
+  "german": "gewesen",
+  "dutch": "passe",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 465,
+  "german": "tod",
+  "dutch": "dood",
+  "dutch_alt": "overlijden",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 466,
+  "german": "stunden",
+  "dutch": "dralen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 467,
+  "german": "hoffe",
+  "dutch": "hopen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 468,
+  "german": "denkst",
+  "dutch": "denken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 469,
+  "german": "oben",
+  "dutch": "boven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Lokaladverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 470,
+  "german": "gestern",
+  "dutch": "gisteren",
+  "dutch_alt": "gister",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 471,
+  "german": "versuchen",
+  "dutch": "proberen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 472,
+  "german": "art",
+  "dutch": "soort",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 473,
+  "german": "letzten",
+  "dutch": "laatst",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 474,
+  "german": "schatz",
+  "dutch": "schat",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 475,
+  "german": "endlich",
+  "dutch": "eindelijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 476,
+  "german": "he",
+  "dutch": "hela",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 477,
+  "german": "nimm",
+  "dutch": "nemen",
+  "dutch_alt": "pakken; benemen; gebruiken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 478,
+  "german": "etwa",
+  "dutch": "ongeveer",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 480,
+  "german": "läuft",
+  "dutch": "rennen",
+  "dutch_alt": "lopen; hollen; werken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 481,
+  "german": "schwer",
+  "dutch": "zwaar",
+  "dutch_alt": "moeilijk",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 482,
+  "german": "anders",
+  "dutch": "anders",
+  "dutch_alt": "ongelijk",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 483,
+  "german": "miss",
+  "dutch": "juffrouw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 484,
+  "german": "musste",
+  "dutch": "moeten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 485,
+  "german": "fünf",
+  "dutch": "vijf",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Numerale",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 486,
+  "german": "wasser",
+  "dutch": "water",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 487,
+  "german": "lässt",
+  "dutch": "laten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 488,
+  "german": "erste",
+  "dutch": "eerste",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 490,
+  "german": "gekommen",
+  "dutch": "komen",
+  "dutch_alt": "klaarkomen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 491,
+  "german": "geschichte",
+  "dutch": "geschiedenis",
+  "dutch_alt": "historie",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 492,
+  "german": "wenig",
+  "dutch": "weinig",
+  "dutch_alt": "beetje",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 493,
+  "german": "holen",
+  "dutch": "halen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 495,
+  "german": "nett",
+  "dutch": "aangenaam",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 496,
+  "german": "wahrheit",
+  "dutch": "waarheid",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 497,
+  "german": "woche",
+  "dutch": "week",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 498,
+  "german": "bringt",
+  "dutch": "brengen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 499,
+  "german": "deshalb",
+  "dutch": "deshalve",
+  "dutch_alt": "deswege",
+  "dutch_article": "",
+  "pos": "Konjunktionaladverb",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 500,
+  "german": "welche",
+  "dutch": "dewelke",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interrogativpronomen",
+  "level": "A1",
+  "sublevel": 5
+ },
+ {
+  "word_id": 501,
+  "german": "bestimmt",
+  "dutch": "bepaald",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 502,
+  "german": "hoch",
+  "dutch": "hoog",
+  "dutch_alt": "omhoog",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 503,
+  "german": "alter",
+  "dutch": "leeftijd",
+  "dutch_alt": "ouderdom",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 504,
+  "german": "sagst",
+  "dutch": "zeggen",
+  "dutch_alt": "spreken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 505,
+  "german": "schau",
+  "dutch": "tentoonstelling, expositie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 506,
+  "german": "ah",
+  "dutch": "hé",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 507,
+  "german": "land",
+  "dutch": "land",
+  "dutch_alt": "grond",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 508,
+  "german": "zimmer",
+  "dutch": "kamer",
+  "dutch_alt": "vertrek",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 509,
+  "german": "wagen",
+  "dutch": "wagen",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 510,
+  "german": "vier",
+  "dutch": "vier",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Numerale",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 511,
+  "german": "gefallen",
+  "dutch": "bevallen",
+  "dutch_alt": "aanstaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 512,
+  "german": "spaß",
+  "dutch": "lol",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 513,
+  "german": "niemals",
+  "dutch": "nooit",
+  "dutch_alt": "nimmer",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 514,
+  "german": "schuld",
+  "dutch": "schuld",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 515,
+  "german": "getötet",
+  "dutch": "doden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 516,
+  "german": "wollten",
+  "dutch": "willen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 517,
+  "german": "verlassen",
+  "dutch": "verlaten",
+  "dutch_alt": "weggaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 518,
+  "german": "zeigen",
+  "dutch": "tonen",
+  "dutch_alt": "wijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 519,
+  "german": "beste",
+  "dutch": "best",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 520,
+  "german": "ernst",
+  "dutch": "ernstig",
+  "dutch_alt": "serieus",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 521,
+  "german": "unserer",
+  "dutch": "ons",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 522,
+  "german": "denen",
+  "dutch": "de",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Artikel",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 523,
+  "german": "ort",
+  "dutch": "oord",
+  "dutch_alt": "bewoners; Zwitsers kanton; topje van zwaard",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 524,
+  "german": "bleibt",
+  "dutch": "blijven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 525,
+  "german": "würdest",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 526,
+  "german": "manchmal",
+  "dutch": "soms",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 527,
+  "german": "glaubst",
+  "dutch": "geloven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 528,
+  "german": "seite",
+  "dutch": "zijde",
+  "dutch_alt": "kant; site",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 529,
+  "german": "lasst",
+  "dutch": "laten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 530,
+  "german": "zwischen",
+  "dutch": "tussen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 531,
+  "german": "eben",
+  "dutch": "vlak",
+  "dutch_alt": "egaal",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 532,
+  "german": "während",
+  "dutch": "terwijl",
+  "dutch_alt": "tijdens; gedurende",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 533,
+  "german": "spiel",
+  "dutch": "spel",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 534,
+  "german": "nehme",
+  "dutch": "nemen",
+  "dutch_alt": "pakken; benemen; gebruiken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 535,
+  "german": "ersten",
+  "dutch": "pas",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 536,
+  "german": "guter",
+  "dutch": "goed",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 537,
+  "german": "chance",
+  "dutch": "kans",
+  "dutch_alt": "gelegenheid",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 538,
+  "german": "freundin",
+  "dutch": "vriendin",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 539,
+  "german": "krieg",
+  "dutch": "oorlog",
+  "dutch_alt": "krijg",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 541,
+  "german": "kleinen",
+  "dutch": "klein",
+  "dutch_alt": "minuscuul",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 542,
+  "german": "erzählen",
+  "dutch": "vertellen",
+  "dutch_alt": "verhalen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 543,
+  "german": "anderes",
+  "dutch": "anders",
+  "dutch_alt": "ongelijk",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 544,
+  "german": "tage",
+  "dutch": "vergaderen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 545,
+  "german": "entschuldigen",
+  "dutch": "verontschuldigen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 546,
+  "german": "wichtig",
+  "dutch": "belangrijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 547,
+  "german": "gehst",
+  "dutch": "gaan",
+  "dutch_alt": "lopen; rijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 548,
+  "german": "allen",
+  "dutch": "op",
+  "dutch_alt": "uit",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 549,
+  "german": "bett",
+  "dutch": "bed",
+  "dutch_alt": "bedding",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 550,
+  "german": "sachen",
+  "dutch": "spullen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 552,
+  "german": "schlecht",
+  "dutch": "slecht",
+  "dutch_alt": "kwaad; zwak; rotten",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 553,
+  "german": "schule",
+  "dutch": "school",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 554,
+  "german": "entschuldigung",
+  "dutch": "verontschuldiging",
+  "dutch_alt": "excuus; excuses; sorry",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 555,
+  "german": "wort",
+  "dutch": "woord",
+  "dutch_alt": "",
+  "dutch_article": "de/het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 557,
+  "german": "hättest",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 558,
+  "german": "wären",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 559,
+  "german": "typ",
+  "dutch": "type",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 560,
+  "german": "schlafen",
+  "dutch": "slapen",
+  "dutch_alt": "overnachten",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 561,
+  "german": "äh",
+  "dutch": "euh",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 563,
+  "german": "euer",
+  "dutch": "jullie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 565,
+  "german": "gesicht",
+  "dutch": "gezicht",
+  "dutch_alt": "aangezicht; gelaat",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 566,
+  "german": "falls",
+  "dutch": "indien",
+  "dutch_alt": "voor het geval dat; bijgeval; ingeval",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 567,
+  "german": "neuen",
+  "dutch": "nieuw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 568,
+  "german": "bloß",
+  "dutch": "bloot",
+  "dutch_alt": "slechts; maar; naakt",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 569,
+  "german": "unten",
+  "dutch": "onder",
+  "dutch_alt": "onderaan",
+  "dutch_article": "",
+  "pos": "Lokaladverb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 570,
+  "german": "teil",
+  "dutch": "deel",
+  "dutch_alt": "onderdeel; stuk; kledingstuk",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 571,
+  "german": "beiden",
+  "dutch": "beide",
+  "dutch_alt": "allebei",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 572,
+  "german": "mensch",
+  "dutch": "mens",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 573,
+  "german": "kleiner",
+  "dutch": "jong",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 574,
+  "german": "stellen",
+  "dutch": "plaatsen",
+  "dutch_alt": "stellen; vragen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 575,
+  "german": "oft",
+  "dutch": "vaak",
+  "dutch_alt": "dikwijls",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 576,
+  "german": "sorge",
+  "dutch": "zorg",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 577,
+  "german": "gedacht",
+  "dutch": "bedoeld",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 578,
+  "german": "tust",
+  "dutch": "doen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 579,
+  "german": "trinken",
+  "dutch": "drinken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 580,
+  "german": "einige",
+  "dutch": "enigen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 581,
+  "german": "dies",
+  "dutch": "dit",
+  "dutch_alt": "deze",
+  "dutch_article": "",
+  "pos": "Pronomen",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 582,
+  "german": "ding",
+  "dutch": "ding",
+  "dutch_alt": "iets; voorval",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 584,
+  "german": "kriegen",
+  "dutch": "krijgen",
+  "dutch_alt": "ontvangen; vatten; klissen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 585,
+  "german": "blut",
+  "dutch": "bloed",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 586,
+  "german": "ehrlich",
+  "dutch": "eerlijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 587,
+  "german": "eltern",
+  "dutch": "ouders",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 588,
+  "german": "scheint",
+  "dutch": "schijnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 589,
+  "german": "herz",
+  "dutch": "hart",
+  "dutch_alt": "harten",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 591,
+  "german": "glücklich",
+  "dutch": "gelukkig",
+  "dutch_alt": "fortuinlijk; voorspoedig",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 592,
+  "german": "alte",
+  "dutch": "oud",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 593,
+  "german": "alt",
+  "dutch": "oud",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 594,
+  "german": "bleib",
+  "dutch": "blijven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 595,
+  "german": "wiedersehen",
+  "dutch": "reviseren",
+  "dutch_alt": "terugzien; weerzien",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 596,
+  "german": "frei",
+  "dutch": "vrij",
+  "dutch_alt": "open",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 597,
+  "german": "wen",
+  "dutch": "wie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Pronomen",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 599,
+  "german": "möglich",
+  "dutch": "mogelijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 600,
+  "german": "irgendwie",
+  "dutch": "eenderhoe",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A1",
+  "sublevel": 6
+ },
+ {
+  "word_id": 601,
+  "german": "reicht",
+  "dutch": "volstaan",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 602,
+  "german": "fest",
+  "dutch": "feest",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 603,
+  "german": "besten",
+  "dutch": "goed",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 604,
+  "german": "waffe",
+  "dutch": "wapen",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 605,
+  "german": "kaum",
+  "dutch": "nauwelijks",
+  "dutch_alt": "amper",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 606,
+  "german": "irgendwas",
+  "dutch": "iets",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 607,
+  "german": "klingt",
+  "dutch": "klinken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 608,
+  "german": "platz",
+  "dutch": "plein",
+  "dutch_alt": "plaats; ruimte",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 609,
+  "german": "brauchst",
+  "dutch": "nodig hebben",
+  "dutch_alt": "behoeven; gebruiken; hoeven",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 610,
+  "german": "rede",
+  "dutch": "toespraak",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 611,
+  "german": "papa",
+  "dutch": "pappa",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 612,
+  "german": "falsch",
+  "dutch": "vals",
+  "dutch_alt": "verkeerd; fout; nep",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 613,
+  "german": "sondern",
+  "dutch": "maar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Konjunktion",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 614,
+  "german": "alten",
+  "dutch": "oud",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 615,
+  "german": "nummer",
+  "dutch": "nummer",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 616,
+  "german": "früher",
+  "dutch": "vroeger",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 617,
+  "german": "jungen",
+  "dutch": "jong",
+  "dutch_alt": "jeugdig",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 618,
+  "german": "wohin",
+  "dutch": "waarheen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 619,
+  "german": "außer",
+  "dutch": "behalve",
+  "dutch_alt": "buiten; tenzij",
+  "dutch_article": "",
+  "pos": "Präposition",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 620,
+  "german": "früh",
+  "dutch": "vroeg",
+  "dutch_alt": "pril",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 621,
+  "german": "setzen",
+  "dutch": "zetten",
+  "dutch_alt": "zitten; neerzitten",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 622,
+  "german": "zuerst",
+  "dutch": "eerst",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 623,
+  "german": "wahrscheinlich",
+  "dutch": "waarschijnlijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 624,
+  "german": "dürfen",
+  "dutch": "mogen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 625,
+  "german": "jede",
+  "dutch": "ieder",
+  "dutch_alt": "iedereen; elk",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 626,
+  "german": "arsch",
+  "dutch": "kont",
+  "dutch_alt": "gat; achterwerk; klootzak",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 627,
+  "german": "telefon",
+  "dutch": "telefoon",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 628,
+  "german": "tue",
+  "dutch": "doen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 629,
+  "german": "kennst",
+  "dutch": "kennen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 630,
+  "german": "willkommen",
+  "dutch": "welkom",
+  "dutch_alt": "graag gezien",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 631,
+  "german": "plan",
+  "dutch": "plan",
+  "dutch_alt": "ontwerp",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 632,
+  "german": "großen",
+  "dutch": "groot",
+  "dutch_alt": "volwassene",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 633,
+  "german": "retten",
+  "dutch": "redden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 634,
+  "german": "hierher",
+  "dutch": "hierheen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 635,
+  "german": "wär",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 636,
+  "german": "bring",
+  "dutch": "brengen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 637,
+  "german": "fehler",
+  "dutch": "fout",
+  "dutch_alt": "vergissing",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 638,
+  "german": "wollt",
+  "dutch": "willen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 639,
+  "german": "dollar",
+  "dutch": "dollar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 640,
+  "german": "zehn",
+  "dutch": "tien",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Numerale",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 641,
+  "german": "allem",
+  "dutch": "op",
+  "dutch_alt": "uit",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 642,
+  "german": "pass",
+  "dutch": "paspoort",
+  "dutch_alt": "pas; bergpas; pass",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 643,
+  "german": "nächste",
+  "dutch": "dichtbij",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 644,
+  "german": "stunde",
+  "dutch": "uur",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 645,
+  "german": "hände",
+  "dutch": "hand",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 647,
+  "german": "menge",
+  "dutch": "verzameling",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 648,
+  "german": "langsam",
+  "dutch": "traag",
+  "dutch_alt": "langzaam; sloom",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 649,
+  "german": "bereits",
+  "dutch": "reeds",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 650,
+  "german": "wartet",
+  "dutch": "wachten",
+  "dutch_alt": "onderhouden; verzorgen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 651,
+  "german": "sechs",
+  "dutch": "zes",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Numerale",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 652,
+  "german": "lieben",
+  "dutch": "liefhebben",
+  "dutch_alt": "houden van",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 653,
+  "german": "meines",
+  "dutch": "mijn",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 654,
+  "german": "büro",
+  "dutch": "kantoor",
+  "dutch_alt": "bureau",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 655,
+  "german": "nächsten",
+  "dutch": "dichtbij",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 656,
+  "german": "gebe",
+  "dutch": "geven",
+  "dutch_alt": "zijn; verstrekken; bestaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 657,
+  "german": "wochen",
+  "dutch": "week",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 658,
+  "german": "ruf",
+  "dutch": "reputatie",
+  "dutch_alt": "roep; kreet; aanmaning",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 659,
+  "german": "schaffen",
+  "dutch": "slagen",
+  "dutch_alt": "scheppfen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 660,
+  "german": "leider",
+  "dutch": "helaas",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Modaladverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 661,
+  "german": "scheiß",
+  "dutch": "gelul",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 662,
+  "german": "hölle",
+  "dutch": "hel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 663,
+  "german": "trotzdem",
+  "dutch": "toch",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Konjunktionaladverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 664,
+  "german": "doktor",
+  "dutch": "doctor",
+  "dutch_alt": "dokter",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 665,
+  "german": "tja",
+  "dutch": "nou",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 667,
+  "german": "voll",
+  "dutch": "vol",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 668,
+  "german": "film",
+  "dutch": "film",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 669,
+  "german": "überall",
+  "dutch": "overal",
+  "dutch_alt": "alom",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 670,
+  "german": "hund",
+  "dutch": "hond",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 671,
+  "german": "geworden",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 672,
+  "german": "direkt",
+  "dutch": "direct",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 673,
+  "german": "wolltest",
+  "dutch": "willen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 674,
+  "german": "tat",
+  "dutch": "daad",
+  "dutch_alt": "prestatie",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 675,
+  "german": "denkt",
+  "dutch": "denken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 676,
+  "german": "schiff",
+  "dutch": "schip",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 677,
+  "german": "neues",
+  "dutch": "nieuw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 678,
+  "german": "wem",
+  "dutch": "waarmee",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Pronomen",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 679,
+  "german": "könig",
+  "dutch": "koning",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 680,
+  "german": "danach",
+  "dutch": "daarna",
+  "dutch_alt": "vervolgens; toen",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 682,
+  "german": "hattest",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 683,
+  "german": "lernen",
+  "dutch": "leren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 684,
+  "german": "deswegen",
+  "dutch": "dus",
+  "dutch_alt": "daarom; toen",
+  "dutch_article": "",
+  "pos": "Konjunktionaladverb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 685,
+  "german": "wow",
+  "dutch": "wauw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 686,
+  "german": "nennen",
+  "dutch": "noemen",
+  "dutch_alt": "aanwijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 687,
+  "german": "hm",
+  "dutch": "hm",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 688,
+  "german": "feuer",
+  "dutch": "vuur",
+  "dutch_alt": "brand",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 689,
+  "german": "laufen",
+  "dutch": "rennen",
+  "dutch_alt": "lopen; hollen; werken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 690,
+  "german": "alleine",
+  "dutch": "alleen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 691,
+  "german": "erinnern",
+  "dutch": "herinneren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 692,
+  "german": "völlig",
+  "dutch": "helemaal",
+  "dutch_alt": "volledig; totaal; compleet",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 693,
+  "german": "kleines",
+  "dutch": "klein",
+  "dutch_alt": "minuscuul",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 694,
+  "german": "könnt",
+  "dutch": "kunnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 695,
+  "german": "stelle",
+  "dutch": "baan",
+  "dutch_alt": "plaats; plek; cijfer",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 696,
+  "german": "kumpel",
+  "dutch": "maat",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 697,
+  "german": "verlieren",
+  "dutch": "verliezen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 698,
+  "german": "probleme",
+  "dutch": "probleem",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 699,
+  "german": "spricht",
+  "dutch": "spreken",
+  "dutch_alt": "praten",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 700,
+  "german": "kaffee",
+  "dutch": "koffie",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 1
+ },
+ {
+  "word_id": 701,
+  "german": "luft",
+  "dutch": "lucht",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 702,
+  "german": "fand",
+  "dutch": "vinden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 703,
+  "german": "entschuldige",
+  "dutch": "verontschuldigen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 704,
+  "german": "ziehen",
+  "dutch": "trekken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 705,
+  "german": "verschwinden",
+  "dutch": "verdwijnen",
+  "dutch_alt": "opsodemieteren",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 706,
+  "german": "könntest",
+  "dutch": "kunnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 707,
+  "german": "seht",
+  "dutch": "zien",
+  "dutch_alt": "aanschouwen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 708,
+  "german": "aufhören",
+  "dutch": "stoppen",
+  "dutch_alt": "ophouden",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 709,
+  "german": "eigenen",
+  "dutch": "apart",
+  "dutch_alt": "eigen",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 710,
+  "german": "richtige",
+  "dutch": "correct",
+  "dutch_alt": "juist",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 711,
+  "german": "unserem",
+  "dutch": "ons",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Possessivpronomen",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 712,
+  "german": "suche",
+  "dutch": "zoektocht",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 713,
+  "german": "zwar",
+  "dutch": "wel",
+  "dutch_alt": "weliswaar",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 714,
+  "german": "groß",
+  "dutch": "groot",
+  "dutch_alt": "volwassene",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 715,
+  "german": "hol",
+  "dutch": "halen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 716,
+  "german": "buch",
+  "dutch": "boek",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 717,
+  "german": "krank",
+  "dutch": "ziek",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 718,
+  "german": "fühle",
+  "dutch": "voelen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 719,
+  "german": "jedes",
+  "dutch": "elk",
+  "dutch_alt": "elke",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 720,
+  "german": "verstehst",
+  "dutch": "verstaan",
+  "dutch_alt": "overweg komen; begrijpen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 721,
+  "german": "wert",
+  "dutch": "waarde",
+  "dutch_alt": "waard",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 722,
+  "german": "arzt",
+  "dutch": "arts",
+  "dutch_alt": "dokter; geneesheer; medicus",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 723,
+  "german": "froh",
+  "dutch": "blij",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 724,
+  "german": "versuche",
+  "dutch": "proberen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 725,
+  "german": "straße",
+  "dutch": "straat",
+  "dutch_alt": "weg",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 726,
+  "german": "rufen",
+  "dutch": "roepen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 727,
+  "german": "heiraten",
+  "dutch": "huwen",
+  "dutch_alt": "trouwen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 728,
+  "german": "super",
+  "dutch": "super",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 730,
+  "german": "lebt",
+  "dutch": "leven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 731,
+  "german": "gutes",
+  "dutch": "goed",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 732,
+  "german": "lasse",
+  "dutch": "laten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 733,
+  "german": "onkel",
+  "dutch": "oom",
+  "dutch_alt": "nonkel",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 734,
+  "german": "total",
+  "dutch": "totaal",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 736,
+  "german": "party",
+  "dutch": "fuif",
+  "dutch_alt": "feest",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 737,
+  "german": "erklären",
+  "dutch": "uitleggen",
+  "dutch_alt": "uit de doeken doen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 738,
+  "german": "spielt",
+  "dutch": "spelen",
+  "dutch_alt": "meespelen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 739,
+  "german": "wahl",
+  "dutch": "verkiezing",
+  "dutch_alt": "keuze; keus",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 740,
+  "german": "vertrauen",
+  "dutch": "vertrouwen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 741,
+  "german": "damals",
+  "dutch": "toen",
+  "dutch_alt": "destijds",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 742,
+  "german": "tagen",
+  "dutch": "vergaderen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 743,
+  "german": "leicht",
+  "dutch": "licht",
+  "dutch_alt": "gemakkelijk; makkelijk",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 744,
+  "german": "nachdem",
+  "dutch": "nadat",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 745,
+  "german": "gegangen",
+  "dutch": "gaan",
+  "dutch_alt": "lopen; rijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 746,
+  "german": "gefühl",
+  "dutch": "gevoel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 747,
+  "german": "kaufen",
+  "dutch": "kopen",
+  "dutch_alt": "aanschaffen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 748,
+  "german": "geschafft",
+  "dutch": "einde",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 749,
+  "german": "typen",
+  "dutch": "letter",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 750,
+  "german": "interessiert",
+  "dutch": "geïnteresseerd",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 751,
+  "german": "möchten",
+  "dutch": "mogen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 752,
+  "german": "halte",
+  "dutch": "houden",
+  "dutch_alt": "vasthouden",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 753,
+  "german": "hält",
+  "dutch": "houden",
+  "dutch_alt": "vasthouden",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 754,
+  "german": "glaub",
+  "dutch": "geloven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 755,
+  "german": "irgendwo",
+  "dutch": "ergens",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 756,
+  "german": "stück",
+  "dutch": "stuk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 757,
+  "german": "genauso",
+  "dutch": "coïncideren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 758,
+  "german": "kennt",
+  "dutch": "kennen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 759,
+  "german": "genommen",
+  "dutch": "nemen",
+  "dutch_alt": "pakken; benemen; gebruiken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 760,
+  "german": "zukunft",
+  "dutch": "toekomst",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 761,
+  "german": "weniger",
+  "dutch": "minder",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 762,
+  "german": "cool",
+  "dutch": "gaaf",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 763,
+  "german": "licht",
+  "dutch": "licht",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 764,
+  "german": "getroffen",
+  "dutch": "treffen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 765,
+  "german": "himmel",
+  "dutch": "hemel",
+  "dutch_alt": "lucht",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 766,
+  "german": "nachricht",
+  "dutch": "boodschap",
+  "dutch_alt": "bericht",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 767,
+  "german": "drüben",
+  "dutch": "daarginds",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 768,
+  "german": "passt",
+  "dutch": "passen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 769,
+  "german": "sagten",
+  "dutch": "zeggen",
+  "dutch_alt": "spreken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 770,
+  "german": "kümmern",
+  "dutch": "behartigen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 771,
+  "german": "laut",
+  "dutch": "luid",
+  "dutch_alt": "hard; luidruchtig; volgens",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 772,
+  "german": "vergiss",
+  "dutch": "vergeten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 773,
+  "german": "angerufen",
+  "dutch": "opbellen",
+  "dutch_alt": "bellen; aanroepen; inroepen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 774,
+  "german": "sitzen",
+  "dutch": "zitten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 776,
+  "german": "erde",
+  "dutch": "aarde",
+  "dutch_alt": "Aarde",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 777,
+  "german": "großer",
+  "dutch": "groot",
+  "dutch_alt": "volwassene",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 778,
+  "german": "schlüssel",
+  "dutch": "sleutel",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 779,
+  "german": "rest",
+  "dutch": "overblijfsel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 780,
+  "german": "passieren",
+  "dutch": "gebeuren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 781,
+  "german": "eher",
+  "dutch": "eerder",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 782,
+  "german": "gefragt",
+  "dutch": "zoek",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 783,
+  "german": "gefängnis",
+  "dutch": "gevangenis",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 784,
+  "german": "opfer",
+  "dutch": "offer",
+  "dutch_alt": "slachtoffer",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 785,
+  "german": "körper",
+  "dutch": "lichaam",
+  "dutch_alt": "lijf",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 787,
+  "german": "mist",
+  "dutch": "mest",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 789,
+  "german": "findet",
+  "dutch": "vinden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 790,
+  "german": "schreiben",
+  "dutch": "schrijven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 791,
+  "german": "böse",
+  "dutch": "kwaad",
+  "dutch_alt": "boos",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 792,
+  "german": "gesprochen",
+  "dutch": "spreken",
+  "dutch_alt": "praten",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 793,
+  "german": "versuch",
+  "dutch": "poging",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 794,
+  "german": "vorstellen",
+  "dutch": "introduceren",
+  "dutch_alt": "voorstellen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 795,
+  "german": "wovon",
+  "dutch": "waarvan",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 796,
+  "german": "sobald",
+  "dutch": "zodra",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 797,
+  "german": "nochmal",
+  "dutch": "nogmaals",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 798,
+  "german": "herren",
+  "dutch": "heer",
+  "dutch_alt": "Heer; mijnheer; meneer",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 799,
+  "german": "sex",
+  "dutch": "seks",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 800,
+  "german": "waffen",
+  "dutch": "wapen",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 2
+ },
+ {
+  "word_id": 801,
+  "german": "wohnung",
+  "dutch": "woning",
+  "dutch_alt": "kwartier; logies; onderkomen",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 802,
+  "german": "weh",
+  "dutch": "wee",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 803,
+  "german": "heißen",
+  "dutch": "heten",
+  "dutch_alt": "betekenen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 804,
+  "german": "krankenhaus",
+  "dutch": "ziekenhuis",
+  "dutch_alt": "gasthuis; hospitaal",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 805,
+  "german": "bringe",
+  "dutch": "brengen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 806,
+  "german": "höre",
+  "dutch": "horen",
+  "dutch_alt": "luisteren",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 807,
+  "german": "millionen",
+  "dutch": "miljoen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 808,
+  "german": "klasse",
+  "dutch": "klasse",
+  "dutch_alt": "klas",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 809,
+  "german": "hart",
+  "dutch": "stug",
+  "dutch_alt": "hard",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 810,
+  "german": "worden",
+  "dutch": "zijn",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 811,
+  "german": "sinn",
+  "dutch": "zin",
+  "dutch_alt": "zintuig",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 812,
+  "german": "außerdem",
+  "dutch": "bovendien",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 813,
+  "german": "verletzt",
+  "dutch": "gewond",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 814,
+  "german": "ändern",
+  "dutch": "wijzigen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 815,
+  "german": "erfahren",
+  "dutch": "ervaren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 816,
+  "german": "tragen",
+  "dutch": "dragen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 817,
+  "german": "wenigstens",
+  "dutch": "minstens",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 818,
+  "german": "vorsichtig",
+  "dutch": "voorzichtig",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 819,
+  "german": "daddy",
+  "dutch": "brompot",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 820,
+  "german": "stolz",
+  "dutch": "trots",
+  "dutch_alt": "fier",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 821,
+  "german": "stark",
+  "dutch": "sterk",
+  "dutch_alt": "krachtig",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 822,
+  "german": "fällt",
+  "dutch": "vellen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 823,
+  "german": "möchtest",
+  "dutch": "mogen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 824,
+  "german": "leuten",
+  "dutch": "luiden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 825,
+  "german": "besonders",
+  "dutch": "apart",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 826,
+  "german": "schöne",
+  "dutch": "mooi",
+  "dutch_alt": "leuk",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 827,
+  "german": "schicken",
+  "dutch": "sturen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 828,
+  "german": "person",
+  "dutch": "persoon",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 829,
+  "german": "schätze",
+  "dutch": "schatten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 830,
+  "german": "solange",
+  "dutch": "zolang",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 831,
+  "german": "länger",
+  "dutch": "langdurig",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 832,
+  "german": "großartig",
+  "dutch": "geweldig",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 833,
+  "german": "lacht",
+  "dutch": "lachen",
+  "dutch_alt": "dubbel liggen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 834,
+  "german": "anrufen",
+  "dutch": "opbellen",
+  "dutch_alt": "bellen; aanroepen; inroepen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 835,
+  "german": "stand",
+  "dutch": "gesteldheid",
+  "dutch_alt": "staat; stand; staanplaats",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 836,
+  "german": "redest",
+  "dutch": "spreken",
+  "dutch_alt": "praten",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 837,
+  "german": "fühlen",
+  "dutch": "voelen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 839,
+  "german": "boden",
+  "dutch": "vloer",
+  "dutch_alt": "bodem",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 840,
+  "german": "boss",
+  "dutch": "baas",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 841,
+  "german": "stimme",
+  "dutch": "stem",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 842,
+  "german": "glaubt",
+  "dutch": "geloven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 843,
+  "german": "still",
+  "dutch": "kalm",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 844,
+  "german": "sicherheit",
+  "dutch": "veiligheid",
+  "dutch_alt": "zekerheid",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 845,
+  "german": "setz",
+  "dutch": "zetten",
+  "dutch_alt": "zitten; neerzitten",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 846,
+  "german": "ma",
+  "dutch": "mega-ampère",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 847,
+  "german": "mund",
+  "dutch": "mond",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 848,
+  "german": "kämpfen",
+  "dutch": "strijden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 849,
+  "german": "wisst",
+  "dutch": "weten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 850,
+  "german": "lachen",
+  "dutch": "lachen",
+  "dutch_alt": "dubbel liggen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 851,
+  "german": "hörst",
+  "dutch": "horen",
+  "dutch_alt": "luisteren",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 852,
+  "german": "zeug",
+  "dutch": "tuig",
+  "dutch_alt": "tuigage; zeiltuig",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 853,
+  "german": "lustig",
+  "dutch": "grappig",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 854,
+  "german": "umbringen",
+  "dutch": "doden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 855,
+  "german": "sollst",
+  "dutch": "moeten",
+  "dutch_alt": "zullen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 856,
+  "german": "hasse",
+  "dutch": "haten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 857,
+  "german": "schlimm",
+  "dutch": "slecht",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 858,
+  "german": "unglaublich",
+  "dutch": "ongelofelijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 859,
+  "german": "wärst",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 860,
+  "german": "laden",
+  "dutch": "winkel",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 861,
+  "german": "führen",
+  "dutch": "leiden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 862,
+  "german": "gestorben",
+  "dutch": "dood",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 863,
+  "german": "schauen",
+  "dutch": "kijken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 864,
+  "german": "meinung",
+  "dutch": "opinie",
+  "dutch_alt": "mening; intentie",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 865,
+  "german": "lesen",
+  "dutch": "lezen",
+  "dutch_alt": "oppikken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 866,
+  "german": "mörder",
+  "dutch": "moordenaar",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 867,
+  "german": "frank",
+  "dutch": "Frank",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 869,
+  "german": "geschehen",
+  "dutch": "gebeuren",
+  "dutch_alt": "geschieden",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 870,
+  "german": "geschäft",
+  "dutch": "winkel",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 871,
+  "german": "idiot",
+  "dutch": "idioot",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 872,
+  "german": "verzeihung",
+  "dutch": "vergiffenis",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 873,
+  "german": "fliegen",
+  "dutch": "vliegen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 874,
+  "german": "zeig",
+  "dutch": "tonen",
+  "dutch_alt": "wijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 875,
+  "german": "team",
+  "dutch": "team",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 876,
+  "german": "general",
+  "dutch": "generaal",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 880,
+  "german": "vorher",
+  "dutch": "van tevoren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 881,
+  "german": "schluss",
+  "dutch": "einde",
+  "dutch_alt": "conclusie; sluiting",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 882,
+  "german": "schneller",
+  "dutch": "snel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 883,
+  "german": "liebt",
+  "dutch": "liefhebben",
+  "dutch_alt": "houden van",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 885,
+  "german": "mögen",
+  "dutch": "mogen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 886,
+  "german": "meisten",
+  "dutch": "meest",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 887,
+  "german": "denk",
+  "dutch": "denken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 889,
+  "german": "perfekt",
+  "dutch": "perfect",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 891,
+  "german": "handy",
+  "dutch": "mobieltje",
+  "dutch_alt": "mobiel",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 892,
+  "german": "hinten",
+  "dutch": "achter",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Lokaladverb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 893,
+  "german": "monate",
+  "dutch": "maand",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 894,
+  "german": "erinnere",
+  "dutch": "herinneren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 895,
+  "german": "acht",
+  "dutch": "acht",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Numerale",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 896,
+  "german": "arbeitet",
+  "dutch": "werken",
+  "dutch_alt": "arbeiden",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 897,
+  "german": "fallen",
+  "dutch": "vallen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 898,
+  "german": "rufe",
+  "dutch": "roepen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 899,
+  "german": "nötig",
+  "dutch": "nodig",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 900,
+  "german": "mord",
+  "dutch": "moord",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 3
+ },
+ {
+  "word_id": 901,
+  "german": "heraus",
+  "dutch": "buiten",
+  "dutch_alt": "eruit",
+  "dutch_article": "",
+  "pos": "Lokaladverb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 902,
+  "german": "tages",
+  "dutch": "dag",
+  "dutch_alt": "etmaal",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 903,
+  "german": "unmöglich",
+  "dutch": "onmogelijk",
+  "dutch_alt": "ondoenlijk",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 904,
+  "german": "liebling",
+  "dutch": "schat",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 906,
+  "german": "tatsächlich",
+  "dutch": "inderdaad",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 907,
+  "german": "folgen",
+  "dutch": "volgen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 908,
+  "german": "bitten",
+  "dutch": "vragen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 909,
+  "german": "behalten",
+  "dutch": "houden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 910,
+  "german": "nähe",
+  "dutch": "nabijheid",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 911,
+  "german": "arbeite",
+  "dutch": "werken",
+  "dutch_alt": "arbeiden",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 913,
+  "german": "verdammte",
+  "dutch": "veroordelen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 914,
+  "german": "plötzlich",
+  "dutch": "plotseling",
+  "dutch_alt": "opeens; ineens",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 915,
+  "german": "lebens",
+  "dutch": "leven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 916,
+  "german": "hole",
+  "dutch": "leemte",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 917,
+  "german": "tisch",
+  "dutch": "tafel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 918,
+  "german": "michael",
+  "dutch": "Michiel",
+  "dutch_alt": "Maikel; Michaël; Machiel",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 919,
+  "german": "hörte",
+  "dutch": "horen",
+  "dutch_alt": "luisteren",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 920,
+  "german": "jemals",
+  "dutch": "ooit",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 921,
+  "german": "liegen",
+  "dutch": "liggen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 922,
+  "german": "verkaufen",
+  "dutch": "verkopen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 923,
+  "german": "gefährlich",
+  "dutch": "gevaarlijk",
+  "dutch_alt": "gevaarlijke",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 924,
+  "german": "anfangen",
+  "dutch": "beginnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 925,
+  "german": "bekommt",
+  "dutch": "krijgen",
+  "dutch_alt": "bekomen; pakken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 926,
+  "german": "machte",
+  "dutch": "doen",
+  "dutch_alt": "maken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 927,
+  "german": "ha",
+  "dutch": "hebben",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interjektion",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 928,
+  "german": "hotel",
+  "dutch": "hotel",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 929,
+  "german": "hilft",
+  "dutch": "helpen",
+  "dutch_alt": "bijstaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 930,
+  "german": "werdet",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 931,
+  "german": "meister",
+  "dutch": "meester",
+  "dutch_alt": "kampioen; groot vakman; baas",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 932,
+  "german": "kampf",
+  "dutch": "gevecht",
+  "dutch_alt": "strijd",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 933,
+  "german": "antwort",
+  "dutch": "antwoord",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 934,
+  "german": "konnten",
+  "dutch": "kunnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 935,
+  "german": "geschickt",
+  "dutch": "handig",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 936,
+  "german": "jedem",
+  "dutch": "ieder",
+  "dutch_alt": "iedereen; elk",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 937,
+  "german": "obwohl",
+  "dutch": "hoewel",
+  "dutch_alt": "ofschoon",
+  "dutch_article": "",
+  "pos": "Subjunktion",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 938,
+  "german": "sieben",
+  "dutch": "zeven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Numerale",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 939,
+  "german": "komisch",
+  "dutch": "komisch",
+  "dutch_alt": "vreemd; grappig; eigenaardig",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 940,
+  "german": "gewinnen",
+  "dutch": "winnen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 941,
+  "german": "ihres",
+  "dutch": "jullie",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Personalpronomen",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 944,
+  "german": "voller",
+  "dutch": "vol",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 945,
+  "german": "unterwegs",
+  "dutch": "onderweg",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 946,
+  "german": "dumm",
+  "dutch": "dom",
+  "dutch_alt": "suf",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 947,
+  "german": "ärger",
+  "dutch": "woede",
+  "dutch_alt": "boosheid",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 948,
+  "german": "bild",
+  "dutch": "beeld",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 950,
+  "german": "neu",
+  "dutch": "nieuw",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 951,
+  "german": "bezahlen",
+  "dutch": "betalen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 952,
+  "german": "dagegen",
+  "dutch": "tegenaan",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Pronominaladverb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 953,
+  "german": "seien",
+  "dutch": "zijn",
+  "dutch_alt": "wezen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 954,
+  "german": "starb",
+  "dutch": "sterven",
+  "dutch_alt": "doodgaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 956,
+  "german": "monaten",
+  "dutch": "maand",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 957,
+  "german": "leiche",
+  "dutch": "lijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 958,
+  "german": "niemanden",
+  "dutch": "niemand",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 959,
+  "german": "auge",
+  "dutch": "oog",
+  "dutch_alt": "kijker",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 960,
+  "german": "arschloch",
+  "dutch": "kontgat",
+  "dutch_alt": "reet",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 961,
+  "german": "verheiratet",
+  "dutch": "getrouwd",
+  "dutch_alt": "gehuwd",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 962,
+  "german": "peter",
+  "dutch": "Pieter",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 963,
+  "german": "zieh",
+  "dutch": "trekken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 964,
+  "german": "nimmt",
+  "dutch": "nemen",
+  "dutch_alt": "pakken; benemen; gebruiken",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 965,
+  "german": "gerettet",
+  "dutch": "redden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 966,
+  "german": "agent",
+  "dutch": "agent",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 967,
+  "german": "traum",
+  "dutch": "droom",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 968,
+  "german": "entscheidung",
+  "dutch": "besluit",
+  "dutch_alt": "arbitrage; beslissing",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 969,
+  "german": "schlimmer",
+  "dutch": "slecht",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 970,
+  "german": "regeln",
+  "dutch": "regelen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 971,
+  "german": "fenster",
+  "dutch": "raam",
+  "dutch_alt": "venster",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 972,
+  "german": "fangen",
+  "dutch": "tikkertje",
+  "dutch_alt": "krijgertje; pakkertje",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 973,
+  "german": "fort",
+  "dutch": "fort",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 974,
+  "german": "ständig",
+  "dutch": "permanent",
+  "dutch_alt": "telkens",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 975,
+  "german": "findest",
+  "dutch": "vinden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 976,
+  "german": "gefahr",
+  "dutch": "gevaar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 977,
+  "german": "absolut",
+  "dutch": "absoluut",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 979,
+  "german": "augenblick",
+  "dutch": "ogenblik",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 980,
+  "german": "bescheid",
+  "dutch": "informatie",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 981,
+  "german": "rum",
+  "dutch": "rum",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 982,
+  "german": "gedanken",
+  "dutch": "gedachte",
+  "dutch_alt": "idee",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 983,
+  "german": "werd",
+  "dutch": "worden",
+  "dutch_alt": "zullen; gaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 984,
+  "german": "ziel",
+  "dutch": "doel",
+  "dutch_alt": "meet",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 986,
+  "german": "bewegung",
+  "dutch": "beweging",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 987,
+  "german": "jemandem",
+  "dutch": "iemand",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Indefinitpronomen",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 988,
+  "german": "wünschte",
+  "dutch": "wensen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 989,
+  "german": "worte",
+  "dutch": "woord",
+  "dutch_alt": "",
+  "dutch_article": "de/het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 990,
+  "german": "kamen",
+  "dutch": "komen",
+  "dutch_alt": "klaarkomen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 991,
+  "german": "welcher",
+  "dutch": "welk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Interrogativpronomen",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 992,
+  "german": "zahlen",
+  "dutch": "betalen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 993,
+  "german": "anfang",
+  "dutch": "begin",
+  "dutch_alt": "aanvang; start",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 994,
+  "german": "legen",
+  "dutch": "leggen",
+  "dutch_alt": "plaatsen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 995,
+  "german": "erinnerst",
+  "dutch": "herinneren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 996,
+  "german": "anwalt",
+  "dutch": "advocaat",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 997,
+  "german": "fahr",
+  "dutch": "rijden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 998,
+  "german": "sitzt",
+  "dutch": "zitten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 999,
+  "german": "hilf",
+  "dutch": "helpen",
+  "dutch_alt": "bijstaan",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 1000,
+  "german": "offen",
+  "dutch": "open",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 4
+ },
+ {
+  "word_id": 1001,
+  "german": "schönen",
+  "dutch": "manipuleren",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1003,
+  "german": "müsste",
+  "dutch": "moeten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1004,
+  "german": "arme",
+  "dutch": "armen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1005,
+  "german": "bier",
+  "dutch": "bier",
+  "dutch_alt": "",
+  "dutch_article": "het",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1007,
+  "german": "partner",
+  "dutch": "partner",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1008,
+  "german": "klein",
+  "dutch": "klein",
+  "dutch_alt": "minuscuul",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1009,
+  "german": "david",
+  "dutch": "David",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1010,
+  "german": "klappe",
+  "dutch": "luik",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1011,
+  "german": "süß",
+  "dutch": "zoet",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1012,
+  "german": "herum",
+  "dutch": "afwisselend",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1013,
+  "german": "finger",
+  "dutch": "vinger",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1014,
+  "german": "ehe",
+  "dutch": "huwelijk",
+  "dutch_alt": "echt",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1015,
+  "german": "rolle",
+  "dutch": "rol",
+  "dutch_alt": "katrol; koprol; rolvlucht",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1016,
+  "german": "ließ",
+  "dutch": "laten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1017,
+  "german": "gleiche",
+  "dutch": "lijken op",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1018,
+  "german": "monat",
+  "dutch": "maand",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1019,
+  "german": "hochzeit",
+  "dutch": "bruiloft",
+  "dutch_alt": "huwelijksfeest",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1021,
+  "german": "führt",
+  "dutch": "leiden",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1022,
+  "german": "paris",
+  "dutch": "Parijs",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1023,
+  "german": "wach",
+  "dutch": "wakker",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1024,
+  "german": "wozu",
+  "dutch": "waarvoor",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1025,
+  "german": "arm",
+  "dutch": "arm",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1026,
+  "german": "geschrieben",
+  "dutch": "schrijven",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1027,
+  "german": "chef",
+  "dutch": "chef",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1028,
+  "german": "benutzen",
+  "dutch": "gebruiken",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1029,
+  "german": "informationen",
+  "dutch": "informatie",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1030,
+  "german": "erledigt",
+  "dutch": "afgelopen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1031,
+  "german": "hoffentlich",
+  "dutch": "hopelijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1032,
+  "german": "müsst",
+  "dutch": "moeten",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1033,
+  "german": "fühlt",
+  "dutch": "voelen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1034,
+  "german": "tanzen",
+  "dutch": "dansen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1035,
+  "german": "ansehen",
+  "dutch": "aanzien",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1036,
+  "german": "darfst",
+  "dutch": "mogen",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1037,
+  "german": "zuhause",
+  "dutch": "thuis",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1038,
+  "german": "wunderbar",
+  "dutch": "heerlijk",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adjektiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1039,
+  "german": "hältst",
+  "dutch": "houden",
+  "dutch_alt": "vasthouden",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1040,
+  "german": "reise",
+  "dutch": "reis",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1042,
+  "german": "dame",
+  "dutch": "dame",
+  "dutch_alt": "koningin",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1043,
+  "german": "irgendwann",
+  "dutch": "ooit",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1046,
+  "german": "steckt",
+  "dutch": "baar",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1047,
+  "german": "jedenfalls",
+  "dutch": "in ieder geval",
+  "dutch_alt": "althans; tenminste",
+  "dutch_article": "",
+  "pos": "Adverb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1048,
+  "german": "schreit",
+  "dutch": "schreeuwen",
+  "dutch_alt": "roepen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1049,
+  "german": "tolle",
+  "dutch": "kuif",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1051,
+  "german": "tschüss",
+  "dutch": "dag",
+  "dutch_alt": "",
+  "dutch_article": "",
+  "pos": "",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1052,
+  "german": "nennt",
+  "dutch": "noemen",
+  "dutch_alt": "aanwijzen",
+  "dutch_article": "",
+  "pos": "Verb",
+  "level": "A2",
+  "sublevel": 5
+ },
+ {
+  "word_id": 1053,
+  "german": "raum",
+  "dutch": "ruimte",
+  "dutch_alt": "",
+  "dutch_article": "de",
+  "pos": "Substantiv",
+  "level": "A2",
+  "sublevel": 5
+ }
+]

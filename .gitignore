@@ -1,0 +1,13 @@
+# Server live state (per-machine)
+data.json
+data.json.tmp
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Large upstream data (regenerate via build.py / generate_seed.py; see LICENSE.txt)
+# nl.sqlite3 is 182 MB — exceeds GitHub's 100 MB file limit.
+*.sqlite3
+de_full.txt
