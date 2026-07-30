@@ -358,6 +358,9 @@ INDEX_HTML = r"""<!doctype html>
            box-shadow: 0 4px 16px rgba(0,0,0,.45); max-width: 90vw;
            white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .toast.show { opacity: 1; transform: translate(-50%, 0); }
+  .toolbar { display:flex; justify-content:flex-end; padding:.4rem 1.25rem 0; }
+  .toolbar button { flex:0 0 auto; padding:.4rem .8rem; font-size:.8rem; min-width:auto; }
+  #addbar[hidden] { display:none; }
   .streak { color: #ffb86b; font-weight: 600; }
 </style>
 </head>
@@ -367,8 +370,9 @@ INDEX_HTML = r"""<!doctype html>
   <button id="dir-toggle" title="Switch learner — each has fully independent progress">…</button>
   <div class="stats" id="stats">…</div>
 </header>
+<div class="toolbar"><button id="addtoggle" title="add a word">＋ Word</button></div>
 <main id="main"><div class="empty">Loading…</div></main>
-<footer>
+<footer id="addbar" hidden>
   <input id="de" placeholder="duits" autocomplete="off" list="de-suggest">
   <datalist id="de-suggest"></datalist>
   <input id="nl" placeholder="nederlands" autocomplete="off">
@@ -535,6 +539,11 @@ async function addWord() {
 }
 document.getElementById('add').onclick = addWord;
 document.getElementById('dir-toggle').onclick = toggleDir;
+document.getElementById('addtoggle').onclick = () => {
+  const bar = document.getElementById('addbar');
+  bar.hidden = !bar.hidden;
+  if (!bar.hidden) document.getElementById('de').focus();
+};
 for (const id of ['de','nl','sub']) {
   document.getElementById(id).addEventListener('keydown', e => {
     if (e.key === 'Enter') { e.preventDefault(); addWord(); }
@@ -681,7 +690,8 @@ class Handler(BaseHTTPRequestHandler):
             with LOCK:
                 state = load_state()
                 # New word_id above any existing, so it introduces after the seed.
-                wid = max((c.get("word_id", 0) for c in state["cards"]), default=0) + 1
+                # Manual words use a high id base so future seed growth can never collide.
+                wid = max(1_000_000, max((c.get("word_id", 0) for c in state["cards"]), default=0) + 1)
                 word = {"word_id": wid, "german": de, "dutch": nl, "dutch_alt": "",
                         "dutch_article": data.get("dutch_article", ""), "pos": "",
                         "level": lvl, "sublevel": sub}

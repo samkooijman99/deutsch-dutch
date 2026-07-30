@@ -59,6 +59,7 @@
   kbd { background:var(--bg); border:1px solid var(--border); border-radius:4px; padding:1px 5px; font-size:.7rem; }
   .toolbar { display:flex; gap:.4rem; padding:0 1rem .5rem; justify-content:flex-end; }
   .toolbar button { flex: 0 0 auto; padding:.45rem .8rem; font-size:.8rem; min-width: auto; }
+  #addbar[hidden] { display: none; }
   .toast { position: fixed; left: 50%; transform: translate(-50%, -16px);
            top: calc(env(safe-area-inset-top, 0px) + .85rem);
            background: var(--accent); color: #1a1d24; padding: .5rem .9rem; border-radius: 999px;
@@ -78,10 +79,11 @@
 </header>
 <main id="main"><div class="empty">Loading…</div></main>
 <div class="toolbar">
+  <button id="addtoggle" title="add a word">＋ Word</button>
   <button id="export" title="export progress">Export</button>
   <button id="reset" title="reset all progress">Reset</button>
 </div>
-<footer>
+<footer id="addbar" hidden>
   <div class="row">
     <input id="de" placeholder="duits" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" list="de-suggest">
     <datalist id="de-suggest"></datalist>
@@ -190,29 +192,51 @@ function ensureDefaults(s) {
   return s;
 }
 
+async function fetchSeed() {
+  try {
+    const r = await fetch("seed.json", { cache: "no-cache" });
+    if (r.ok) return await r.json();
+  } catch (e) { console.warn("seed fetch failed", e); }
+  return [];
+}
+
+// Add a card for every (word_id, dir) in the seed that isn't already present.
+// Existing cards are NEVER touched, so grading progress is fully preserved — a
+// bigger seed release just adds the new words. Non-destructive & backward-compatible.
+function mergeSeed(s, seed) {
+  const have = new Set(s.cards.map(c => `${c.word_id}:${c.dir}`));
+  for (const w of seed) {
+    for (const dir of DIRECTIONS) {
+      const key = `${w.word_id}:${dir}`;
+      if (have.has(key)) continue;
+      s.cards.push(newCard(s.next_id++, w, dir));
+      have.add(key);
+    }
+  }
+  return s;
+}
+
 async function loadState() {
+  const seed = await fetchSeed();
   const raw = localStorage.getItem(KEY);
   if (raw) {
-    try { return ensureDefaults(JSON.parse(raw)); }
-    catch (e) { console.warn("corrupt local state, re-bootstrapping", e); }
+    try {
+      const s = ensureDefaults(JSON.parse(raw));
+      if (typeof s.next_id !== "number") {
+        s.next_id = s.cards.reduce((m, c) => Math.max(m, c.id || 0), 0) + 1;
+      }
+      return mergeSeed(s, seed);           // pick up any new deck words, keep progress
+    } catch (e) { console.warn("corrupt local state, re-bootstrapping", e); }
   }
-  // First run: try bootstrap.json (snapshot of desktop progress), else build from seed.json.
+  // First run: optional bootstrap snapshot of desktop progress, else a fresh deck.
   try {
     const r = await fetch("bootstrap.json", { cache: "no-cache" });
     if (r.ok) {
-      const s = await r.json();
-      if (s.cards && s.cards.length) return ensureDefaults(s);
+      const b = await r.json();
+      if (b.cards && b.cards.length) return mergeSeed(ensureDefaults(b), seed);
     }
-  } catch (e) { /* ignore, try seed */ }
-
-  const r2 = await fetch("seed.json", { cache: "no-cache" });
-  const seed = await r2.json();
-  const cards = [];
-  let id = 1;
-  for (const w of seed) {
-    for (const dir of DIRECTIONS) cards.push(newCard(id++, w, dir));
-  }
-  return ensureDefaults({ next_id: id, cards });
+  } catch (e) { /* ignore, build fresh */ }
+  return mergeSeed(ensureDefaults({ next_id: 1, cards: [] }), seed);
 }
 
 function newCard(id, word, dir) {
@@ -474,7 +498,8 @@ function addWord() {
   const lvl = document.getElementById("lvl").value;
   const sub = parseInt(document.getElementById("sub").value, 10) || 1;
   if (!de || !nl) return;
-  const wid = state.cards.reduce((mx, c) => Math.max(mx, c.word_id || 0), 0) + 1;
+  // Manual words get IDs from a high base so future seed growth can never collide.
+  const wid = Math.max(1000000, state.cards.reduce((mx, c) => Math.max(mx, c.word_id || 0), 0) + 1);
   const word = { word_id: wid, german: de, dutch: nl, dutch_alt: "", dutch_article: "", pos: "", level: lvl, sublevel: sub };
   for (const dir of DIRECTIONS) state.cards.push(newCard(state.next_id++, word, dir));
   saveState();
@@ -536,6 +561,11 @@ document.getElementById("add").onclick = addWord;
 document.getElementById("dir-toggle").onclick = toggleDir;
 document.getElementById("export").onclick = exportState;
 document.getElementById("reset").onclick = resetState;
+document.getElementById("addtoggle").onclick = () => {
+  const bar = document.getElementById("addbar");
+  bar.hidden = !bar.hidden;
+  if (!bar.hidden) document.getElementById("de").focus();
+};
 
 for (const id of ["de", "nl", "sub"]) {
   document.getElementById(id).addEventListener("keydown", e => {
