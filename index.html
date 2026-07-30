@@ -138,7 +138,7 @@
 
 const KEY = "deutsch_v1";
 const LEVEL_ORDER = {A1:1, A2:2, B1:3, B2:4, C1:5, C2:6};
-const DEFAULT_NEW_PER_DAY = 15; // per direction; click "today N/M" to change
+const DEFAULT_NEW_PER_DAY = 15; // legacy field kept in state for compatibility; no cap enforced
 const RELEARN_GAP = 3;          // re-show a failed card after this many other grades
 const DIRECTIONS = ["de2nl", "nl2de"];
 const DIR_LABEL = { de2nl: "Currently learning Dutch 🇳🇱", nl2de: "Currently learning German 🇩🇪" };
@@ -307,9 +307,6 @@ function activeDir() { return (state.config && state.config.active_dir) || "de2n
 function newIntrosToday(dir) {
   return (state.intro_log && state.intro_log[dir] && state.intro_log[dir][todayKey()]) || 0;
 }
-function newPerDay(dir) {
-  return (state.config.new_per_day && state.config.new_per_day[dir]) || DEFAULT_NEW_PER_DAY;
-}
 function todayLog(dir) {
   const dl = state.daily_log[dir];
   const k = todayKey();
@@ -451,8 +448,8 @@ function pickDue() {
     due.sort((a, b) => (b.lapses - a.lapses) || (a.due_ts - b.due_ts));
     return due[0];
   }
-  // 3. New cards, capped per local day per direction.
-  if (newIntrosToday(dir) < newPerDay()) {
+  // 3. New cards (no daily limit).
+  {
     const fresh = state.cards.filter(c => c.dir === dir && c.reps === 0 && c.dutch);
     if (fresh.length) {
       fresh.sort((a, b) => levelRank(a) - levelRank(b) || a.word_id - b.word_id);
@@ -540,26 +537,10 @@ function refreshStats() {
   const s = computeStats();
   document.getElementById("dir-toggle").textContent = DIR_LABEL[s.dir] || s.dir;
   const today = newIntrosToday(s.dir);
-  const cap = newPerDay(s.dir);
   const streakDays = (state.streak[s.dir] && state.streak[s.dir].days) || 0;
   const streakHtml = streakDays >= 2 ? `<span class="streak" title="day streak">🔥 ${streakDays}d</span>` : "";
   document.getElementById("stats").innerHTML =
-    `${streakHtml}<span>due <b>${s.due}</b></span><span>new ${s.new}</span><span>learn ${s.learning}</span><span>mature ${s.mature}</span><span>tot ${s.total}</span><span id="today-cap" title="tap to change daily new-card limit" style="cursor:pointer;text-decoration:underline dotted">today ${today}/${cap}</span>`;
-  const el = document.getElementById("today-cap");
-  if (el) el.onclick = editDailyCap;
-}
-
-function editDailyCap() {
-  const cur = newPerDay();
-  const v = prompt(`New cards per day for this learner (currently ${cur}). Set to a high number like 999 for unlimited.`, String(cur));
-  if (v === null) return;
-  const n = parseInt(v, 10);
-  if (!Number.isFinite(n) || n < 0) return;
-  if (!state.config) state.config = {};
-  state.config.new_per_day[activeDir()] = n;
-  saveState();
-  refreshStats();
-  if (!current) loadNext();
+    `${streakHtml}<span>due <b>${s.due}</b></span><span>new ${s.new}</span><span>learn ${s.learning}</span><span>mature ${s.mature}</span><span>tot ${s.total}</span><span title="new words started today">today ${today}</span>`;
 }
 
 function toggleDir() {
@@ -572,24 +553,7 @@ function toggleDir() {
 function render() {
   const m = document.getElementById("main");
   if (!current) {
-    const dir = activeDir();
-    const remainingNew = state.cards.filter(c => c.dir === dir && c.reps === 0 && c.dutch).length;
-    const capped = remainingNew > 0 && newIntrosToday(dir) >= newPerDay(dir);
-    if (capped) {
-      m.innerHTML = `<div class="empty"><h2>Daily new-card limit reached</h2>
-        <p>${newIntrosToday(dir)} new cards introduced today (cap ${newPerDay(dir)}) for this learner.
-        ${remainingNew} new cards still in the deck. Reviews are caught up.</p>
-        <div class="btns" style="margin-top:1rem"><button id="more-btn">+10 more today</button><button id="raise-btn">Change daily cap…</button></div></div>`;
-      document.getElementById("more-btn").onclick = () => {
-        const k = todayKey();
-        state.intro_log[dir][k] = Math.max(0, (state.intro_log[dir][k] || 0) - 10);
-        saveState();
-        loadNext();
-      };
-      document.getElementById("raise-btn").onclick = editDailyCap;
-    } else {
-      m.innerHTML = `<div class="empty"><h2>All caught up 🎉</h2><p>No cards due for this learner. Switch learner above, add words below, or come back later.</p></div>`;
-    }
+    m.innerHTML = `<div class="empty"><h2>All caught up 🎉</h2><p>No cards due for this learner. Switch learner above, add words below, or come back later.</p></div>`;
     return;
   }
   const tag = current.level ? `${current.level}.${current.sublevel || 1}` : "—";
