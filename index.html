@@ -151,61 +151,44 @@ let suggestTimer = null;
 let relearnQueue = [];     // ephemeral [{id, dir, gradesLeft}], lost on reload
 let sessionCombo = 0;      // ephemeral consecutive-good streak
 
-// ---------- Supabase cloud sync (optional) ----------
-// The anon key below is PUBLIC by design; Row-Level Security + login guard the data.
+// ---------- Cloud sync via secret code (optional) ----------
+// The anon key below is PUBLIC by design. Data is reached ONLY through the
+// get_deck/save_deck RPCs, each scoped to the exact code passed in — the code is
+// the only key, and the table itself stays unreadable to anon (RLS, no policies).
 const SUPABASE_URL = "https://tgbzqmdjgsjillqyqowd.supabase.co";
 const SUPABASE_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnYnpxbWRqZ3NqaWxscXlxb3dkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU0MzE0ODAsImV4cCI6MjEwMTAwNzQ4MH0.2RTtOgIRo40Dk6694yDGKRLf7_YSBDmnvhQTuyVPqhI";
+const SYNC_KEY = "deutsch_synccode";
 let sbClient = null;
-let sbSession = null;
+let syncCode = null;
 let pushTimer = null;
 
 function initSupabase() {
   if (!window.supabase) return;                 // CDN blocked/offline -> local-only, no crash
-  sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
-  sbClient.auth.onAuthStateChange((evt, session) => {
-    sbSession = session;
-    updateSyncUI();
-    if (session) cloudPullMerge();
-    else if (evt === "INITIAL_SESSION" && !localStorage.getItem("deutsch_onboarded")) openSync();
-  });
+  sbClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON, { auth: { persistSession: false } });
+  syncCode = localStorage.getItem(SYNC_KEY) || null;
   updateSyncUI();
+  if (syncCode) cloudPullMerge();
+  else if (!localStorage.getItem("deutsch_onboarded")) openSync();
 }
 
 function updateSyncUI() {
   const b = document.getElementById("sync");
   if (!b) return;
-  if (sbSession) { b.textContent = "☁︎ Synced"; b.title = "Synced with your code — tap to sign out"; }
+  if (syncCode) { b.textContent = "☁︎ Synced"; b.title = "Synced as “" + syncCode + "” — tap to manage"; }
   else { b.textContent = "☁︎ Sync"; b.title = "Enter a code to sync across your devices"; }
-}
-
-// A sync code is both the identity and the password. Same code anywhere = same deck.
-function codeToCred(code) {
-  const slug = code.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-  return { email: slug + "@sync.deutschdutch.app", password: "sync:" + code };
-}
-
-async function submitCode(code) {
-  const cred = codeToCred(code);
-  const res = await sbClient.auth.signInWithPassword(cred);
-  if (res.error) {                                   // unknown code -> create it
-    const su = await sbClient.auth.signUp(cred);
-    if (su.error) return { ok: false, msg: su.error.message };
-    if (!su.data.session) return { ok: false, msg: "Sync isn't switched on yet. (Owner: turn off ‘Confirm email’ in Supabase → Auth → Providers → Email.)" };
-  }
-  return { ok: true };
 }
 
 function openSync() {
   const modal = document.getElementById("sync-modal");
   const form = document.getElementById("sync-form");
   const done = document.getElementById("sync-done");
-  if (sbSession) { form.hidden = true; done.hidden = false; }
+  if (syncCode) { form.hidden = true; done.hidden = false; }
   else {
     form.hidden = false; done.hidden = true;
     document.getElementById("sync-msg").textContent = sbClient ? "" : "You appear to be offline — try again when connected.";
   }
   modal.hidden = false;
-  if (!sbSession && sbClient) setTimeout(() => { const i = document.getElementById("sync-code"); if (i) i.focus(); }, 60);
+  if (!syncCode && sbClient) setTimeout(function () { var i = document.getElementById("sync-code"); if (i) i.focus(); }, 60);
 }
 
 function closeSync() { document.getElementById("sync-modal").hidden = true; }
@@ -213,27 +196,34 @@ function closeSync() { document.getElementById("sync-modal").hidden = true; }
 async function onSyncGo() {
   const input = document.getElementById("sync-code");
   const msg = document.getElementById("sync-msg");
-  const code = (input.value || "").trim();
+  const code = (input.value || "").trim().toLowerCase();
   if (code.length < 3) { msg.textContent = "Please use a code of at least 3 characters."; return; }
   if (!sbClient) { msg.textContent = "Sync unavailable (offline?)."; return; }
   msg.textContent = "Connecting…";
-  const r = await submitCode(code);
-  if (r.ok) { localStorage.setItem("deutsch_onboarded", "1"); msg.textContent = ""; input.value = ""; closeSync(); }
-  else { msg.textContent = r.msg; }
+  const res = await sbClient.rpc("get_deck", { p_code: code });   // also verifies connectivity
+  if (res.error) { msg.textContent = "Couldn't reach sync: " + (res.error.message || "try again"); return; }
+  syncCode = code;
+  localStorage.setItem(SYNC_KEY, code);
+  localStorage.setItem("deutsch_onboarded", "1");
+  updateSyncUI();
+  msg.textContent = ""; input.value = ""; closeSync();
+  cloudPullMerge();
 }
 
-async function onSyncSignout() {
-  if (sbClient && sbSession) { await sbClient.auth.signOut(); sbSession = null; updateSyncUI(); }
+function onSyncSignout() {
+  syncCode = null;
+  localStorage.removeItem(SYNC_KEY);
+  updateSyncUI();
   closeSync();
 }
 
 async function cloudPullMerge() {
-  if (!sbClient || !sbSession) return;
+  if (!sbClient || !syncCode) return;
   try {
-    const { data, error } = await sbClient.from("deck_state").select("state").eq("user_id", sbSession.user.id).maybeSingle();
-    if (error) { console.warn("cloud pull failed", error); return; }
-    if (data && data.state) {
-      state = mergeStates(state, ensureDefaults(data.state));
+    const res = await sbClient.rpc("get_deck", { p_code: syncCode });
+    if (res.error) { console.warn("cloud pull failed", res.error); return; }
+    if (res.data) {
+      state = mergeStates(state, ensureDefaults(res.data));
       try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
       loadNext();
     }
@@ -243,12 +233,11 @@ async function cloudPullMerge() {
 }
 
 function cloudPush(immediate) {
-  if (!sbClient || !sbSession) return;
+  if (!sbClient || !syncCode) return;
   clearTimeout(pushTimer);
-  const doPush = async () => {
-    try {
-      await sbClient.from("deck_state").upsert({ user_id: sbSession.user.id, state, updated_at: new Date().toISOString() });
-    } catch (e) { console.warn("cloud push failed", e); }
+  const doPush = async function () {
+    try { await sbClient.rpc("save_deck", { p_code: syncCode, p_state: state }); }
+    catch (e) { console.warn("cloud push failed", e); }
   };
   if (immediate) doPush(); else pushTimer = setTimeout(doPush, 1500);
 }
