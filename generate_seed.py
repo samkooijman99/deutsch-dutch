@@ -16,6 +16,7 @@ FREQ_PATH = os.path.join(ROOT, "de_full.txt")
 SEED_PATH = os.path.join(ROOT, "seed.json")
 WORDBANK_PATH = os.path.join(ROOT, "wordbank.txt")
 CATS_PATH = os.path.join(ROOT, "categories.json")
+SITS_PATH = os.path.join(ROOT, "situations.json")
 
 DECK_SIZE = 5000          # number of vocab words -> 2x cards. Raise freely.
 WORDBANK_SIZE = 50_000    # German words offered for Add-form autocomplete.
@@ -37,6 +38,7 @@ def level_for_rank(rank: int) -> tuple[str, int]:
 
 def build_seed() -> list[dict]:
     cats = json.load(open(CATS_PATH, encoding="utf-8")) if os.path.exists(CATS_PATH) else {}
+    sits = json.load(open(SITS_PATH, encoding="utf-8")) if os.path.exists(SITS_PATH) else {}
     rows = []
     with open(CSV_PATH, encoding="utf-8") as f:
         reader = csv.DictReader(f)
@@ -55,6 +57,7 @@ def build_seed() -> list[dict]:
                 "level": level,
                 "sublevel": sub,
                 "category": cats.get(str(rank), "Other"),
+                "situations": sits.get(str(rank), []),
             })
             if len(rows) >= DECK_SIZE:
                 break

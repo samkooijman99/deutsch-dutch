@@ -168,11 +168,14 @@ const CAT_GROUPS = [
 const GROUP_OF = {};
 for (const [g, leaves] of CAT_GROUPS) for (const l of leaves) GROUP_OF[l] = g;
 const GROUP_NAMES = new Set(CAT_GROUPS.map(g => g[0]));
+const SITUATIONS = ["Greetings & small talk","Introducing & meeting people","Family & relationships","Making plans & invitations","Dining out & restaurant","Food & groceries","Cooking & kitchen","Shopping & stores","Clothes & appearance","At the doctor & illness","Body & health","Travel & transport","Asking directions & location","Hotel & accommodation","Airport, train & tickets","Work & office","Jobs & careers","School & studying","Money, prices & banking","Phone, text & email","Internet & computers","Weather & seasons","Free time & hobbies","Sports & exercise","Music, film & TV","Going out & nightlife","Parties & celebrations","Home & housing","Household chores & routine","Describing people & character","Feelings & emotions","Opinions, likes & dislikes","City & sightseeing","Nature & outdoors","Animals & pets","Emergencies & help","News, politics & society","Law, rules & crime","Time, dates & numbers","Problems & complaints"];
+const SIT_SET = new Set(SITUATIONS);
 let catFilter = localStorage.getItem("deutsch_catfilter") || "all";
 function inCat(c) {
   if (catFilter === "all") return true;
-  if (GROUP_NAMES.has(catFilter)) return GROUP_OF[c.category] === catFilter;   // whole group
-  return c.category === catFilter;                                            // single leaf
+  if (SIT_SET.has(catFilter)) return (c.situations || []).includes(catFilter);   // activity / situation
+  if (GROUP_NAMES.has(catFilter)) return GROUP_OF[c.category] === catFilter;      // whole topic group
+  return c.category === catFilter;                                               // single leaf
 }
 
 let state = null;
@@ -464,6 +467,7 @@ async function fetchSeed() {
 function mergeSeed(s, seed) {
   const have = new Set(s.cards.map(c => `${c.word_id}:${c.dir}`));
   const catOf = new Map(seed.map(w => [w.word_id, w.category || "Other"]));
+  const sitOf = new Map(seed.map(w => [w.word_id, w.situations || []]));
   for (const w of seed) {
     for (const dir of DIRECTIONS) {
       const key = `${w.word_id}:${dir}`;
@@ -473,6 +477,7 @@ function mergeSeed(s, seed) {
     }
   }
   for (const c of s.cards) if (!c.category) c.category = catOf.get(c.word_id) || "Other";
+  for (const c of s.cards) if (!c.situations) c.situations = sitOf.get(c.word_id) || [];
   return s;
 }
 
@@ -504,7 +509,7 @@ function newCard(id, word, dir) {
     id, word_id: word.word_id, dir,
     german: word.german || "", dutch: word.dutch || "",
     dutch_alt: word.dutch_alt || "", dutch_article: word.dutch_article || "",
-    pos: word.pos || "", category: word.category || "Other",
+    pos: word.pos || "", category: word.category || "Other", situations: word.situations || [],
     level: word.level || null, sublevel: word.sublevel || null,
     ease: 2.5, interval_days: 0.0,
     due_ts: nowSec(), reps: 0, lapses: 0,
@@ -641,9 +646,10 @@ function toggleDir() {
 function populateCatFilter() {
   const sel = document.getElementById("catfilter");
   if (!sel) return;
-  const valid = new Set(["all", ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
+  const valid = new Set(["all", ...SITUATIONS, ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
   if (!valid.has(catFilter)) { catFilter = "all"; localStorage.setItem("deutsch_catfilter", "all"); }
-  let html = '<option value="all">All categories</option>';
+  let html = '<option value="all">All words</option>';
+  html += '<optgroup label="\u2014 Situations \u2014">' + SITUATIONS.map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('') + '</optgroup>';
   for (const [g, leaves] of CAT_GROUPS) {
     if (leaves.length === 1 && leaves[0] === g) { html += `<option value="${escapeHtml(g)}">${escapeHtml(g)}</option>`; continue; }
     if (g === "Other") { html += `<option value="Other">Other</option>`; continue; }
