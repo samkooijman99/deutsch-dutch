@@ -145,9 +145,35 @@ const DEFAULT_NEW_PER_DAY = 15; // legacy field kept in state for compatibility;
 const RELEARN_GAP = 3;          // re-show a failed card after this many other grades
 const DIRECTIONS = ["de2nl", "nl2de"];
 const DIR_LABEL = { de2nl: "Currently learning Dutch 🇳🇱", nl2de: "Currently learning German 🇩🇪" };
-const CATEGORIES = ["People & Family","Body & Health","Food & Drink","Home & Household","Clothing & Style","Nature & Animals","Travel & Places","Work & Money","School & Language","Time & Numbers","Emotions & Character","Society & Law","Arts, Sport & Leisure","Actions & Movement","Mind & Communication","Function words","Other"];
+const CAT_GROUPS = [
+  ["People & Family", ["Family & Relatives","People & Roles"]],
+  ["Body & Health", ["Body Parts","Health & Illness"]],
+  ["Food & Drink", ["Food & Meals","Drinks & Cooking"]],
+  ["Home", ["House & Rooms","Household Objects & Chores"]],
+  ["Clothing", ["Clothing & Appearance"]],
+  ["Nature", ["Animals","Plants & Nature","Weather & Geography"]],
+  ["Travel & Places", ["Transport & Travel","Places & Buildings","Direction & Location"]],
+  ["Work & Money", ["Work & Professions","Money & Business"]],
+  ["School & Language", ["School & Education","Language & Writing"]],
+  ["Time & Numbers", ["Time & Calendar","Numbers & Measurement"]],
+  ["Emotions & Character", ["Emotions & Feelings","Character & Personality"]],
+  ["Society", ["Social Life & Community","Politics & Law","Religion & Belief","War & Military"]],
+  ["Arts & Leisure", ["Arts & Culture","Music","Sport & Games","Media & Leisure"]],
+  ["Actions", ["Movement & Motion","Physical Actions","Making & Change"]],
+  ["Mind & Communication", ["Thinking & Knowledge","Speech & Communication","Perception & Will"]],
+  ["Descriptors & Abstract", ["Qualities & Properties","Quantity & Degree","Colours & Shapes","Abstract Concepts"]],
+  ["Function words", ["Pronouns","Prepositions & Conjunctions","Particles & Determiners"]],
+  ["Other", ["Other"]],
+];
+const GROUP_OF = {};
+for (const [g, leaves] of CAT_GROUPS) for (const l of leaves) GROUP_OF[l] = g;
+const GROUP_NAMES = new Set(CAT_GROUPS.map(g => g[0]));
 let catFilter = localStorage.getItem("deutsch_catfilter") || "all";
-function inCat(c) { return catFilter === "all" || c.category === catFilter; }
+function inCat(c) {
+  if (catFilter === "all") return true;
+  if (GROUP_NAMES.has(catFilter)) return GROUP_OF[c.category] === catFilter;   // whole group
+  return c.category === catFilter;                                            // single leaf
+}
 
 let state = null;
 let current = null;
@@ -615,8 +641,18 @@ function toggleDir() {
 function populateCatFilter() {
   const sel = document.getElementById("catfilter");
   if (!sel) return;
-  sel.innerHTML = '<option value="all">All categories</option>' +
-    CATEGORIES.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join("");
+  const valid = new Set(["all", ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
+  if (!valid.has(catFilter)) { catFilter = "all"; localStorage.setItem("deutsch_catfilter", "all"); }
+  let html = '<option value="all">All categories</option>';
+  for (const [g, leaves] of CAT_GROUPS) {
+    if (leaves.length === 1 && leaves[0] === g) { html += `<option value="${escapeHtml(g)}">${escapeHtml(g)}</option>`; continue; }
+    if (g === "Other") { html += `<option value="Other">Other</option>`; continue; }
+    html += `<optgroup label="${escapeHtml(g)}">`;
+    html += `<option value="${escapeHtml(g)}">— all ${escapeHtml(g)} —</option>`;
+    for (const l of leaves) html += `<option value="${escapeHtml(l)}">${escapeHtml(l)}</option>`;
+    html += `</optgroup>`;
+  }
+  sel.innerHTML = html;
   sel.value = catFilter;
   sel.onchange = () => { catFilter = sel.value; localStorage.setItem("deutsch_catfilter", catFilter); loadNext(); };
 }
