@@ -179,6 +179,8 @@ for (const [g, leaves] of CAT_GROUPS) for (const l of leaves) GROUP_OF[l] = g;
 const GROUP_NAMES = new Set(CAT_GROUPS.map(g => g[0]));
 const SITUATIONS = ["Greetings & small talk","Introducing & meeting people","Family & relationships","Making plans & invitations","Dining out & restaurant","Food & groceries","Cooking & kitchen","Shopping & stores","Clothes & appearance","At the doctor & illness","Body & health","Travel & transport","Asking directions & location","Hotel & accommodation","Airport, train & tickets","Work & office","Jobs & careers","School & studying","Money, prices & banking","Phone, text & email","Internet & computers","Weather & seasons","Free time & hobbies","Sports & exercise","Music, film & TV","Going out & nightlife","Parties & celebrations","Home & housing","Household chores & routine","Describing people & character","Feelings & emotions","Opinions, likes & dislikes","City & sightseeing","Nature & outdoors","Animals & pets","Emergencies & help","News, politics & society","Law, rules & crime","Time, dates & numbers","Problems & complaints"];
 const SIT_SET = new Set(SITUATIONS);
+const SENT_TOPICS = ["Small talk & everyday","People, family & relationships","Feelings & opinions","Home & daily life","Food & drink","Work, school & money","Travel & places","Health & body","Time & numbers","Nature, weather & animals","Society, news & law","Arts, sport & leisure","Describing things","Other"];
+const SENT_TOPIC_SET = new Set(SENT_TOPICS);
 let studyMode  = localStorage.getItem("deutsch_mode")       || "words";
 let wordFilter = localStorage.getItem("deutsch_wordfilter") || "all";
 let sentFilter = localStorage.getItem("deutsch_sentfilter") || "all";
@@ -191,7 +193,9 @@ function inCat(c) {
 function eligible(c) {
   if (studyMode === "sentences") {
     if (c.kind !== "sentence") return false;
-    return sentFilter === "all" || (c.situations || []).includes(sentFilter);
+    if (sentFilter === "all") return true;
+    if (SENT_TOPIC_SET.has(sentFilter)) return c.category === sentFilter;      // sentence topic
+    return (c.situations || []).includes(sentFilter);                          // sentence situation
   }
   if (c.kind === "sentence") return false;
   return inCat(c);
@@ -487,7 +491,7 @@ async function fetchSeed() {
       const arr = await r.json();
       arr.forEach((x, i) => out.push({ word_id: SENT_BASE + i, kind: "sentence",
         german: x.de, dutch: x.nl, dutch_alt: "", dutch_article: "", pos: "",
-        category: "", situations: x.sits || [], level: null, sublevel: null }));
+        category: x.topic || "Small talk & everyday", situations: x.sits || [], level: null, sublevel: null }));
     }
   } catch (e) { console.warn("sentences fetch failed", e); }
   return out;
@@ -687,9 +691,11 @@ function populateFilter() {
   if (!sel) return;
   let html, cur;
   if (studyMode === "sentences") {
+    const sTopics = SENT_TOPICS.filter(t => state.cards.some(c => c.kind === "sentence" && c.category === t));
     const sSits = SITUATIONS.filter(x => state.cards.some(c => c.kind === "sentence" && (c.situations || []).includes(x)));
-    if (!(sentFilter === "all" || sSits.includes(sentFilter))) { sentFilter = "all"; localStorage.setItem("deutsch_sentfilter", "all"); }
+    if (!(sentFilter === "all" || sTopics.includes(sentFilter) || sSits.includes(sentFilter))) { sentFilter = "all"; localStorage.setItem("deutsch_sentfilter", "all"); }
     html = '<option value="all">All sentences</option>';
+    if (sTopics.length) html += '<optgroup label="By topic (all sentences covered)">' + sTopics.map(t => `<option value="${escapeHtml(t)}">${escapeHtml(t)}</option>`).join('') + '</optgroup>';
     if (sSits.length) html += '<optgroup label="By situation">' + sSits.map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('') + '</optgroup>';
     cur = sentFilter;
   } else {
