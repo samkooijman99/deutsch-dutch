@@ -14,10 +14,11 @@
   html, body { margin:0; height:100%; }
   body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro", system-ui, sans-serif;
          background:var(--bg); color:var(--fg); display:flex; flex-direction:column;
-         min-height:100vh; min-height:100dvh; padding-bottom: env(safe-area-inset-bottom); }
+         min-height:100vh; min-height:100dvh; padding-bottom: env(safe-area-inset-bottom); overflow-x:hidden; }
   header { padding:.85rem 1rem; border-bottom:1px solid var(--border);
-           display:flex; justify-content:space-between; align-items:center; gap:.6rem;
+           display:flex; justify-content:space-between; align-items:center; gap:.5rem; flex-wrap:wrap;
            padding-top: calc(.85rem + env(safe-area-inset-top)); }
+  #dir-toggle { max-width:100%; }
   header h1 { margin:0; font-size:1.05rem; font-weight:600; letter-spacing:.02em; white-space:nowrap; }
   .stats { color:var(--muted); font-size:.78rem; font-variant-numeric:tabular-nums; text-align:right; }
   .stats span { margin-left:.65rem; }
@@ -79,8 +80,11 @@
   .sheet-ghost { width:100%; background:transparent; color:var(--muted); border:1px solid var(--border); border-radius:10px; padding:.7rem; font-size:.9rem; cursor:pointer; font-family:inherit; }
   .sheet-fine { color:var(--muted); font-size:.72rem; margin:.85rem 0 0; text-align:center; }
   .sheet-x { position:absolute; top:.5rem; right:.5rem; background:transparent; border:none; color:var(--muted); font-size:1.1rem; cursor:pointer; min-width:auto; padding:.2rem .45rem; flex:0; }
-  .catbar { display:flex; justify-content:center; padding:.5rem 1rem 0; }
-  .catbar select { background:var(--card); color:var(--fg); border:1px solid var(--border); border-radius:999px; padding:.35rem .9rem; font-family:inherit; font-size:.85rem; max-width:92vw; }
+  .catbar { display:flex; gap:.5rem; justify-content:center; align-items:center; flex-wrap:wrap; padding:.6rem 1rem 0; max-width:100%; }
+  .seg { display:inline-flex; border:1px solid var(--border); border-radius:999px; overflow:hidden; flex:0 0 auto; }
+  .seg button { background:var(--card); color:var(--muted); border:none; padding:.35rem .8rem; font-size:.82rem; font-family:inherit; cursor:pointer; flex:0 0 auto; min-width:auto; border-radius:0; white-space:nowrap; }
+  .seg button.active { background:var(--accent); color:#1a1d24; font-weight:600; }
+  .catbar select { background:var(--card); color:var(--fg); border:1px solid var(--border); border-radius:999px; padding:.35rem .9rem; font-family:inherit; font-size:.85rem; max-width:min(70vw, 320px); }
   .card.sentence .word { font-size: clamp(1.15rem, 4.6vw, 1.55rem); font-weight:500; line-height:1.3; }
   .card.sentence .answer { font-size: clamp(1rem, 4vw, 1.3rem); }
   .streak { color: var(--accent); font-weight: 600; }
@@ -92,7 +96,10 @@
   <button id="dir-toggle" title="Switch learner — each has fully independent progress">…</button>
   <div class="stats" id="stats">…</div>
 </header>
-<div class="catbar"><select id="catfilter" title="study one topic"></select></div>
+<div class="catbar">
+  <div class="seg" id="modeseg"><button type="button" data-mode="words">📖 Words</button><button type="button" data-mode="sentences">💬 Sentences</button></div>
+  <select id="catfilter" title="filter"></select>
+</div>
 <main id="main"><div class="empty">Loading…</div></main>
 <div class="toolbar">
   <button id="addtoggle" title="add a word">＋ Word</button>
@@ -172,17 +179,21 @@ for (const [g, leaves] of CAT_GROUPS) for (const l of leaves) GROUP_OF[l] = g;
 const GROUP_NAMES = new Set(CAT_GROUPS.map(g => g[0]));
 const SITUATIONS = ["Greetings & small talk","Introducing & meeting people","Family & relationships","Making plans & invitations","Dining out & restaurant","Food & groceries","Cooking & kitchen","Shopping & stores","Clothes & appearance","At the doctor & illness","Body & health","Travel & transport","Asking directions & location","Hotel & accommodation","Airport, train & tickets","Work & office","Jobs & careers","School & studying","Money, prices & banking","Phone, text & email","Internet & computers","Weather & seasons","Free time & hobbies","Sports & exercise","Music, film & TV","Going out & nightlife","Parties & celebrations","Home & housing","Household chores & routine","Describing people & character","Feelings & emotions","Opinions, likes & dislikes","City & sightseeing","Nature & outdoors","Animals & pets","Emergencies & help","News, politics & society","Law, rules & crime","Time, dates & numbers","Problems & complaints"];
 const SIT_SET = new Set(SITUATIONS);
-let catFilter = localStorage.getItem("deutsch_catfilter") || "all";
+let studyMode  = localStorage.getItem("deutsch_mode")       || "words";
+let wordFilter = localStorage.getItem("deutsch_wordfilter") || "all";
+let sentFilter = localStorage.getItem("deutsch_sentfilter") || "all";
 function inCat(c) {
-  if (catFilter === "all") return true;
-  if (SIT_SET.has(catFilter)) return (c.situations || []).includes(catFilter);   // activity / situation
-  if (GROUP_NAMES.has(catFilter)) return GROUP_OF[c.category] === catFilter;      // whole topic group
-  return c.category === catFilter;                                               // single leaf
+  if (wordFilter === "all") return true;
+  if (SIT_SET.has(wordFilter)) return (c.situations || []).includes(wordFilter);
+  if (GROUP_NAMES.has(wordFilter)) return GROUP_OF[c.category] === wordFilter;
+  return c.category === wordFilter;
 }
 function eligible(c) {
-  if (catFilter === "sentences") return c.kind === "sentence";                       // all sentences
-  if (catFilter.slice(0, 5) === "sent:") return c.kind === "sentence" && (c.situations || []).includes(catFilter.slice(5));
-  if (c.kind === "sentence") return false;                                           // word modes exclude sentences
+  if (studyMode === "sentences") {
+    if (c.kind !== "sentence") return false;
+    return sentFilter === "all" || (c.situations || []).includes(sentFilter);
+  }
+  if (c.kind === "sentence") return false;
   return inCat(c);
 }
 
@@ -267,7 +278,7 @@ async function cloudPullMerge() {
     if (res.error) { console.warn("cloud pull failed", res.error); return; }
     if (res.data) {
       state = applyCloud(state, res.data);
-      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+      persistLocal();
       loadNext();
     }
     cloudPush(true);            // ensure the cloud holds the merged result
@@ -283,7 +294,7 @@ function cloudPush(immediate) {
       const res = await sbClient.rpc("get_deck", { p_code: syncCode });   // merge before write
       if (!res.error && res.data) {
         state = applyCloud(state, res.data);
-        try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+        persistLocal();
       }
       await sbClient.rpc("save_deck", { p_code: syncCode, p_state: toCloud(state) });  // compact
     } catch (e) { console.warn("cloud push failed", e); }
@@ -373,6 +384,7 @@ function applyCloud(st, cloud) {
     const cn = ((cloud.config || {}).new_per_day || {})[d];
     if (typeof cn === "number") st.config.new_per_day[d] = Math.max(st.config.new_per_day[d] || DEFAULT_NEW_PER_DAY, cn);
   }
+  if (cloud.config && DIRECTIONS.includes(cloud.config.active_dir)) st.config.active_dir = cloud.config.active_dir;
   return st;
 }
 
@@ -431,9 +443,12 @@ function toast(html, ms = 2200) {
   setTimeout(() => { t.classList.remove("show"); setTimeout(() => t.remove(), 300); }, ms);
 }
 
+function persistLocal() {
+  try { localStorage.setItem(KEY, JSON.stringify(toCloud(state))); }   // compact: only progress, not the deck
+  catch (e) { console.warn("local save failed", e); }
+}
 function saveState() {
-  try { localStorage.setItem(KEY, JSON.stringify(state)); }
-  catch (e) { alert("Couldn't save progress (storage full?). " + e); }
+  persistLocal();
   cloudPush();
 }
 
@@ -500,25 +515,24 @@ function mergeSeed(s, seed) {
 
 async function loadState() {
   const seed = await fetchSeed();
+  const fresh = () => mergeSeed(ensureDefaults({ next_id: 1, cards: [] }), seed);   // full deck, no progress
   const raw = localStorage.getItem(KEY);
   if (raw) {
     try {
-      const s = ensureDefaults(JSON.parse(raw));
-      if (typeof s.next_id !== "number") {
-        s.next_id = s.cards.reduce((m, c) => Math.max(m, c.id || 0), 0) + 1;
+      const saved = JSON.parse(raw);
+      if (Array.isArray(saved.cards)) {                    // legacy full-state blob -> migrate
+        const s = ensureDefaults(saved);
+        if (typeof s.next_id !== "number") s.next_id = s.cards.reduce((m, c) => Math.max(m, c.id || 0), 0) + 1;
+        return mergeSeed(s, seed);
       }
-      return mergeSeed(s, seed);           // pick up any new deck words, keep progress
+      return applyCloud(fresh(), saved);                   // compact progress -> overlay onto the deck
     } catch (e) { console.warn("corrupt local state, re-bootstrapping", e); }
   }
-  // First run: optional bootstrap snapshot of desktop progress, else a fresh deck.
   try {
     const r = await fetch("bootstrap.json", { cache: "no-cache" });
-    if (r.ok) {
-      const b = await r.json();
-      if (b.cards && b.cards.length) return mergeSeed(ensureDefaults(b), seed);
-    }
-  } catch (e) { /* ignore, build fresh */ }
-  return mergeSeed(ensureDefaults({ next_id: 1, cards: [] }), seed);
+    if (r.ok) { const b = await r.json(); if (b.cards && b.cards.length) return mergeSeed(ensureDefaults(b), seed); }
+  } catch (e) { /* ignore */ }
+  return fresh();
 }
 
 function newCard(id, word, dir) {
@@ -661,29 +675,50 @@ function toggleDir() {
   loadNext();
 }
 
-function populateCatFilter() {
+function setMode(m) {
+  studyMode = m; localStorage.setItem("deutsch_mode", m);
+  document.querySelectorAll("#modeseg button").forEach(b => b.classList.toggle("active", b.dataset.mode === m));
+  populateFilter();
+  loadNext();
+}
+
+function populateFilter() {
   const sel = document.getElementById("catfilter");
   if (!sel) return;
-  const sSits = SITUATIONS.filter(sN => state.cards.some(c => c.kind === "sentence" && (c.situations || []).includes(sN)));
-  const valid = new Set(["all", "sentences", ...sSits.map(sN => "sent:" + sN), ...SITUATIONS, ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
-  if (!valid.has(catFilter)) { catFilter = "all"; localStorage.setItem("deutsch_catfilter", "all"); }
-  let html = '<option value="all">All words</option>';
-  html += '<optgroup label="💬 Sentences">';
-  html += '<option value="sentences">All sentences</option>';
-  html += sSits.map(sN => `<option value="sent:${escapeHtml(sN)}">${escapeHtml(sN)}</option>`).join("");
-  html += '</optgroup>';
-  html += '<optgroup label="\u2014 Situations \u2014">' + SITUATIONS.map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('') + '</optgroup>';
-  for (const [g, leaves] of CAT_GROUPS) {
-    if (leaves.length === 1 && leaves[0] === g) { html += `<option value="${escapeHtml(g)}">${escapeHtml(g)}</option>`; continue; }
-    if (g === "Other") { html += `<option value="Other">Other</option>`; continue; }
-    html += `<optgroup label="${escapeHtml(g)}">`;
-    html += `<option value="${escapeHtml(g)}">— all ${escapeHtml(g)} —</option>`;
-    for (const l of leaves) html += `<option value="${escapeHtml(l)}">${escapeHtml(l)}</option>`;
-    html += `</optgroup>`;
+  let html, cur;
+  if (studyMode === "sentences") {
+    const sSits = SITUATIONS.filter(x => state.cards.some(c => c.kind === "sentence" && (c.situations || []).includes(x)));
+    if (!(sentFilter === "all" || sSits.includes(sentFilter))) { sentFilter = "all"; localStorage.setItem("deutsch_sentfilter", "all"); }
+    html = '<option value="all">All sentences</option>';
+    if (sSits.length) html += '<optgroup label="By situation">' + sSits.map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('') + '</optgroup>';
+    cur = sentFilter;
+  } else {
+    const valid = new Set(["all", ...SITUATIONS, ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
+    if (!valid.has(wordFilter)) { wordFilter = "all"; localStorage.setItem("deutsch_wordfilter", "all"); }
+    html = '<option value="all">All words</option>';
+    html += '<optgroup label="By situation">' + SITUATIONS.map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('') + '</optgroup>';
+    for (const [g, leaves] of CAT_GROUPS) {
+      if (g === "Other") { html += `<optgroup label="Other"><option value="Other">Other</option></optgroup>`; continue; }
+      html += `<optgroup label="Topic: ${escapeHtml(g)}">`;
+      html += `<option value="${escapeHtml(g)}">All ${escapeHtml(g)}</option>`;
+      for (const l of leaves) if (l !== g) html += `<option value="${escapeHtml(l)}">&nbsp;&nbsp;${escapeHtml(l)}</option>`;
+      html += `</optgroup>`;
+    }
+    cur = wordFilter;
   }
   sel.innerHTML = html;
-  sel.value = catFilter;
-  sel.onchange = () => { catFilter = sel.value; localStorage.setItem("deutsch_catfilter", catFilter); loadNext(); };
+  sel.value = cur;
+  sel.onchange = () => {
+    if (studyMode === "sentences") { sentFilter = sel.value; localStorage.setItem("deutsch_sentfilter", sentFilter); }
+    else { wordFilter = sel.value; localStorage.setItem("deutsch_wordfilter", wordFilter); }
+    loadNext();
+  };
+}
+
+function initFilterUI() {
+  const seg = document.getElementById("modeseg");
+  if (seg) seg.querySelectorAll("button").forEach(b => { b.onclick = () => setMode(b.dataset.mode); b.classList.toggle("active", b.dataset.mode === studyMode); });
+  populateFilter();
 }
 
 function render() {
@@ -883,7 +918,7 @@ document.addEventListener("keydown", e => {
 (async () => {
   state = await loadState();
   saveState();
-  populateCatFilter();
+  initFilterUI();
   loadNext();
   initSupabase();
 })();
