@@ -180,8 +180,9 @@ function inCat(c) {
   return c.category === catFilter;                                               // single leaf
 }
 function eligible(c) {
-  if (catFilter === "sentences") return c.kind === "sentence";   // sentences deck
-  if (c.kind === "sentence") return false;                       // word modes exclude sentences
+  if (catFilter === "sentences") return c.kind === "sentence";                       // all sentences
+  if (catFilter.slice(0, 5) === "sent:") return c.kind === "sentence" && (c.situations || []).includes(catFilter.slice(5));
+  if (c.kind === "sentence") return false;                                           // word modes exclude sentences
   return inCat(c);
 }
 
@@ -471,7 +472,7 @@ async function fetchSeed() {
       const arr = await r.json();
       arr.forEach((x, i) => out.push({ word_id: SENT_BASE + i, kind: "sentence",
         german: x.de, dutch: x.nl, dutch_alt: "", dutch_article: "", pos: "",
-        category: "", situations: [], level: null, sublevel: null }));
+        category: "", situations: x.sits || [], level: null, sublevel: null }));
     }
   } catch (e) { console.warn("sentences fetch failed", e); }
   return out;
@@ -663,10 +664,14 @@ function toggleDir() {
 function populateCatFilter() {
   const sel = document.getElementById("catfilter");
   if (!sel) return;
-  const valid = new Set(["all", "sentences", ...SITUATIONS, ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
+  const sSits = SITUATIONS.filter(sN => state.cards.some(c => c.kind === "sentence" && (c.situations || []).includes(sN)));
+  const valid = new Set(["all", "sentences", ...sSits.map(sN => "sent:" + sN), ...SITUATIONS, ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
   if (!valid.has(catFilter)) { catFilter = "all"; localStorage.setItem("deutsch_catfilter", "all"); }
   let html = '<option value="all">All words</option>';
-  html += '<option value="sentences">💬 Sentences (common)</option>';
+  html += '<optgroup label="💬 Sentences">';
+  html += '<option value="sentences">All sentences</option>';
+  html += sSits.map(sN => `<option value="sent:${escapeHtml(sN)}">${escapeHtml(sN)}</option>`).join("");
+  html += '</optgroup>';
   html += '<optgroup label="\u2014 Situations \u2014">' + SITUATIONS.map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('') + '</optgroup>';
   for (const [g, leaves] of CAT_GROUPS) {
     if (leaves.length === 1 && leaves[0] === g) { html += `<option value="${escapeHtml(g)}">${escapeHtml(g)}</option>`; continue; }
