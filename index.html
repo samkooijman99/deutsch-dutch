@@ -81,6 +81,8 @@
   .sheet-x { position:absolute; top:.5rem; right:.5rem; background:transparent; border:none; color:var(--muted); font-size:1.1rem; cursor:pointer; min-width:auto; padding:.2rem .45rem; flex:0; }
   .catbar { display:flex; justify-content:center; padding:.5rem 1rem 0; }
   .catbar select { background:var(--card); color:var(--fg); border:1px solid var(--border); border-radius:999px; padding:.35rem .9rem; font-family:inherit; font-size:.85rem; max-width:92vw; }
+  .card.sentence .word { font-size: clamp(1.15rem, 4.6vw, 1.55rem); font-weight:500; line-height:1.3; }
+  .card.sentence .answer { font-size: clamp(1rem, 4vw, 1.3rem); }
   .streak { color: var(--accent); font-weight: 600; }
 </style>
 </head>
@@ -176,6 +178,11 @@ function inCat(c) {
   if (SIT_SET.has(catFilter)) return (c.situations || []).includes(catFilter);   // activity / situation
   if (GROUP_NAMES.has(catFilter)) return GROUP_OF[c.category] === catFilter;      // whole topic group
   return c.category === catFilter;                                               // single leaf
+}
+function eligible(c) {
+  if (catFilter === "sentences") return c.kind === "sentence";   // sentences deck
+  if (c.kind === "sentence") return false;                       // word modes exclude sentences
+  return inCat(c);
 }
 
 let state = null;
@@ -317,12 +324,13 @@ function mergeStates(a, b) {
 //  - manually-added words in full (not derivable from the seed)
 //  - the small per-direction meta (intro_log / daily_log / streak / config)
 const MANUAL_BASE = 1000000;
+const SENT_BASE = 2000000;
 
 function toCloud(st) {
   const sched = {};
   const manual = [];
   for (const c of st.cards) {
-    if (c.word_id >= MANUAL_BASE) { manual.push(c); continue; }
+    if (c.word_id >= MANUAL_BASE && c.word_id < SENT_BASE) { manual.push(c); continue; }
     if ((c.reps || 0) > 0 || (c.lapses || 0) > 0) {
       sched[c.word_id + ":" + c.dir] = [c.reps || 0, c.lapses || 0, c.ease, c.interval_days, c.due_ts];
     }
@@ -454,11 +462,19 @@ function ensureDefaults(s) {
 }
 
 async function fetchSeed() {
+  const out = [];
+  try { const r = await fetch("seed.json", { cache: "no-cache" }); if (r.ok) out.push(...await r.json()); }
+  catch (e) { console.warn("seed fetch failed", e); }
   try {
-    const r = await fetch("seed.json", { cache: "no-cache" });
-    if (r.ok) return await r.json();
-  } catch (e) { console.warn("seed fetch failed", e); }
-  return [];
+    const r = await fetch("sentences.json", { cache: "no-cache" });
+    if (r.ok) {
+      const arr = await r.json();
+      arr.forEach((x, i) => out.push({ word_id: SENT_BASE + i, kind: "sentence",
+        german: x.de, dutch: x.nl, dutch_alt: "", dutch_article: "", pos: "",
+        category: "", situations: [], level: null, sublevel: null }));
+    }
+  } catch (e) { console.warn("sentences fetch failed", e); }
+  return out;
 }
 
 // Add a card for every (word_id, dir) in the seed that isn't already present.
@@ -510,6 +526,7 @@ function newCard(id, word, dir) {
     german: word.german || "", dutch: word.dutch || "",
     dutch_alt: word.dutch_alt || "", dutch_article: word.dutch_article || "",
     pos: word.pos || "", category: word.category || "Other", situations: word.situations || [],
+    kind: word.kind || "word",
     level: word.level || null, sublevel: word.sublevel || null,
     ease: 2.5, interval_days: 0.0,
     due_ts: nowSec(), reps: 0, lapses: 0,
@@ -531,20 +548,20 @@ function pickDue() {
     const r = relearnQueue[i];
     if (r.gradesLeft <= 0 && r.dir === dir) {
       const c = state.cards.find(x => x.id === r.id);
-      if (c && inCat(c)) { relearnQueue.splice(i, 1); return c; }
+      if (c && eligible(c)) { relearnQueue.splice(i, 1); return c; }
     }
   }
   // 2. Review-due within this direction, skipping queued cards.
   const t = nowSec();
   const inQueue = new Set(relearnQueue.map(r => r.id));
-  const due = state.cards.filter(c => c.dir === dir && c.due_ts <= t && c.reps > 0 && c.dutch && inCat(c) && !inQueue.has(c.id));
+  const due = state.cards.filter(c => c.dir === dir && c.due_ts <= t && c.reps > 0 && c.dutch && eligible(c) && !inQueue.has(c.id));
   if (due.length) {
     due.sort((a, b) => (b.lapses - a.lapses) || (a.due_ts - b.due_ts));
     return due[0];
   }
   // 3. New cards (no daily limit).
   {
-    const fresh = state.cards.filter(c => c.dir === dir && c.reps === 0 && c.dutch && inCat(c));
+    const fresh = state.cards.filter(c => c.dir === dir && c.reps === 0 && c.dutch && eligible(c));
     if (fresh.length) {
       fresh.sort((a, b) => levelRank(a) - levelRank(b) || a.word_id - b.word_id);
       return fresh[0];
@@ -555,7 +572,7 @@ function pickDue() {
     const r = relearnQueue[i];
     if (r.dir === dir) {
       const c = state.cards.find(x => x.id === r.id);
-      if (c && inCat(c)) { relearnQueue.splice(i, 1); return c; }
+      if (c && eligible(c)) { relearnQueue.splice(i, 1); return c; }
     }
   }
   return null;
@@ -598,7 +615,7 @@ function review(card, rating) {
 function computeStats() {
   const dir = activeDir();
   const t = nowSec();
-  const cards = state.cards.filter(c => c.dir === dir && c.dutch && inCat(c));
+  const cards = state.cards.filter(c => c.dir === dir && c.dutch && eligible(c));
   return {
     dir,
     total: cards.length,
@@ -646,9 +663,10 @@ function toggleDir() {
 function populateCatFilter() {
   const sel = document.getElementById("catfilter");
   if (!sel) return;
-  const valid = new Set(["all", ...SITUATIONS, ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
+  const valid = new Set(["all", "sentences", ...SITUATIONS, ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
   if (!valid.has(catFilter)) { catFilter = "all"; localStorage.setItem("deutsch_catfilter", "all"); }
   let html = '<option value="all">All words</option>';
+  html += '<option value="sentences">💬 Sentences (common)</option>';
   html += '<optgroup label="\u2014 Situations \u2014">' + SITUATIONS.map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('') + '</optgroup>';
   for (const [g, leaves] of CAT_GROUPS) {
     if (leaves.length === 1 && leaves[0] === g) { html += `<option value="${escapeHtml(g)}">${escapeHtml(g)}</option>`; continue; }
@@ -673,7 +691,7 @@ function render() {
   const front = current.dir === "de2nl" ? germanDisplay(current) : dutchPhrase(current);
   if (!revealed) {
     m.innerHTML = `
-      <div class="card">
+      <div class="card${current.kind === "sentence" ? " sentence" : ""}">
         <div class="badge">${tag}</div>
         <div class="word">${escapeHtml(front)}</div>
       </div>
@@ -688,7 +706,7 @@ function render() {
       answerHtml = `<div class="answer">${escapeHtml(germanDisplay(current))}</div>`;
     }
     m.innerHTML = `
-      <div class="card">
+      <div class="card${current.kind === "sentence" ? " sentence" : ""}">
         <div class="badge">${tag}</div>
         <div class="word">${escapeHtml(front)}</div>
         ${answerHtml}
@@ -755,7 +773,7 @@ function addWord() {
   const sub = parseInt(document.getElementById("sub").value, 10) || 1;
   if (!de || !nl) return;
   // Manual words get IDs from a high base so future seed growth can never collide.
-  const wid = Math.max(1000000, state.cards.reduce((mx, c) => Math.max(mx, c.word_id || 0), 0) + 1);
+  const wid = Math.max(MANUAL_BASE, state.cards.reduce((mx, c) => (c.word_id >= MANUAL_BASE && c.word_id < SENT_BASE) ? Math.max(mx, c.word_id) : mx, MANUAL_BASE - 1) + 1);
   const word = { word_id: wid, german: de, dutch: nl, dutch_alt: "", dutch_article: "", pos: "", level: lvl, sublevel: sub };
   for (const dir of DIRECTIONS) state.cards.push(newCard(state.next_id++, word, dir));
   saveState();
