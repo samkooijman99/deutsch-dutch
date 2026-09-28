@@ -99,6 +99,13 @@
 <div class="catbar">
   <div class="seg" id="modeseg"><button type="button" data-mode="words">📖 Words</button><button type="button" data-mode="sentences">💬 Sentences</button></div>
   <select id="catfilter" title="filter"></select>
+  <select id="posfilter" title="part of speech filter">
+    <option value="all">All parts of speech</option>
+    <option value="pos:nouns_verbs">Nouns &amp; Verbs</option>
+    <option value="pos:nouns">Nouns only</option>
+    <option value="pos:verbs">Verbs only</option>
+    <option value="pos:adjectives">Adjectives only</option>
+  </select>
 </div>
 <main id="main"><div class="empty">Loading…</div></main>
 <div class="toolbar">
@@ -184,6 +191,7 @@ const SENT_TOPIC_SET = new Set(SENT_TOPICS);
 let studyMode  = localStorage.getItem("deutsch_mode")       || "words";
 let wordFilter = localStorage.getItem("deutsch_wordfilter") || "all";
 let sentFilter = localStorage.getItem("deutsch_sentfilter") || "all";
+let posFilter  = localStorage.getItem("deutsch_posfilter")  || "all";
 const POS_FILTERS = {
   "pos:nouns_verbs": c => c.pos === "Substantiv" || c.pos === "Verb",
   "pos:nouns":       c => c.pos === "Substantiv",
@@ -192,10 +200,13 @@ const POS_FILTERS = {
 };
 function inCat(c) {
   if (wordFilter === "all") return true;
-  if (POS_FILTERS[wordFilter]) return POS_FILTERS[wordFilter](c);
   if (SIT_SET.has(wordFilter)) return (c.situations || []).includes(wordFilter);
   if (GROUP_NAMES.has(wordFilter)) return GROUP_OF[c.category] === wordFilter;
   return c.category === wordFilter;
+}
+function inPos(c) {
+  if (posFilter === "all") return true;
+  return POS_FILTERS[posFilter] ? POS_FILTERS[posFilter](c) : true;
 }
 function eligible(c) {
   if (studyMode === "sentences") {
@@ -205,7 +216,7 @@ function eligible(c) {
     return (c.situations || []).includes(sentFilter);                          // sentence situation
   }
   if (c.kind === "sentence") return false;
-  return inCat(c);
+  return inCat(c) && inPos(c);
 }
 
 let state = null;
@@ -706,10 +717,9 @@ function populateFilter() {
     if (sSits.length) html += '<optgroup label="By situation">' + sSits.map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('') + '</optgroup>';
     cur = sentFilter;
   } else {
-    const valid = new Set(["all", ...Object.keys(POS_FILTERS), ...SITUATIONS, ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
+    const valid = new Set(["all", ...SITUATIONS, ...GROUP_NAMES, ...Object.keys(GROUP_OF)]);
     if (!valid.has(wordFilter)) { wordFilter = "all"; localStorage.setItem("deutsch_wordfilter", "all"); }
     html = '<option value="all">All words</option>';
-    html += '<optgroup label="By part of speech"><option value="pos:nouns_verbs">Nouns &amp; Verbs</option><option value="pos:nouns">Nouns only</option><option value="pos:verbs">Verbs only</option><option value="pos:adjectives">Adjectives only</option></optgroup>';
     html += '<optgroup label="By situation">' + SITUATIONS.map(x => `<option value="${escapeHtml(x)}">${escapeHtml(x)}</option>`).join('') + '</optgroup>';
     for (const [g, leaves] of CAT_GROUPS) {
       if (g === "Other") { html += `<optgroup label="Other"><option value="Other">Other</option></optgroup>`; continue; }
@@ -727,6 +737,14 @@ function populateFilter() {
     else { wordFilter = sel.value; localStorage.setItem("deutsch_wordfilter", wordFilter); }
     loadNext();
   };
+
+  const posSel = document.getElementById("posfilter");
+  if (posSel) {
+    posSel.style.display = studyMode === "sentences" ? "none" : "";
+    if (!POS_FILTERS[posFilter]) { posFilter = "all"; localStorage.setItem("deutsch_posfilter", "all"); }
+    posSel.value = posFilter;
+    posSel.onchange = () => { posFilter = posSel.value; localStorage.setItem("deutsch_posfilter", posFilter); loadNext(); };
+  }
 }
 
 function initFilterUI() {
